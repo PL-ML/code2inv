@@ -1,0 +1,105 @@
+{
+  "nodes": {
+    "39": {
+      "cmd": "Phi",
+      "lval": { "Var": "c_39" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "c_30" },
+        "arg1": { "Var": "c_33" },
+        "arg2": { "Var": "c_34" },
+        "arg3": { "Var": "c_39" }
+      }
+    },
+    "35": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "c_39" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "34": {
+      "cmd": "assign",
+      "lval": { "Var": "c_34" },
+      "rval": { "Const": "1" }
+    },
+    "33": {
+      "cmd": "assign",
+      "lval": { "Var": "c_33" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "c_39" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "30": {
+      "cmd": "assign",
+      "lval": { "Var": "c_30" },
+      "rval": { "Const": "0" }
+    },
+    "29": { "cmd": "TrueBranch" },
+    "28": { "cmd": "FalseBranch" },
+    "27": { "cmd": "TrueBranch" },
+    "26": { "cmd": "FalseBranch" },
+    "25": { "cmd": "TrueBranch" },
+    "24": { "cmd": "FalseBranch" },
+    "23": { "cmd": "TrueBranch" },
+    "22": { "cmd": "FalseBranch" },
+    "21": { "cmd": "TrueBranch" },
+    "20": { "cmd": "FalseBranch" },
+    "19": { "cmd": "SKIP" },
+    "16": {
+      "cmd": "if",
+      "rval": {
+        "OP": "!=",
+        "arg1": { "Var": "c_39" },
+        "arg2": { "Const": "4" }
+      }
+    },
+    "13": {
+      "cmd": "if",
+      "rval": {
+        "OP": "==",
+        "arg1": { "Var": "c_39" },
+        "arg2": { "Const": "4" }
+      }
+    },
+    "11": {
+      "cmd": "if",
+      "rval": {
+        "OP": "!=",
+        "arg1": { "Var": "c_39" },
+        "arg2": { "Const": "4" }
+      }
+    },
+    "10": { "cmd": "if", "rval": { "UNK": "UNK_VAL" } },
+    "6": { "cmd": "if", "rval": { "UNK": "UNK_VAL" } },
+    "2": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "29", "35" ],
+    [ "27", "34" ],
+    [ "25", "33" ],
+    [ "23", "11" ],
+    [ "22", "13" ],
+    [ "21", "10" ],
+    [ "20", "19" ],
+    [ "20", "16" ],
+    [ "16", "29" ],
+    [ "16", "28" ],
+    [ "13", "27" ],
+    [ "13", "26" ],
+    [ "11", "25" ],
+    [ "11", "24" ],
+    [ "10", "23" ],
+    [ "10", "22" ],
+    [ "6", "21" ],
+    [ "6", "20" ],
+    [ "2", "39" ],
+    [ "2", "6" ],
+    [ "ENTRY", "30" ],
+    [ "ENTRY", "2" ]
+  ]
+}

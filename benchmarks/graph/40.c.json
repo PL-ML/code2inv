@@ -1,0 +1,114 @@
+{
+  "nodes": {
+    "42": {
+      "cmd": "Phi",
+      "lval": { "Var": "c_42" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "c_32" },
+        "arg1": { "Var": "c_36" },
+        "arg2": { "Var": "c_37" },
+        "arg3": { "Var": "c_42" }
+      }
+    },
+    "38": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "c_42" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "37": {
+      "cmd": "assign",
+      "lval": { "Var": "c_37" },
+      "rval": { "Const": "1" }
+    },
+    "36": {
+      "cmd": "assign",
+      "lval": { "Var": "c_36" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "c_42" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "33": {
+      "cmd": "Assume",
+      "rval": {
+        "OP": ">",
+        "arg1": { "Var": "n_0" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "32": {
+      "cmd": "assign",
+      "lval": { "Var": "c_32" },
+      "rval": { "Const": "0" }
+    },
+    "31": { "cmd": "TrueBranch" },
+    "30": { "cmd": "FalseBranch" },
+    "29": { "cmd": "TrueBranch" },
+    "28": { "cmd": "FalseBranch" },
+    "27": { "cmd": "TrueBranch" },
+    "26": { "cmd": "FalseBranch" },
+    "25": { "cmd": "TrueBranch" },
+    "24": { "cmd": "FalseBranch" },
+    "23": { "cmd": "TrueBranch" },
+    "22": { "cmd": "FalseBranch" },
+    "21": { "cmd": "SKIP" },
+    "18": {
+      "cmd": "if",
+      "rval": {
+        "OP": "!=",
+        "arg1": { "Var": "c_42" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "15": {
+      "cmd": "if",
+      "rval": {
+        "OP": "==",
+        "arg1": { "Var": "c_42" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "13": {
+      "cmd": "if",
+      "rval": {
+        "OP": ">",
+        "arg1": { "Var": "c_42" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "12": { "cmd": "if", "rval": { "UNK": "UNK_VAL" } },
+    "8": { "cmd": "if", "rval": { "UNK": "UNK_VAL" } },
+    "4": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "31", "38" ],
+    [ "29", "37" ],
+    [ "27", "36" ],
+    [ "25", "13" ],
+    [ "24", "15" ],
+    [ "23", "12" ],
+    [ "22", "21" ],
+    [ "22", "18" ],
+    [ "18", "31" ],
+    [ "18", "30" ],
+    [ "15", "29" ],
+    [ "15", "28" ],
+    [ "13", "27" ],
+    [ "13", "26" ],
+    [ "12", "25" ],
+    [ "12", "24" ],
+    [ "8", "23" ],
+    [ "8", "22" ],
+    [ "4", "42" ],
+    [ "4", "8" ],
+    [ "ENTRY", "33" ],
+    [ "ENTRY", "32" ],
+    [ "ENTRY", "4" ]
+  ]
+}

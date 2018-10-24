@@ -1,0 +1,91 @@
+{
+  "nodes": {
+    "29": {
+      "cmd": "Phi",
+      "lval": { "Var": "x_29" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "x_19" },
+        "arg1": { "Var": "x_21" }
+      }
+    },
+    "27": {
+      "cmd": "Phi",
+      "lval": { "Var": "sn_27" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "sn_18" },
+        "arg1": { "Var": "sn_22" }
+      }
+    },
+    "23": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": "==",
+        "arg1": { "Var": "sn_27" },
+        "arg2": { "Var": "x_29" }
+      }
+    },
+    "22": {
+      "cmd": "assign",
+      "lval": { "Var": "sn_22" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "sn_27" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "21": {
+      "cmd": "assign",
+      "lval": { "Var": "x_21" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "x_29" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "19": {
+      "cmd": "assign",
+      "lval": { "Var": "x_19" },
+      "rval": { "Const": "0" }
+    },
+    "18": {
+      "cmd": "assign",
+      "lval": { "Var": "sn_18" },
+      "rval": { "Const": "0" }
+    },
+    "17": { "cmd": "TrueBranch" },
+    "16": { "cmd": "FalseBranch" },
+    "15": { "cmd": "TrueBranch" },
+    "14": { "cmd": "FalseBranch" },
+    "13": { "cmd": "SKIP" },
+    "10": {
+      "cmd": "if",
+      "rval": {
+        "OP": "!=",
+        "arg1": { "Var": "sn_27" },
+        "arg2": { "Const": "-1" }
+      }
+    },
+    "6": { "cmd": "if", "rval": { "UNK": "UNK_VAL" } },
+    "2": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "17", "23" ],
+    [ "15", "22" ],
+    [ "15", "21" ],
+    [ "14", "13" ],
+    [ "14", "10" ],
+    [ "10", "17" ],
+    [ "10", "16" ],
+    [ "6", "15" ],
+    [ "6", "14" ],
+    [ "2", "29" ],
+    [ "2", "27" ],
+    [ "2", "6" ],
+    [ "ENTRY", "19" ],
+    [ "ENTRY", "18" ],
+    [ "ENTRY", "2" ]
+  ]
+}

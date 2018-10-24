@@ -1,0 +1,94 @@
+{
+  "nodes": {
+    "33": {
+      "cmd": "Phi",
+      "lval": { "Var": "c_33" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "c_24" },
+        "arg1": { "Var": "c_27" },
+        "arg2": { "Var": "c_28" }
+      }
+    },
+    "29": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "c_33" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "28": {
+      "cmd": "assign",
+      "lval": { "Var": "c_28" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "c_33" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "27": {
+      "cmd": "assign",
+      "lval": { "Var": "c_27" },
+      "rval": { "Const": "1" }
+    },
+    "25": {
+      "cmd": "Assume",
+      "rval": {
+        "OP": ">",
+        "arg1": { "Var": "n_0" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "24": {
+      "cmd": "assign",
+      "lval": { "Var": "c_24" },
+      "rval": { "Const": "0" }
+    },
+    "23": { "cmd": "TrueBranch" },
+    "22": { "cmd": "FalseBranch" },
+    "21": { "cmd": "TrueBranch" },
+    "20": { "cmd": "FalseBranch" },
+    "19": { "cmd": "TrueBranch" },
+    "18": { "cmd": "FalseBranch" },
+    "17": { "cmd": "SKIP" },
+    "14": {
+      "cmd": "if",
+      "rval": {
+        "OP": "==",
+        "arg1": { "Var": "c_33" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "10": {
+      "cmd": "if",
+      "rval": {
+        "OP": "==",
+        "arg1": { "Var": "c_33" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "8": { "cmd": "if", "rval": { "UNK": "UNK_VAL" } },
+    "4": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "23", "29" ],
+    [ "21", "27" ],
+    [ "20", "28" ],
+    [ "19", "10" ],
+    [ "18", "17" ],
+    [ "18", "14" ],
+    [ "14", "23" ],
+    [ "14", "22" ],
+    [ "10", "21" ],
+    [ "10", "20" ],
+    [ "8", "19" ],
+    [ "8", "18" ],
+    [ "4", "33" ],
+    [ "4", "8" ],
+    [ "ENTRY", "25" ],
+    [ "ENTRY", "24" ],
+    [ "ENTRY", "4" ]
+  ]
+}

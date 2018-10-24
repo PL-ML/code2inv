@@ -1,0 +1,83 @@
+{
+  "nodes": {
+    "22": {
+      "cmd": "Phi",
+      "lval": { "Var": "j_22" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "j_14" },
+        "arg1": { "Var": "j_16" }
+      }
+    },
+    "21": {
+      "cmd": "Phi",
+      "lval": { "Var": "i_21" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "i_13" },
+        "arg1": { "Var": "i_15" }
+      }
+    },
+    "17": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": "==",
+        "arg1": { "Var": "j_22" },
+        "arg2": { "Const": "6" }
+      }
+    },
+    "16": {
+      "cmd": "assign",
+      "lval": { "Var": "j_16" },
+      "rval": {
+        "OP": "-",
+        "arg1": { "Var": "j_22" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "15": {
+      "cmd": "assign",
+      "lval": { "Var": "i_15" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "i_21" },
+        "arg2": { "Const": "2" }
+      }
+    },
+    "14": {
+      "cmd": "assign",
+      "lval": { "Var": "j_14" },
+      "rval": { "Const": "10" }
+    },
+    "13": {
+      "cmd": "assign",
+      "lval": { "Var": "i_13" },
+      "rval": { "Const": "1" }
+    },
+    "12": { "cmd": "TrueBranch" },
+    "11": { "cmd": "FalseBranch" },
+    "4": {
+      "cmd": "if",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "j_22" },
+        "arg2": { "Var": "i_21" }
+      }
+    },
+    "2": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "12", "16" ],
+    [ "12", "15" ],
+    [ "11", "17" ],
+    [ "4", "12" ],
+    [ "4", "11" ],
+    [ "2", "22" ],
+    [ "2", "21" ],
+    [ "2", "4" ],
+    [ "ENTRY", "14" ],
+    [ "ENTRY", "13" ],
+    [ "ENTRY", "2" ]
+  ]
+}

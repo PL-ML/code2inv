@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "22": {
+      "cmd": "Phi",
+      "lval": { "Var": "x_22" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "x_15" },
+        "arg1": { "Var": "x_17" }
+      }
+    },
+    "18": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": "==",
+        "arg1": { "Var": "x_22" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "17": {
+      "cmd": "assign",
+      "lval": { "Var": "x_17" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "x_22" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "16": {
+      "cmd": "Assume",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "n_0" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "15": {
+      "cmd": "assign",
+      "lval": { "Var": "x_15" },
+      "rval": { "Const": "0" }
+    },
+    "14": { "cmd": "TrueBranch" },
+    "13": { "cmd": "FalseBranch" },
+    "6": {
+      "cmd": "if",
+      "rval": {
+        "OP": "<",
+        "arg1": { "Var": "x_22" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "4": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "14", "17" ],
+    [ "13", "18" ],
+    [ "6", "14" ],
+    [ "6", "13" ],
+    [ "4", "22" ],
+    [ "4", "6" ],
+    [ "ENTRY", "16" ],
+    [ "ENTRY", "15" ],
+    [ "ENTRY", "4" ]
+  ]
+}

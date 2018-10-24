@@ -1,0 +1,128 @@
+{
+  "nodes": {
+    "38": {
+      "cmd": "Phi",
+      "lval": { "Var": "z_38" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "z_28" },
+        "arg1": { "Var": "z_30" },
+        "arg2": { "Var": "z_38" }
+      }
+    },
+    "36": {
+      "cmd": "Phi",
+      "lval": { "Var": "c_36" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "c_25" },
+        "arg1": { "Var": "c_31" },
+        "arg2": { "Var": "c_36" }
+      }
+    },
+    "32": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "z_38" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "31": {
+      "cmd": "assign",
+      "lval": { "Var": "c_31" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "c_36" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "30": {
+      "cmd": "assign",
+      "lval": { "Var": "z_30" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "z_38" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "28": {
+      "cmd": "assign",
+      "lval": { "Var": "z_28" },
+      "rval": {
+        "OP": "*",
+        "arg1": { "Const": "36" },
+        "arg2": { "Var": "y_0" }
+      }
+    },
+    "27": {
+      "cmd": "Assume",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "y_0" },
+        "arg2": { "Const": "127" }
+      }
+    },
+    "26": {
+      "cmd": "Assume",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "y_0" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "25": {
+      "cmd": "assign",
+      "lval": { "Var": "c_25" },
+      "rval": { "Const": "0" }
+    },
+    "24": { "cmd": "TrueBranch" },
+    "23": { "cmd": "FalseBranch" },
+    "22": { "cmd": "TrueBranch" },
+    "21": { "cmd": "FalseBranch" },
+    "20": { "cmd": "TrueBranch" },
+    "19": { "cmd": "FalseBranch" },
+    "18": { "cmd": "SKIP" },
+    "15": {
+      "cmd": "if",
+      "rval": {
+        "OP": "<",
+        "arg1": { "Var": "c_36" },
+        "arg2": { "Const": "36" }
+      }
+    },
+    "12": {
+      "cmd": "if",
+      "rval": {
+        "OP": "<",
+        "arg1": { "Var": "c_36" },
+        "arg2": { "Const": "36" }
+      }
+    },
+    "10": { "cmd": "if", "rval": { "UNK": "UNK_VAL" } },
+    "6": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "24", "32" ],
+    [ "22", "31" ],
+    [ "22", "30" ],
+    [ "20", "12" ],
+    [ "19", "18" ],
+    [ "19", "15" ],
+    [ "15", "24" ],
+    [ "15", "23" ],
+    [ "12", "22" ],
+    [ "12", "21" ],
+    [ "10", "20" ],
+    [ "10", "19" ],
+    [ "6", "38" ],
+    [ "6", "36" ],
+    [ "6", "10" ],
+    [ "ENTRY", "28" ],
+    [ "ENTRY", "27" ],
+    [ "ENTRY", "26" ],
+    [ "ENTRY", "25" ],
+    [ "ENTRY", "6" ]
+  ]
+}

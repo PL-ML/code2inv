@@ -1,0 +1,113 @@
+{
+  "nodes": {
+    "28": {
+      "cmd": "Phi",
+      "lval": { "Var": "j_28" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "j_20" },
+        "arg1": { "Var": "j_22" }
+      }
+    },
+    "27": {
+      "cmd": "Phi",
+      "lval": { "Var": "i_27" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "i_19" },
+        "arg1": { "Var": "i_21" }
+      }
+    },
+    "23": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": ">",
+        "arg1": {
+          "OP": "+",
+          "arg1": { "Var": "i_27" },
+          "arg2": {
+            "OP": "+",
+            "arg1": { "Var": "j_28" },
+            "arg2": { "Var": "k_0" }
+          }
+        },
+        "arg2": {
+          "OP": "*",
+          "arg1": { "Const": "2" },
+          "arg2": { "Var": "n_0" }
+        }
+      }
+    },
+    "22": {
+      "cmd": "assign",
+      "lval": { "Var": "j_22" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "j_28" },
+        "arg2": { "Var": "i_21" }
+      }
+    },
+    "21": {
+      "cmd": "assign",
+      "lval": { "Var": "i_21" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "i_27" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "20": {
+      "cmd": "assign",
+      "lval": { "Var": "j_20" },
+      "rval": { "Const": "0" }
+    },
+    "19": {
+      "cmd": "assign",
+      "lval": { "Var": "i_19" },
+      "rval": { "Const": "0" }
+    },
+    "18": {
+      "cmd": "Assume",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "n_0" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "17": {
+      "cmd": "Assume",
+      "rval": {
+        "OP": ">=",
+        "arg1": { "Var": "k_0" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "16": { "cmd": "TrueBranch" },
+    "15": { "cmd": "FalseBranch" },
+    "8": {
+      "cmd": "if",
+      "rval": {
+        "OP": "<=",
+        "arg1": { "Var": "i_27" },
+        "arg2": { "Var": "n_0" }
+      }
+    },
+    "6": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "16", "22" ],
+    [ "16", "21" ],
+    [ "15", "23" ],
+    [ "8", "16" ],
+    [ "8", "15" ],
+    [ "6", "28" ],
+    [ "6", "27" ],
+    [ "6", "8" ],
+    [ "ENTRY", "20" ],
+    [ "ENTRY", "19" ],
+    [ "ENTRY", "18" ],
+    [ "ENTRY", "17" ],
+    [ "ENTRY", "6" ]
+  ]
+}

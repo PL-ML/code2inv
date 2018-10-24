@@ -1,0 +1,77 @@
+{
+  "nodes": {
+    "21": {
+      "cmd": "Phi",
+      "lval": { "Var": "y_21" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "y_0" },
+        "arg1": { "Var": "y_15" }
+      }
+    },
+    "20": {
+      "cmd": "Phi",
+      "lval": { "Var": "x_20" },
+      "rval": {
+        "OP": "phi_merge",
+        "arg0": { "Var": "x_13" },
+        "arg1": { "Var": "x_14" }
+      }
+    },
+    "16": {
+      "cmd": "Assert",
+      "rval": {
+        "OP": ">",
+        "arg1": { "Var": "y_21" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "15": {
+      "cmd": "assign",
+      "lval": { "Var": "y_15" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "y_21" },
+        "arg2": { "Const": "1" }
+      }
+    },
+    "14": {
+      "cmd": "assign",
+      "lval": { "Var": "x_14" },
+      "rval": {
+        "OP": "+",
+        "arg1": { "Var": "x_20" },
+        "arg2": { "Var": "y_21" }
+      }
+    },
+    "13": {
+      "cmd": "assign",
+      "lval": { "Var": "x_13" },
+      "rval": { "Const": "-50" }
+    },
+    "12": { "cmd": "TrueBranch" },
+    "11": { "cmd": "FalseBranch" },
+    "4": {
+      "cmd": "if",
+      "rval": {
+        "OP": "<",
+        "arg1": { "Var": "x_20" },
+        "arg2": { "Const": "0" }
+      }
+    },
+    "2": { "cmd": "Loop" },
+    "ENTRY": { "cmd": "SKIP" }
+  },
+  "control-flow": [
+    [ "12", "15" ],
+    [ "12", "14" ],
+    [ "11", "16" ],
+    [ "4", "12" ],
+    [ "4", "11" ],
+    [ "2", "21" ],
+    [ "2", "20" ],
+    [ "2", "4" ],
+    [ "ENTRY", "13" ],
+    [ "ENTRY", "2" ]
+  ]
+}

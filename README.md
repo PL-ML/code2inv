@@ -20,4 +20,41 @@ Frontend is used to extract program graphs and verifcation conditions from C pro
 
 
 # Experiments
-TODO
+
+## Package Install
+
+Install the dev version of this package:
+
+```pip install -e .```
+
+## Run as out-of-the-box solver:
+
+```cd code2inv/prog_generator```, then directly run the script ```./run_solver.sh```
+
+To modify the script ```run_solver.sh```:
+
+1. Set ```data_folder``` option to the code folder that contains folders: ```graph/``` and ```smt2/``` which are created by the front-end pre-processor
+2. Set ```file_list``` option to the file that contains a list of code names. See ```code2inv/benchmarks/names.txt``` as an example.
+3. Set ```single_sample``` to be the index of code where you want to find the loopinv for.
+4. Adjust other parameters if necessary. Make sure to change the parameters like ```max_and, max_or, max_depth, list_op``` to make sure the loopinv space is large enough (but not too large).
+
+## Run by pretraining and fine-tuning:
+
+### Pretraining: 
+
+```cd code2inv/prog_generator```
+The do:
+```./pretraining.sh ${dataset} ${prog_idx} ${agg_check}```
+where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denotes whether more aggressive checker should be used. 
+
+### fine-tuning:
+```cd code2inv/prog_generator```
+The do:
+```./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch}```
+where the last argument ```init_epoch``` stands for the model dump of corresponding epoch. 
+
+
+
+
+
+

@@ -23,13 +23,13 @@ The frontend is used to extract program graphs and verification conditions (VCs)
 
 # Experiments
 
-## Package Install
+## Package Installation
 
 Install the dev version of this package:
 
 ```pip install -e .```
 
-## Run as out-of-the-box solver:
+## Running as an out-of-the-box solver
 
 ```cd code2inv/prog_generator```, then directly run the script ```./run_solver.sh```
 
@@ -40,7 +40,7 @@ To modify the script ```run_solver.sh```:
 3. Set the ```single_sample``` option to be the index of code where you want to find the loopinv for.
 4. Adjust other parameters if necessary. Make sure to change parameters like ```max_and, max_or, max_depth, list_op``` to make sure the loopinv space is large enough (but not too large).
 
-## Run by pretraining and fine-tuning:
+## Running with pretraining and fine-tuning
 
 ### Pretraining: 
 
@@ -49,7 +49,7 @@ Then run:
 ```./pretraining.sh ${dataset} ${prog_idx} ${agg_check}```
 where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denoting whether more aggressive checker should be used. 
 
-### fine-tuning:
+### Fine-tuning:
 ```cd code2inv/prog_generator```
 Then run:
 ```./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch}```

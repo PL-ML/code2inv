@@ -1,4 +1,5 @@
 
+This clang-fe branch uses Clang compiler as the front-end, which is still under development by [Aaditya Naik](https://github.com/aadityanaik).
 
 # Environment Setup
 

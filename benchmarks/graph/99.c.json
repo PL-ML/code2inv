@@ -1,96 +1,155 @@
 {
-  "nodes": {
-    "26": {
-      "cmd": "Phi",
-      "lval": { "Var": "y_26" },
-      "rval": {
-        "OP": "phi_merge",
-        "arg0": { "Var": "y_18" },
-        "arg1": { "Var": "y_19" }
-      }
-    },
-    "25": {
-      "cmd": "Phi",
-      "lval": { "Var": "x_25" },
-      "rval": {
-        "OP": "phi_merge",
-        "arg0": { "Var": "x_17" },
-        "arg1": { "Var": "x_20" }
-      }
-    },
-    "21": {
-      "cmd": "Assert",
-      "rval": {
-        "OP": "==",
-        "arg1": { "Var": "n_0" },
-        "arg2": {
-          "OP": "+",
-          "arg1": { "Var": "x_25" },
-          "arg2": { "Var": "y_26" }
-        }
-      }
-    },
-    "20": {
-      "cmd": "assign",
-      "lval": { "Var": "x_20" },
-      "rval": {
-        "OP": "-",
-        "arg1": { "Var": "x_25" },
-        "arg2": { "Const": "1" }
-      }
-    },
-    "19": {
-      "cmd": "assign",
-      "lval": { "Var": "y_19" },
-      "rval": {
-        "OP": "+",
-        "arg1": { "Var": "y_26" },
-        "arg2": { "Const": "1" }
-      }
-    },
-    "18": {
-      "cmd": "assign",
-      "lval": { "Var": "y_18" },
-      "rval": { "Const": "0" }
-    },
-    "17": {
-      "cmd": "assign",
-      "lval": { "Var": "x_17" },
-      "rval": { "Var": "n_0" }
-    },
-    "16": {
-      "cmd": "Assume",
-      "rval": {
-        "OP": ">=",
-        "arg1": { "Var": "n_0" },
-        "arg2": { "Const": "0" }
-      }
-    },
-    "15": { "cmd": "TrueBranch" },
-    "14": { "cmd": "FalseBranch" },
-    "7": {
-      "cmd": "if",
-      "rval": {
-        "OP": ">",
-        "arg1": { "Var": "x_25" },
-        "arg2": { "Const": "0" }
-      }
-    },
-    "5": { "cmd": "Loop" },
-    "ENTRY": { "cmd": "SKIP" }
-  },
-  "control-flow": [
-    [ "15", "20" ],
-    [ "15", "19" ],
-    [ "14", "21" ],
-    [ "7", "15" ],
-    [ "7", "14" ],
-    [ "5", "26" ],
-    [ "5", "25" ],
-    [ "5", "7" ],
-    [ "ENTRY", "18" ],
-    [ "ENTRY", "17" ],
-    [ "ENTRY", "16" ],
-    [ "ENTRY", "5" ]
-  ]
+	"nodes": {
+		"4_4": {
+			"cmd": "if",
+			"rval": {
+				"OP": ">",
+				"arg0": {
+					"Var": "x_2"
+				},
+				"arg1": {
+					"Const": "0"
+				}
+			}
+		},
+		"4_1": {
+			"cmd": "Loop"
+		},
+		"4_2": {
+			"cmd": "Phi",
+			"lval": {
+				"Var": "x_2"
+			},
+			"rval": {
+				"OP": "phi_merge",
+				"arg0": {
+					"Var": "x_1"
+				},
+				"arg1": {
+					"Var": "x_3"
+				}
+			}
+		},
+		"4_3": {
+			"cmd": "Phi",
+			"lval": {
+				"Var": "y_2"
+			},
+			"rval": {
+				"OP": "phi_merge",
+				"arg0": {
+					"Var": "y_1"
+				},
+				"arg1": {
+					"Var": "y_3"
+				}
+			}
+		},
+		"1_1": {
+			"cmd": "Assert",
+			"rval": {
+				"OP": "==",
+				"arg0": {
+					"Var": "n_0"
+				},
+				"arg1": {
+					"OP": "+",
+					"arg0": {
+						"Var": "x_2"
+					},
+					"arg1": {
+						"Var": "y_2"
+					}
+				}
+			}
+		},
+		"EXIT": {
+			"cmd": "SKIP"
+		},
+		"4_5": {
+			"cmd": "TrueBranch"
+		},
+		"4_6": {
+			"cmd": "FalseBranch"
+		},
+		"3_1": {
+			"cmd": "assign",
+			"lval": {
+				"Var": "y_3"
+			},
+			"rval": {
+				"OP": "+",
+				"arg0": {
+					"Var": "y_2"
+				},
+				"arg1": {
+					"Const": "1"
+				}
+			}
+		},
+		"5_2": {
+			"cmd": "assign",
+			"lval": {
+				"Var": "x_1"
+			},
+			"rval": {
+				"Var": "n_0"
+			}
+		},
+		"3_2": {
+			"cmd": "assign",
+			"lval": {
+				"Var": "x_3"
+			},
+			"rval": {
+				"OP": "-",
+				"arg0": {
+					"Var": "x_2"
+				},
+				"arg1": {
+					"Const": "1"
+				}
+			}
+		},
+		"5_3": {
+			"cmd": "assign",
+			"lval": {
+				"Var": "y_1"
+			},
+			"rval": {
+				"Const": "0"
+			}
+		},
+		"ENTRY": {
+			"cmd": "SKIP"
+		},
+		"5_1": {
+			"cmd": "Assume",
+			"rval": {
+				"OP": ">=",
+				"arg0": {
+					"Var": "n_0"
+				},
+				"arg1": {
+					"Const": "0"
+				}
+			}
+		}
+	},
+	"control-flow": [
+		[ "1_1", "EXIT" ],
+		[ "3_1", "3_2" ],
+		[ "3_2", "4_1" ],
+		[ "4_1", "4_2" ],
+		[ "4_2", "4_3" ],
+		[ "4_3", "4_4" ],
+		[ "4_4", "4_5" ],
+		[ "4_4", "4_6" ],
+		[ "4_5", "3_1" ],
+		[ "4_6", "1_1" ],
+		[ "5_1", "5_2" ],
+		[ "5_2", "5_3" ],
+		[ "5_3", "4_1" ],
+		[ "ENTRY", "5_1" ]
+	]
 }

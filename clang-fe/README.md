@@ -1,16 +1,10 @@
 # clang-fe
+
 A front end to code2inv responsible for transforming code into its SSA form using Clang.
+
 # Installation
-First get the dependencies
-<ul>
-    <li> LLVM </li>
-    <li> The Clang API</li>
-</ul>
-Get them at https://clang.llvm.org
 
-Then run `make` while inside the ssa-transform directory. This should make an executable named ssa-transform.
-
-You may need to edit the include variables of make if llvm-config does not include the clang include directory or produces linker errors.
+Refer [INSTALL.md](INSTALL.md)
 
 # Run the executable
 
@@ -24,5 +18,5 @@ Clang-fe has only been tested on the programs under the tests directory, taken f
 # Known Issues
 <ul>
     <li> The program crashes if a non-existent file is passed as the argument.</li>
-    <li> The program crashes if undefined keywords are used (for eg. using the assert keyword without including assert.h) </li>
+    <li> The program simply ignores any errors it encounters in the C code. </li>
 </ul>

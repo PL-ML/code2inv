@@ -1,8 +1,8 @@
 from __future__ import print_function
 from subprocess import check_output
-from constants import AC_CODE, INVALID_CODE, ENTRY_FAIL_CODE, INDUCTIVE_FAIL_CODE, POST_FAIL_CODE, ALWAYS_TRUE_EXPR_CODE, ALWAYS_FALSE_EXPR_CODE, NORMAL_EXPR_CODE
+from code2inv.common.constants import AC_CODE, INVALID_CODE, ENTRY_FAIL_CODE, INDUCTIVE_FAIL_CODE, POST_FAIL_CODE, ALWAYS_TRUE_EXPR_CODE, ALWAYS_FALSE_EXPR_CODE, NORMAL_EXPR_CODE
 
-from cmd_args import cmd_args, toc
+from code2inv.common.cmd_args import cmd_args, toc
 from collections import Counter
 import z3
 import sys

@@ -17,7 +17,7 @@ from code2inv.common.ssa_graph_builder import ProgramGraph
 from code2inv.common.constants import NUM_EDGE_TYPES
 from code2inv.common.cmd_args import cmd_args
 from code2inv.common.pytorch_util import weights_init, gnn_spmm, get_torch_version
-from s2v_lib import S2VLIB, S2VGraph
+from code2inv.graph_encoder.s2v_lib import S2VLIB, S2VGraph
 
 class LSTMEmbed(nn.Module):
     def __init__(self, latent_dim, num_node_feats):

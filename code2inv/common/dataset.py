@@ -4,9 +4,9 @@ import os
 import random
 import numpy as np
 
-from cmd_args import cmd_args
-from ssa_graph_builder import ProgramGraph
-from seq_graph_builder import SeqTokenGraph
+from code2inv.common.cmd_args import cmd_args
+from code2inv.common.ssa_graph_builder import ProgramGraph
+from code2inv.common.seq_graph_builder import SeqTokenGraph
 import gzip
 import pickle
 

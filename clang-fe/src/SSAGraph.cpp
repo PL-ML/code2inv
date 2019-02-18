@@ -34,7 +34,7 @@ namespace ssa_transform {
         llvm::errs() << id << "\n";
         llvm::errs() << cmdName << "\n";
 
-        if (cmdName == "Assert" || cmdName == "func_call") {
+        if (cmdName == "Assert" || cmdName == "Assume" || cmdName == "func_call") {
             for (auto &arg : args) {
                 arg->print("\t");
             }
@@ -67,12 +67,12 @@ namespace ssa_transform {
             outStream << indent << "\t\"rval\": {\n";
             rightChild->printAsJSON(indent + "\t\t", outStream);
             outStream << indent << "\t}";
-        } else if (!args.empty() && cmdName == "Assert") {
+        } else if (!args.empty() && (cmdName == "Assert" || cmdName == "Assume")) {
             outStream << ",\n";
             outStream << indent << "\t\"rval\": {\n";
             args[0]->printAsJSON(indent + "\t\t", outStream);
             outStream << indent << "\t}";
-        } else if (!args.empty() && cmdName == "func_call") {
+        } else if (!args.empty() && (cmdName == "func_call" || cmdName == "UNK")) {
             outStream << ",\n";
             outStream << indent << "\t\"rval\": {\n";
             int i;
@@ -221,5 +221,7 @@ namespace ssa_transform {
         }
     }
 
+    SSAGraph SSAGraph::simplify() {
 
+    }
 }

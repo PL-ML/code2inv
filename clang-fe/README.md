@@ -13,6 +13,7 @@ Then run `make` while inside the ssa-transform directory. This should make an ex
 You may need to edit the include variables of make if llvm-config does not include the clang include directory or produces linker errors.
 
 # Run the executable
+
 To run any of the test codes inside the tests directory, cd into tests/ and run `../bin/ssa-transform filename.c`. This will produce a json file of the same name with the ssa graph in it. To run all tests, run `make tests` (for no debug output) or `make test-debug` for debug output (which includes the CFG, Dominator Tree and the SSA Graph).
 
 # Notes

@@ -75,6 +75,13 @@ int main(int argc, const char **argv) {
 
             llvm::errs() << "Rewritten code is\n\n" << newContent << "\n";
 
+
+            /**
+             * @todo Merge the following two passes into one pass, so that the entire structure becomes a one pass structure
+             */
+
+
+
             // SECOND PASS- GETTING THE NECESSARY DATA STRUCTURES
             std::map<clang::SourceLocation, std::string> resVarReplacementMap;
             std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>> phiPlacementMap;
@@ -83,9 +90,10 @@ int main(int argc, const char **argv) {
             mainClassAction->setPhiPlaceMap(phiPlacementMap);
             clang::tooling::runToolOnCode(mainClassAction, newContent);
 
-            // llvm::errs() << "Out of tool\n";
-
             /*
+            llvm::errs() << "Out of tool\n";
+
+
             for(auto x : phiPlacementMap) {
                 llvm::errs() << "block " << x.first << "\n";
                 for(auto var : x.second) {
@@ -96,11 +104,14 @@ int main(int argc, const char **argv) {
 
                     llvm::errs() << "\n";
                 }
-            }
-            */
+            }*/
+
+
 
             // THIRD PASS- MAKING THE SSA GRAPH
             clang::tooling::runToolOnCode(new SSAWriterFrontAction(resVarReplacementMap, phiPlacementMap, argv[i]), newContent);
+
+
         }
     }
 

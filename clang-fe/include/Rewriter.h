@@ -10,6 +10,7 @@
 #include "clang/Rewrite/Core/Rewriter.h"
 #include "clang/Rewrite/Frontend/Rewriters.h"
 #include "clang/Lex/Lexer.h"
+#include "clang/Basic/Diagnostic.h"
 
 namespace ssa_transform {
 
@@ -53,6 +54,11 @@ namespace ssa_transform {
             if(d->isMain()) {
                 numCond = 0;
                 beginMain = (*d->getBody()->child_begin())->getBeginLoc();
+                rewriter.InsertText(d->getBeginLoc(), "void assert(int cond);\nvoid assume(int cond);\nint unknown();\n");
+                // (context->getDiagnostics()).dump();
+
+
+
                 // d->dump();
             }
 

@@ -97,7 +97,7 @@ namespace ssa_transform {
             // mapping the block ids to the phi functions instead of the CFGBlocks themselves
             // this is because if we map CFGBlock* to the functions, when the pass is complete, the CFGBlock* addresses
             // are no longer valid
-            for(auto pair : phiPlacements) {
+            for(const auto &pair : phiPlacements) {
                 blockPhiFuncMap[pair.first->getBlockID()] = pair.second;
             }
         }
@@ -251,6 +251,7 @@ namespace ssa_transform {
             // we replace only pair.second[0] with the appropriate value now
 
             int i = C[pair.first];
+            // pair.second.push_back(pair.first + "_" + std::to_string(i));
             pair.second[0] = pair.first + "_" + std::to_string(i);
             S[pair.first].push(i);
             C[pair.first] = i + 1;
@@ -305,7 +306,12 @@ namespace ssa_transform {
                         i = S[phiFunc.first].top();
                     }
                     // llvm::errs() << i << "\n";
-                    phiFunc.second[j + 1] = phiFunc.first + "_" + std::to_string(i);
+                    if(std::find(phiFunc.second.begin(), phiFunc.second.end(), phiFunc.first + "_" + std::to_string(i))
+                        == phiFunc.second.end()) {
+
+                        phiFunc.second[j + 1] = phiFunc.first + "_" + std::to_string(i);
+                        // phiFunc.second.push_back(phiFunc.first + "_" + std::to_string(i));
+                    }
                     /*
                     llvm::errs() << "Added variable " << phiFunc.first + "_" + std::to_string(i)
                                  << " to the phi function to " << phiFunc.second[0] << " in block "

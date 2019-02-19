@@ -89,6 +89,12 @@ namespace ssa_transform {
          */
         void clean();
 
+        /**
+         * A function to simplify the control flow of the SSA Graph in accordance to the simplification provided by Sparrow
+         * @return simplified SSA Graph
+         */
+        SSAGraph simplify();
+
         void setExitNodeAltID(std::string id) {
             altExitId = std::move(id);
         }

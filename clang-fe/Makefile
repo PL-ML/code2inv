@@ -1,10 +1,10 @@
-CPPFLAGS=-Iinclude $(shell llvm-config --cxxflags) -ggdb
+CPPFLAGS=-Iinclude $(shell llvm-config-7 --cxxflags) -ggdb
 
 CLANGLIBS=-lclangTooling -lclangFrontendTool -lclangFrontend -lclangDriver -lclangSerialization -lclangCodeGen -lclangParse -lclangSema -lclangStaticAnalyzerFrontend -lclangStaticAnalyzerCheckers -lclangStaticAnalyzerCore -lclangAnalysis -lclangARCMigrate -lclangRewrite -lclangRewriteFrontend -lclangEdit -lclangAST -lclangLex -lclangBasic -lclang
 
-LDFLAGS=$(shell llvm-config --ldflags --system-libs --libs core native engine) $(CLANGLIBS)
+LDFLAGS=$(shell llvm-config-7 --ldflags --system-libs --libs core native engine) $(CLANGLIBS)
 
-CC=g++
+CC=clang++-7
 
 .PHONY: all tests clean
 

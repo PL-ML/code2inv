@@ -33,7 +33,7 @@ namespace ssa_transform {
             ssaGraph.clean();
             ssaGraph.print();
 
-            std::string jsonFileName = srcFile.substr(0, srcFile.length() - 1) + "json";
+            std::string jsonFileName = srcFile + ".json";
 
             std::ofstream outputFileStream(jsonFileName);
             if(outputFileStream.is_open()) {
@@ -57,7 +57,7 @@ namespace ssa_transform {
             auto ref = llvm::dyn_cast<DeclRefExpr>(e);
             SourceLocation srcLoc = ref->getBeginLoc();
             subNode->parent = varReplacementMap[srcLoc];
-            subNode->type = "VAR";
+            subNode->type = "Var";
         } else if(llvm::isa<CallExpr>(e)) {
             auto callExpr = llvm::dyn_cast<CallExpr>(e);
 
@@ -65,21 +65,26 @@ namespace ssa_transform {
             if(llvm::isa<DeclRefExpr>(functnDeclExpr)) {
                 auto ref = llvm::dyn_cast<DeclRefExpr>(functnDeclExpr);
                 subNode->parent = ref->getDecl()->getName();
-                subNode->type = "func_call";
-                auto args = callExpr->getArgs();
-                for(unsigned int i = 0; i < callExpr->getNumArgs(); i++) {
-                    subNode->args.push_back(getSubSSANode(args[i]->IgnoreCasts()->IgnoreParens()));
+                if(subNode->parent == "unknown") {
+                    subNode->type = "UNK";
+                    subNode->parent = "UNK_VAL";
+                } else {
+                    subNode->type = "func_call";
+                    auto args = callExpr->getArgs();
+                    for (unsigned int i = 0; i < callExpr->getNumArgs(); i++) {
+                        subNode->args.push_back(getSubSSANode(args[i]->IgnoreCasts()->IgnoreParens()));
+                    }
                 }
             }
 
         } else if(llvm::isa<IntegerLiteral>(e)) {
             auto Int = llvm::dyn_cast<IntegerLiteral>(e);
             subNode->parent = Int->getValue().toString(10, true);
-            subNode->type = "CONST";
+            subNode->type = "Const";
         } else if(llvm::isa<FloatingLiteral>(e)) {
             auto Float = llvm::dyn_cast<FloatingLiteral>(e);
             subNode->parent = std::to_string(Float->getValueAsApproximateDouble());
-            subNode->type = "CONST";
+            subNode->type = "Const";
         } else if(llvm::isa<BinaryOperator>(e)) {
             auto binOp = llvm::dyn_cast<BinaryOperator>(e);
             subNode->parent = binOp->getOpcodeStr();
@@ -91,6 +96,12 @@ namespace ssa_transform {
             subNode->parent = clang::UnaryOperator::getOpcodeStr(unop->getOpcode());
             subNode->type = "OP";
             subNode->args.push_back(getSubSSANode(unop->getSubExpr()->IgnoreCasts()->IgnoreParens()));
+
+            if(subNode->args[0]->type == "Const" && (subNode->parent == "+" || subNode->parent == "-")) {
+                subNode->type = "Const";
+                subNode->parent = subNode->parent + subNode->args[0]->parent;
+                subNode->args.pop_back();
+            }
         }
         return subNode;
     }
@@ -151,6 +162,8 @@ namespace ssa_transform {
                 if(ssaNode->cmd.find("assert") != std::string::npos) {
                     // is an assert function
                     ssaNode->cmdName = "Assert";
+                } else if(ssaNode->cmd.find("assume") != std::string::npos) {
+                    ssaNode->cmdName = "Assume";
                 } else {
                     ssaNode->cmdName = "func_call";
                 }
@@ -184,7 +197,7 @@ namespace ssa_transform {
                     ssaNode->leftChild = llvm::make_unique<SSASubNode>();
                     auto loc = varDecl->getLocation();
                     ssaNode->leftChild->parent = varReplacementMap[loc];
-                    ssaNode->leftChild->type = "var";
+                    ssaNode->leftChild->type = "Var";
                     ssaNode->rightChild = getSubSSANode(varDecl->getInit()->IgnoreCasts()->IgnoreParens());
                 }
             }
@@ -276,16 +289,18 @@ namespace ssa_transform {
 
         phiNode->leftChild = llvm::make_unique<SSASubNode>();
         phiNode->leftChild->parent = function[0];
-        phiNode->leftChild->type = "VAR";
+        phiNode->leftChild->type = "Var";
 
         phiNode->rightChild = llvm::make_unique<SSASubNode>();
         phiNode->rightChild->parent = "phi_merge";
         phiNode->rightChild->type = "OP";
         for(auto iter = function.begin() + 1; iter != function.end(); iter++) {
-            auto arg = llvm::make_unique<SSASubNode>();
-            arg->parent = *iter;
-            arg->type = "VAR";
-            phiNode->rightChild->args.push_back(std::move(arg));
+            if(!(*iter).empty()) {
+                auto arg = llvm::make_unique<SSASubNode>();
+                arg->parent = *iter;
+                arg->type = "Var";
+                phiNode->rightChild->args.push_back(std::move(arg));
+            }
         }
 
         return phiNode;

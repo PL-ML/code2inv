@@ -17,7 +17,7 @@ ALWAYS_TRUE_EXPR_CODE = 3
 ALWAYS_FALSE_EXPR_CODE = 4
 NORMAL_EXPR_CODE = 5
 
-from cmd_args import cmd_args
+from code2inv.common.cmd_args import cmd_args
 
 LIST_PREDICATES = [w for w in cmd_args.list_pred.split(',')]
 LIST_OP = [w for w in cmd_args.list_op.split(',')]

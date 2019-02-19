@@ -1,12 +1,12 @@
 import json
 import sys
 
-from cmd_args import cmd_args
-from constants import AST_EDGE_TYPE, CONTROL_EDGE_TYPE, VAR_LINK_TYPE
-from checker import z3_check_implication
+from code2inv.common.cmd_args import cmd_args
+from code2inv.common.constants import AST_EDGE_TYPE, CONTROL_EDGE_TYPE, VAR_LINK_TYPE
+from code2inv.common.checker import z3_check_implication
 
 
-from ssa_graph_builder import GraphNode
+from code2inv.common.ssa_graph_builder import GraphNode
 
 
 class SeqTokenGraph(object):

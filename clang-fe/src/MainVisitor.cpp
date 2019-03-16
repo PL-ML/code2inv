@@ -154,7 +154,7 @@ namespace ssa_transform {
             for (auto iter = declSt->decl_begin(); iter != declSt->decl_end(); iter++) {
                 auto varDecl = llvm::dyn_cast<VarDecl>(*iter);
                 std::string varName = varDecl->getDeclName().getAsString();
-                variables.insert(varName);
+                variables[varName] = std::set<std::string>();
                 // llvm::errs() << varName << "\n";
 
                 // causes segfault when more than one vardecl in one stmt since for some reason cm->getBlock(stmt) gives 0x0
@@ -253,6 +253,7 @@ namespace ssa_transform {
             int i = C[pair.first];
             // pair.second.push_back(pair.first + "_" + std::to_string(i));
             pair.second[0] = pair.first + "_" + std::to_string(i);
+            variables[pair.first].insert(pair.first + "_" + std::to_string(i));
             S[pair.first].push(i);
             C[pair.first] = i + 1;
         }
@@ -270,6 +271,7 @@ namespace ssa_transform {
                              << " by " << varInfo.var << "_" << i << "\n";
                 */
                 varReplacementMap[varInfo.begin] = varInfo.var + "_" + std::to_string(i);
+                variables[varInfo.var].insert(varInfo.var + "_" + std::to_string(i));
                 S[varInfo.var].push(i);
                 C[varInfo.var] = i + 1;
             } else {
@@ -280,6 +282,7 @@ namespace ssa_transform {
                              << " by " << varInfo.var << "_" << i << "\n";
                 */
                 varReplacementMap[varInfo.begin] = varInfo.var + "_" + std::to_string(i);
+                variables[varInfo.var].insert(varInfo.var + "_" + std::to_string(i));
             }
         }
 
@@ -310,6 +313,7 @@ namespace ssa_transform {
                         == phiFunc.second.end()) {
 
                         phiFunc.second[j + 1] = phiFunc.first + "_" + std::to_string(i);
+                        variables[phiFunc.first].insert(phiFunc.first + "_" + std::to_string(i));
                         // phiFunc.second.push_back(phiFunc.first + "_" + std::to_string(i));
                     }
                     /*
@@ -341,8 +345,8 @@ namespace ssa_transform {
         std::map<std::string, int> C;
         std::map<std::string, std::stack<int>> S;
 
-        for(const auto &variable : variables) {
-            C[variable] = 0;
+        for(const auto &variablePair : variables) {
+            C[variablePair.first] = 0;
         }
 
         search(dominatorTree->getRootNode(), C, S);

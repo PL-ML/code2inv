@@ -40,7 +40,7 @@ obj/SSAGraph.o : src/SSAGraph.cpp include/SSAGraph.h
 	$(CC) -c $(CPPFLAGS) -O3 src/SSAGraph.cpp -o obj/SSAGraph.o
 
 
-obj/SSAWriter.o : src/SSAWriter.cpp include/SSAWriter.h
+obj/SSAWriter.o : src/SSAWriter.cpp include/SSAWriter.h obj/SSAGraph.o
 	@mkdir -p obj/
 	@echo prereqs that are newer than obj/SSAWriter.o: $?
 	$(CC) -c $(CPPFLAGS) -O3 src/SSAWriter.cpp -o obj/SSAWriter.o

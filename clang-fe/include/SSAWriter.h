@@ -1,3 +1,11 @@
+#include <utility>
+
+#include <utility>
+
+#include <utility>
+
+#include <utility>
+
 #ifndef SSA_TRANSFORM_SSAWRITER_H
 #define SSA_TRANSFORM_SSAWRITER_H
 
@@ -27,9 +35,12 @@ namespace ssa_transform {
 
     class SSAWriterVisitor : public RecursiveASTVisitor<SSAWriterVisitor> {
     public:
-        explicit SSAWriterVisitor(ASTContext* Context, std::map<clang::SourceLocation, std::string> varRepmap, std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>>& phiPlaceMap, std::string filename) :
-                Context(Context), varReplacementMap(std::move(varRepmap)), phiPlacementMap(phiPlaceMap), srcFile(
-                std::move(filename)) {
+        explicit SSAWriterVisitor(
+                ASTContext* Context, std::map<clang::SourceLocation, std::string> varRepmap,
+                std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>>& phiPlaceMap,
+                std::map<std::string, std::set<std::string>> varMap, std::string filename, std::string mode) :
+                Context(Context), varReplacementMap(std::move(varRepmap)), phiPlacementMap(phiPlaceMap),
+                variableMap(std::move(varMap)), srcFile(std::move(filename)), genmode(std::move(mode)) {
             lo = Context->getLangOpts();
             sm = &Context->getSourceManager();
         }
@@ -41,11 +52,13 @@ namespace ssa_transform {
     private:
         ASTContext* Context;
         std::map<clang::SourceLocation, std::string> varReplacementMap;
+        std::map<std::string, std::set<std::string>> variableMap;
         std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>> phiPlacementMap;
         clang::LangOptions lo;
         clang::SourceManager* sm;
         SSAGraph ssaGraph;
         std::string srcFile;
+        std::string genmode;
 
         std::unique_ptr<SSASubNode> getSubSSANode(Expr* e);
 
@@ -82,8 +95,12 @@ namespace ssa_transform {
 
     class SSAWriterConsumer : public clang::ASTConsumer {
     public:
-        explicit SSAWriterConsumer(clang::ASTContext* Context, const std::map<clang::SourceLocation, std::string>& varRepMap,
-                                   std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>>& phiPlaceMap, std::string filename) : Visitor(Context, varRepMap, phiPlaceMap, filename) {}
+        explicit SSAWriterConsumer(
+                clang::ASTContext* Context, const std::map<clang::SourceLocation, std::string>& varRepMap,
+                std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>>& phiPlaceMap,
+                std::map<std::string, std::set<std::string>> varMap, std::string filename, std::string mode) :
+
+                Visitor(Context, varRepMap, phiPlaceMap, std::move(varMap), std::move(filename), std::move(mode)) {}
 
         virtual void HandleTranslationUnit(clang::ASTContext& Context) {
             Visitor.TraverseDecl(Context.getTranslationUnitDecl());
@@ -97,15 +114,25 @@ namespace ssa_transform {
         std::string filename;
         std::map<clang::SourceLocation, std::string> varReplacementMap;
         std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>> phiPlacementMap;
+        std::map<std::string, std::set<std::string>> variableMap;
+        std::string mode;
     public:
-        explicit SSAWriterFrontAction(const std::map<clang::SourceLocation, std::string>& varRepMap, std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>> & phiPlaceMap, std::string fname) {
+        explicit SSAWriterFrontAction(
+                const std::map<clang::SourceLocation, std::string>& varRepMap,
+                std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>> & phiPlaceMap,
+                std::map<std::string, std::set<std::string>> varMap, std::string fname, std::string mode) {
             varReplacementMap = varRepMap;
             phiPlacementMap = phiPlaceMap;
             filename = std::move(fname);
+            variableMap = std::move(varMap);
+            this->mode = std::move(mode);
         }
 
         virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance &Compiler, llvm::StringRef InFile) {
-            return std::unique_ptr<clang::ASTConsumer>(new SSAWriterConsumer(&Compiler.getASTContext(), varReplacementMap, phiPlacementMap, filename));
+            llvm::errs() << "Mode is " << mode << "\n";
+            return std::unique_ptr<clang::ASTConsumer>(
+                    new SSAWriterConsumer(
+                            &Compiler.getASTContext(), varReplacementMap, phiPlacementMap, variableMap, filename, mode));
         }
     };
 

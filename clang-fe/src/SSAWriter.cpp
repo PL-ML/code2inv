@@ -1,6 +1,9 @@
 #include "../include/SSAWriter.h"
 
+#include <iostream>
+
 namespace ssa_transform {
+
     bool SSAWriterVisitor::VisitFunctionDecl(clang::FunctionDecl *Declaration) {
 
         if(Declaration->isMain()) {
@@ -33,6 +36,7 @@ namespace ssa_transform {
             ssaGraph.clean();
             ssaGraph.print();
 
+            /*
             std::string jsonFileName = srcFile + ".json";
 
             std::ofstream outputFileStream(jsonFileName);
@@ -40,6 +44,17 @@ namespace ssa_transform {
                 ssaGraph.printAsJSON(outputFileStream);
                 outputFileStream.close();
                 llvm::outs() << "Wrote SSA graph for " << srcFile << " into " << jsonFileName << "\n";
+            }
+             */
+            if(genmode == "-ssa") {
+                ssaGraph.printAsJSON(std::cout);
+            } else if(genmode == "-smt") {
+                llvm::errs() << "Generating SMT\n";
+                llvm::outs() << ssaGraph.getSMT(variableMap);
+                llvm::errs() << "SMT Generated\n";
+
+            } else {
+                llvm::errs() << "No mode as " << genmode << "\n";
             }
         }
 

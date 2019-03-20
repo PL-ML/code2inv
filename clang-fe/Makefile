@@ -8,12 +8,12 @@ CC=clang++-7
 
 .PHONY: all tests clean
 
-all: bin/ssa-transform
+all: bin/clang-fe
 
-bin/ssa-transform: obj/Rewriter.o obj/domfrontier.o obj/MainVisitor.o obj/SSAGraph.o obj/SSAWriter.o obj/main.o
+bin/clang-fe: obj/Rewriter.o obj/domfrontier.o obj/MainVisitor.o obj/SSAGraph.o obj/SSAWriter.o obj/main.o
 	@mkdir -p bin/
-	@echo prereqs that are newer than bin/ssa-transform: $?
-	$(CC) obj/Rewriter.o obj/domfrontier.o obj/MainVisitor.o obj/SSAGraph.o obj/SSAWriter.o obj/main.o $(LDFLAGS) -o bin/ssa-transform
+	@echo prereqs that are newer than bin/clang-fe: $?
+	$(CC) obj/Rewriter.o obj/domfrontier.o obj/MainVisitor.o obj/SSAGraph.o obj/SSAWriter.o obj/main.o $(LDFLAGS) -o bin/clang-fe
 
 
 obj/Rewriter.o : src/Rewriter.cpp include/Rewriter.h
@@ -52,18 +52,18 @@ obj/main.o : src/main.cpp
 	$(CC) -c $(CPPFLAGS) -O3 src/main.cpp -o obj/main.o
 
 
-tests: bin/ssa-transform
+tests: bin/clang-fe
 	@echo "The tests need to be manually verified. The json files are written into the same directory as the test cases."
 	@echo "For information about the rewritten code, CFG and the Dominator Tree, run make test-debug."
 	@cp tests/assert.h .
-	./bin/ssa-transform $(shell ls tests/*.c) 2>/dev/null
+	./bin/clang-fe $(shell ls tests/*.c) 2>/dev/null
 	@rm assert.h
 
-test-debug: bin/ssa-transform
+test-debug: bin/clang-fe
 	@echo "The tests need to be manually verified. The json files are written into the same directory as the test cases."
 	@echo "For information about the rewritten code, CFG and the Dominator Tree, run make test-debug."
 	@cp tests/assert.h .
-	./bin/ssa-transform $(shell ls tests/*.c)
+	./bin/clang-fe $(shell ls tests/*.c)
 	@rm assert.h
 
 clean:

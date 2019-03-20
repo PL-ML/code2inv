@@ -4,7 +4,7 @@ data_folder=../../benchmarks
 file_list=names.txt
 
 inv_reward_type=ordered
-single_sample=1
+single_sample=$1
 rl_batchsize=10
 embedding=128
 s2v_level=20
@@ -39,4 +39,5 @@ python -u ootb_solver_main.py \
     -rl_batchsize $rl_batchsize \
     -file_list $file_list \
     -inv_reward_type $inv_reward_type \
+    -save_smt "result" \
     2>&1 | tee $log_file

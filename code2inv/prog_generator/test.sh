@@ -2,7 +2,8 @@
 
 num=$1
 
-timeout 5m ./run_solver.sh $num
+# timeout 5m ./run_solver.sh $num
+./run_solver.sh $num
 
 if [ $? -eq 124 ]
 then
@@ -13,19 +14,22 @@ fi
 
 file=$(cat ../../benchmarks/names.txt | head -$(($num+1)) | tail -1)
 
-mkdir -p tmp
+mkdir -p tmp-test
 
-../../clang-fe/bin/clang-fe -smt ../../benchmarks/c/$file > tmp/smt2testfile.smt
+cp ../../clang-fe/benchmarks-copy/smt2/$file.smt tmp-test/smt2testfile_$num.smt
 
 # slice files
+
+cd tmp-test
+
 orgifs=$IFS
 prevline=0
 body=()
-for line in $(grep -n "SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop" smt2testfile.smt | cut -f1 -d:)
+for line in $(grep -n "SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop" smt2testfile_$num.smt | cut -f1 -d:)
 do
     # IFS=
     # echo $line
-    s=$(cat smt2testfile.smt | head -$((line-1)) | tail -$((line-prevline)))
+    s=$(cat smt2testfile_$num.smt | head -$((line-1)) | tail -$((line-prevline)))
     body+=("$s")
     # echo -e "\n\nSEPERATOR\n\n"
     # echo $s
@@ -33,28 +37,26 @@ do
     # IFS=$orgifs
 done
 
-totalLines=$(wc -l smt2testfile.smt | awk '{ print $1 }')
+totalLines=$(wc -l smt2testfile_$num.smt | awk '{ print $1 }')
 
-s=$(cat smt2testfile.smt | tail -$((totalLines-line)))
+s=$(cat smt2testfile_$num.smt | tail -$((totalLines-line)))
 body+=("$s")
 
 # making 3 separate assert versions of the file
 
 # top
-echo "${body[0]}" > tmp/smt2testfile.smt.1
+echo "${body[0]}" > smt2testfile_$num.smt.1
 
 # pre
-echo -e "${body[1]}\n${body[2]}" > tmp/smt2testfile.smt.2
+echo -e "${body[1]}\n${body[2]}" > smt2testfile_$num.smt.2
 
 # trans
-echo -e "${body[1]}\n${body[3]}" > tmp/smt2testfile.smt.3
+echo -e "${body[1]}\n${body[3]}" > smt2testfile_$num.smt.3
 
 # post
-echo -e "${body[1]}\n${body[4]}" > tmp/smt2testfile.smt.4
+echo -e "${body[1]}\n${body[4]}" > smt2testfile_$num.smt.4
 
-cd tmp
+../check.sh ../results/result_$num smt2testfile_$num > test_$num
 
-../check.sh ../result smt2testfile > test
-
-diff test control && echo "Success" && tput bel && exit 0 || echo "Failed" && tput bel && exit 1
+diff test_$num control && echo "Success" && tput bel && exit 0 || echo "Failed" && tput bel && exit 1
 

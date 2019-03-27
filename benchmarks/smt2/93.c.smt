@@ -1,142 +1,145 @@
 (set-logic LIA)
 
-(declare-const y Int)
-(declare-const y! Int)
-(declare-const x Int)
-(declare-const x! Int)
-(declare-const tmp Int)
-(declare-const tmp! Int)
-(declare-const n Int)
-(declare-const n! Int)
-(declare-const i Int)
-(declare-const i! Int)
+( declare-const i Int )
+( declare-const i! Int )
+( declare-const n Int )
+( declare-const n! Int )
+( declare-const x Int )
+( declare-const x! Int )
+( declare-const y Int )
+( declare-const y! Int )
+( declare-const tmp Int )
+( declare-const tmp! Int )
 
-(declare-const y_41 Int)
-(declare-const y_33 Int)
-(declare-const y_31 Int)
-(declare-const y_27 Int)
-(declare-const x_40 Int)
-(declare-const x_32 Int)
-(declare-const x_30 Int)
-(declare-const x_26 Int)
-(declare-const n_0 Int)
-(declare-const i_38 Int)
-(declare-const i_28 Int)
-(declare-const i_25 Int)
+( declare-const i_0 Int )
+( declare-const i_1 Int )
+( declare-const i_2 Int )
+( declare-const i_3 Int )
+( declare-const n_0 Int )
+( declare-const x_0 Int )
+( declare-const x_1 Int )
+( declare-const x_2 Int )
+( declare-const x_3 Int )
+( declare-const x_4 Int )
+( declare-const x_5 Int )
+( declare-const y_0 Int )
+( declare-const y_1 Int )
+( declare-const y_2 Int )
+( declare-const y_3 Int )
+( declare-const y_4 Int )
+( declare-const y_5 Int )
 
-(define-fun inv-f((i Int)(n Int)(tmp Int)(x Int)(y Int)) Bool
+( define-fun inv-f( ( i Int )( n Int )( x Int )( y Int )( tmp Int ) ) Bool
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
 )
 
-(define-fun pre-f ((i Int)(n Int)(tmp Int)(x Int)(y Int)(i_25 Int)(i_28 Int)(i_38 Int)(n_0 Int)(x_26 Int)(x_30 Int)(x_32 Int)(x_40 Int)(y_27 Int)(y_31 Int)(y_33 Int)(y_41 Int)) Bool
-  (and
-    (= y y_27)
-    (= x x_26)
-    (= n n_0)
-    (= i i_25)
-    (>= n_0 0)
-    (= i_25 0)
-    (= x_26 0)
-    (= y_27 0)
-  )
+( define-fun pre-f ( ( i Int )( n Int )( x Int )( y Int )( tmp Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( n_0 Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int )( x_4 Int )( x_5 Int )( y_0 Int )( y_1 Int )( y_2 Int )( y_3 Int )( y_4 Int )( y_5 Int ) ) Bool
+	( and
+		( = i i_1 )
+		( = n n_0 )
+		( = x x_1 )
+		( = y y_1 )
+		( >= n_0 0 )
+		( = i_1 0 )
+		( = x_1 0 )
+		( = y_1 0 )
+	)
 )
 
-(define-fun trans-f ((i Int)(n Int)(tmp Int)(x Int)(y Int)(i! Int)(n! Int)(tmp! Int)(x! Int)(y! Int)(i_25 Int)(i_28 Int)(i_38 Int)(n_0 Int)(x_26 Int)(x_30 Int)(x_32 Int)(x_40 Int)(y_27 Int)(y_31 Int)(y_33 Int)(y_41 Int)) Bool
-  (or
-    (and
-      (= i_38 i)
-      (= x_40 x)
-      (= y_41 y)
-      (= y_41 y!)
-      (= x_40 x!)
-      (= i_38 i!)
-      (= n n_0)
-      (= n! n_0)
-      (= y y!)
-      (= x x!)
-      (= tmp tmp!)
-    )
-    (and
-      (= i_38 i)
-      (= x_40 x)
-      (= y_41 y)
-      (< i_38 n_0)
-      (= i_28 (+ i_38 1))
-      (= x_32 (+ x_40 2))
-      (= y_33 (+ y_41 1))
-      (= y_33 y!)
-      (= x_32 x!)
-      (= i_28 i!)
-      (= n n_0)
-      (= n! n_0)
-      (= tmp tmp!)
-    )
-    (and
-      (= i_38 i)
-      (= x_40 x)
-      (= y_41 y)
-      (< i_38 n_0)
-      (= i_28 (+ i_38 1))
-      (= x_30 (+ x_40 1))
-      (= y_31 (+ y_41 2))
-      (= y_31 y!)
-      (= x_30 x!)
-      (= i_28 i!)
-      (= n n_0)
-      (= n! n_0)
-      (= tmp tmp!)
-    )
-  )
+( define-fun trans-f ( ( i Int )( n Int )( x Int )( y Int )( tmp Int )( i! Int )( n! Int )( x! Int )( y! Int )( tmp! Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( n_0 Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int )( x_4 Int )( x_5 Int )( y_0 Int )( y_1 Int )( y_2 Int )( y_3 Int )( y_4 Int )( y_5 Int ) ) Bool
+	( or
+		( and
+			( = i_2 i )
+			( = x_2 x )
+			( = y_2 y )
+			( = i_2 i! )
+			( = x_2 x! )
+			( = y_2 y! )
+			( = n n_0 )
+			( = n! n_0 )
+			( = x x! )
+			( = y y! )
+			(= tmp tmp! )
+		)
+		( and
+			( = i_2 i )
+			( = x_2 x )
+			( = y_2 y )
+			( < i_2 n_0 )
+			( = i_3 ( + i_2 1 ) )
+			( = x_3 ( + x_2 1 ) )
+			( = y_3 ( + y_2 2 ) )
+			( = x_4 x_3 )
+			( = y_4 y_3 )
+			( = i_3 i! )
+			( = x_4 x! )
+			( = y_4 y! )
+			(= n n_0 )
+			(= n! n_0 )
+			(= tmp tmp! )
+		)
+		( and
+			( = i_2 i )
+			( = x_2 x )
+			( = y_2 y )
+			( < i_2 n_0 )
+			( = i_3 ( + i_2 1 ) )
+			( = x_5 ( + x_2 2 ) )
+			( = y_5 ( + y_2 1 ) )
+			( = x_4 x_5 )
+			( = y_4 y_5 )
+			( = i_3 i! )
+			( = x_4 x! )
+			( = y_4 y! )
+			(= n n_0 )
+			(= n! n_0 )
+			(= tmp tmp! )
+		)
+	)
 )
 
-(define-fun post-f ((i Int)(n Int)(tmp Int)(x Int)(y Int)(i_25 Int)(i_28 Int)(i_38 Int)(n_0 Int)(x_26 Int)(x_30 Int)(x_32 Int)(x_40 Int)(y_27 Int)(y_31 Int)(y_33 Int)(y_41 Int)) Bool
-  (or
-    (not
-      (and
-        (= i i_38)
-        (= n n_0)
-        (= x x_40)
-        (= y y_41)
-      )
-    )
-    (not
-      (and
-        (not (< i_38 n_0))
-        (not
-          (=
-            (* 3 n_0)
-            (+ x_40 y_41)
-          )
-        )
-      )
-    )
-  )
+( define-fun post-f ( ( i Int )( n Int )( x Int )( y Int )( tmp Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( n_0 Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int )( x_4 Int )( x_5 Int )( y_0 Int )( y_1 Int )( y_2 Int )( y_3 Int )( y_4 Int )( y_5 Int ) ) Bool
+	( or
+		( not
+			( and
+				( = i i_2)
+				( = n n_0)
+				( = x x_2)
+				( = y y_2)
+			)
+		)
+		( not
+			( and
+				( not ( < i_2 n_0 ) )
+				( not ( = ( * 3 n_0 ) ( + x_2 y_2 ) ) )
+			)
+		)
+	)
 )
-
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (pre-f i n tmp x y i_25 i_28 i_38 n_0 x_26 x_30 x_32 x_40 y_27 y_31 y_33 y_41 )
-    (inv-f i n tmp x y )
-  )
+( assert ( not
+	( =>
+		( pre-f i n x y tmp i_0 i_1 i_2 i_3 n_0 x_0 x_1 x_2 x_3 x_4 x_5 y_0 y_1 y_2 y_3 y_4 y_5  )
+		( inv-f i n x y tmp )
+	)
 ))
 
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (and
-      (inv-f i n tmp x y )
-      (trans-f i n tmp x y i! n! tmp! x! y! i_25 i_28 i_38 n_0 x_26 x_30 x_32 x_40 y_27 y_31 y_33 y_41 )
-    )
-    (inv-f i! n! tmp! x! y! )
-  )
+( assert ( not
+	( =>
+		( and
+			( inv-f i n x y tmp )
+			( trans-f i n x y tmp i! n! x! y! tmp! i_0 i_1 i_2 i_3 n_0 x_0 x_1 x_2 x_3 x_4 x_5 y_0 y_1 y_2 y_3 y_4 y_5 )
+		)
+		( inv-f i! n! x! y! tmp! )
+	)
 ))
 
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (inv-f i n tmp x y )
-    (post-f i n tmp x y i_25 i_28 i_38 n_0 x_26 x_30 x_32 x_40 y_27 y_31 y_33 y_41 )
-  )
+( assert ( not
+	( =>
+		( inv-f i n x y tmp  )
+		( post-f i n x y tmp i_0 i_1 i_2 i_3 n_0 x_0 x_1 x_2 x_3 x_4 x_5 y_0 y_1 y_2 y_3 y_4 y_5 )
+	)
 ))
 

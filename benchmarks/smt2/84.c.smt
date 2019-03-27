@@ -1,90 +1,90 @@
 (set-logic LIA)
 
-(declare-const y Int)
-(declare-const y! Int)
-(declare-const x Int)
-(declare-const x! Int)
+( declare-const x Int )
+( declare-const x! Int )
+( declare-const y Int )
+( declare-const y! Int )
 
-(declare-const y_21 Int)
-(declare-const y_15 Int)
-(declare-const y_0 Int)
-(declare-const x_20 Int)
-(declare-const x_14 Int)
-(declare-const x_13 Int)
+( declare-const x_0 Int )
+( declare-const x_1 Int )
+( declare-const x_2 Int )
+( declare-const x_3 Int )
+( declare-const y_0 Int )
+( declare-const y_1 Int )
+( declare-const y_2 Int )
 
-(define-fun inv-f((x Int)(y Int)) Bool
+( define-fun inv-f( ( x Int )( y Int ) ) Bool
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
 )
 
-(define-fun pre-f ((x Int)(y Int)(x_13 Int)(x_14 Int)(x_20 Int)(y_0 Int)(y_15 Int)(y_21 Int)) Bool
-  (and
-    (= x x_13)
-    (= x_13 -50)
-  )
+( define-fun pre-f ( ( x Int )( y Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int )( y_0 Int )( y_1 Int )( y_2 Int ) ) Bool
+	( and
+		( = x x_1 )
+		( = x_1 -50 )
+	)
 )
 
-(define-fun trans-f ((x Int)(y Int)(x! Int)(y! Int)(x_13 Int)(x_14 Int)(x_20 Int)(y_0 Int)(y_15 Int)(y_21 Int)) Bool
-  (or
-    (and
-      (= x_20 x)
-      (= y_21 y)
-      (= y_21 y!)
-      (= x_20 x!)
-      (= y y!)
-    )
-    (and
-      (= x_20 x)
-      (= y_21 y)
-      (< x_20 0)
-      (= x_14 (+ x_20 y_21))
-      (= y_15 (+ y_21 1))
-      (= y_15 y!)
-      (= x_14 x!)
-    )
-  )
+( define-fun trans-f ( ( x Int )( y Int )( x! Int )( y! Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int )( y_0 Int )( y_1 Int )( y_2 Int ) ) Bool
+	( or
+		( and
+			( = x_2 x )
+			( = y_1 y )
+			( = x_2 x! )
+			( = y_1 y! )
+			( = y y! )
+		)
+		( and
+			( = x_2 x )
+			( = y_1 y )
+			( < x_2 0 )
+			( = x_3 ( + x_2 y_1 ) )
+			( = y_2 ( + y_1 1 ) )
+			( = x_3 x! )
+			( = y_2 y! )
+		)
+	)
 )
 
-(define-fun post-f ((x Int)(y Int)(x_13 Int)(x_14 Int)(x_20 Int)(y_0 Int)(y_15 Int)(y_21 Int)) Bool
-  (or
-    (not
-      (and
-        (= x x_20)
-        (= y y_21)
-      )
-    )
-    (not
-      (and
-        (not (< x_20 0))
-        (not (> y_21 0))
-      )
-    )
-  )
+( define-fun post-f ( ( x Int )( y Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int )( y_0 Int )( y_1 Int )( y_2 Int ) ) Bool
+	( or
+		( not
+			( and
+				( = x x_2)
+				( = y y_1)
+			)
+		)
+		( not
+			( and
+				( not ( < x_2 0 ) )
+				( not ( > y_1 0 ) )
+			)
+		)
+	)
 )
-
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (pre-f x y x_13 x_14 x_20 y_0 y_15 y_21 )
-    (inv-f x y )
-  )
+( assert ( not
+	( =>
+		( pre-f x y x_0 x_1 x_2 x_3 y_0 y_1 y_2  )
+		( inv-f x y )
+	)
 ))
 
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (and
-      (inv-f x y )
-      (trans-f x y x! y! x_13 x_14 x_20 y_0 y_15 y_21 )
-    )
-    (inv-f x! y! )
-  )
+( assert ( not
+	( =>
+		( and
+			( inv-f x y )
+			( trans-f x y x! y! x_0 x_1 x_2 x_3 y_0 y_1 y_2 )
+		)
+		( inv-f x! y! )
+	)
 ))
 
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (inv-f x y )
-    (post-f x y x_13 x_14 x_20 y_0 y_15 y_21 )
-  )
+( assert ( not
+	( =>
+		( inv-f x y  )
+		( post-f x y x_0 x_1 x_2 x_3 y_0 y_1 y_2 )
+	)
 ))
 

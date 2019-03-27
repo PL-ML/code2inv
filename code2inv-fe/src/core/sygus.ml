@@ -857,7 +857,6 @@ let process_pre_f : string -> t -> node * string
     let pre_body = "(and\n" ^ pre_cond ^ (ws 1) ^ ")\n" in 
     let pre_body = SExp.to_string 1 (SExp.sanitize_for_sygus pre_body) in 
     let pre_f = pre_f ^ pre_body ^"\n)\n" in
-
     (loop, pre_f)
 
 

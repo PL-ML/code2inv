@@ -1,93 +1,103 @@
-
 )
 
-(define-fun pre-f ((c Int)(i Int)(j Int)(t Int)(tmp Int)(c_0 Int)(i_21 Int)(i_25 Int)(i_30 Int)(j_0 Int)(j_23 Int)(j_31 Int)(t_0 Int)(t_24 Int)(t_32 Int)) Bool
-  (and
-    (= i i_21)
-    (= i_21 0)
-  )
+( define-fun pre-f ( ( c Int )( i Int )( j Int )( t Int )( tmp Int )( c_0 Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( j_0 Int )( j_1 Int )( j_2 Int )( j_3 Int )( t_0 Int )( t_1 Int )( t_2 Int )( t_3 Int ) ) Bool
+	( and
+		( = i i_0 )
+		( = i_0 0 )
+	)
 )
 
-(define-fun trans-f ((c Int)(i Int)(j Int)(t Int)(tmp Int)(c! Int)(i! Int)(j! Int)(t! Int)(tmp! Int)(c_0 Int)(i_21 Int)(i_25 Int)(i_30 Int)(j_0 Int)(j_23 Int)(j_31 Int)(t_0 Int)(t_24 Int)(t_32 Int)) Bool
-  (or
-    (and
-      (= i_30 i)
-      (= j_31 j)
-      (= t_32 t)
-      (= t_32 t!)
-      (= j_31 j!)
-      (= i_30 i!)
-      (= tmp tmp!)
-      (= t t!)
-      (= j j!)
-      (= i i!)
-      (= c c!)
-    )
-    (and
-      (= i_30 i)
-      (= j_31 j)
-      (= t_32 t)
-      (not (> c_0 48))
-      (= t_32 t!)
-      (= j_31 j!)
-      (= i_30 i!)
-      (= c c_0)
-      (= c! c_0)
-      (= tmp tmp!)
-      (= t t!)
-      (= j j!)
-      (= i i!)
-    )
-    (and
-      (= i_30 i)
-      (= j_31 j)
-      (= t_32 t)
-      (> c_0 48)
-      (not (< c_0 57))
-      (= t_32 t!)
-      (= j_31 j!)
-      (= i_30 i!)
-      (= c c_0)
-      (= c! c_0)
-      (= tmp tmp!)
-      (= t t!)
-      (= j j!)
-      (= i i!)
-    )
-    (and
-      (= i_30 i)
-      (= j_31 j)
-      (= t_32 t)
-      (> c_0 48)
-      (< c_0 57)
-      (= j_23 (+ i_30 i_30))
-      (= t_24 (- c_0 48))
-      (= i_25 (+ j_23 t_24))
-      (= t_24 t!)
-      (= j_23 j!)
-      (= i_25 i!)
-      (= c c_0)
-      (= c! c_0)
-      (= tmp tmp!)
-    )
-  )
+( define-fun trans-f ( ( c Int )( i Int )( j Int )( t Int )( tmp Int )( c! Int )( i! Int )( j! Int )( t! Int )( tmp! Int )( c_0 Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( j_0 Int )( j_1 Int )( j_2 Int )( j_3 Int )( t_0 Int )( t_1 Int )( t_2 Int )( t_3 Int ) ) Bool
+	( or
+		( and
+			( = i_1 i )
+			( = j_1 j )
+			( = t_1 t )
+			( = i_1 i! )
+			( = j_1 j! )
+			( = t_1 t! )
+			( = c c! )
+			( = i i! )
+			( = j j! )
+			( = t t! )
+			(= tmp tmp! )
+		)
+		( and
+			( = i_1 i )
+			( = j_1 j )
+			( = t_1 t )
+			( > c_0 48 )
+			( < c_0 57 )
+			( = j_2 ( + i_1 i_1 ) )
+			( = t_2 ( - c_0 48 ) )
+			( = i_2 ( + j_2 t_2 ) )
+			( = i_3 i_2 )
+			( = j_3 j_2 )
+			( = t_3 t_2 )
+			( = i_3 i! )
+			( = j_3 j! )
+			( = t_3 t! )
+			(= c c_0 )
+			(= c! c_0 )
+			(= tmp tmp! )
+		)
+		( and
+			( = i_1 i )
+			( = j_1 j )
+			( = t_1 t )
+			( > c_0 48 )
+			( not ( < c_0 57 ) )
+			( = i_3 i_1 )
+			( = j_3 j_1 )
+			( = t_3 t_1 )
+			( = i_3 i! )
+			( = j_3 j! )
+			( = t_3 t! )
+			(= c c_0 )
+			(= c! c_0 )
+			(= tmp tmp! )
+		)
+		( and
+			( = i_1 i )
+			( = j_1 j )
+			( = t_1 t )
+			( not ( > c_0 48 ) )
+			( = i_3 i_1 )
+			( = j_3 j_1 )
+			( = t_3 t_1 )
+			( = i_3 i! )
+			( = j_3 j! )
+			( = t_3 t! )
+			(= c c_0 )
+			(= c! c_0 )
+			(= tmp tmp! )
+		)
+	)
 )
 
-(define-fun post-f ((c Int)(i Int)(j Int)(t Int)(tmp Int)(c_0 Int)(i_21 Int)(i_25 Int)(i_30 Int)(j_0 Int)(j_23 Int)(j_31 Int)(t_0 Int)(t_24 Int)(t_32 Int)) Bool
-  (or
-    (not (= i i_30))
-    (not (not (>= i_30 0)))
-  )
+( define-fun post-f ( ( c Int )( i Int )( j Int )( t Int )( tmp Int )( c_0 Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( j_0 Int )( j_1 Int )( j_2 Int )( j_3 Int )( t_0 Int )( t_1 Int )( t_2 Int )( t_3 Int ) ) Bool
+	( or
+		( not
+			( and
+				( = c c_0 )
+				( = i i_1)
+				( = j j_1)
+				( = t t_1)
+			)
+		)
+		( not
+			( and
+				( not ( >= i_1 0 ) )
+			)
+		)
+	)
 )
-
-
-(assert (not
-  (=>
-    (and
-      (inv-f c i j t tmp )
-      (trans-f c i j t tmp c! i! j! t! tmp! c_0 i_21 i_25 i_30 j_0 j_23 j_31 t_0 t_24 t_32 )
-    )
-    (inv-f c! i! j! t! tmp! )
-  )
+( assert ( not
+	( =>
+		( and
+			( inv-f c i j t tmp )
+			( trans-f c i j t tmp c! i! j! t! tmp! c_0 i_0 i_1 i_2 i_3 j_0 j_1 j_2 j_3 t_0 t_1 t_2 t_3 )
+		)
+		( inv-f c! i! j! t! tmp! )
+	)
 ))
-

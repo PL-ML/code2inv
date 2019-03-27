@@ -1,102 +1,104 @@
 (set-logic LIA)
 
-(declare-const tmp Int)
-(declare-const tmp! Int)
-(declare-const n Int)
-(declare-const n! Int)
-(declare-const c Int)
-(declare-const c! Int)
+( declare-const c Int )
+( declare-const c! Int )
+( declare-const n Int )
+( declare-const n! Int )
+( declare-const tmp Int )
+( declare-const tmp! Int )
 
-(declare-const n_0 Int)
-(declare-const c_33 Int)
-(declare-const c_28 Int)
-(declare-const c_27 Int)
-(declare-const c_24 Int)
+( declare-const c_0 Int )
+( declare-const c_1 Int )
+( declare-const c_2 Int )
+( declare-const c_3 Int )
+( declare-const c_4 Int )
+( declare-const n_0 Int )
 
-(define-fun inv-f((c Int)(n Int)(tmp Int)) Bool
+( define-fun inv-f( ( c Int )( n Int )( tmp Int ) ) Bool
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
 )
 
-(define-fun pre-f ((c Int)(n Int)(tmp Int)(c_24 Int)(c_27 Int)(c_28 Int)(c_33 Int)(n_0 Int)) Bool
-  (and
-    (= n n_0)
-    (= c c_24)
-    (= c_24 0)
-    (> n_0 0)
-  )
+( define-fun pre-f ( ( c Int )( n Int )( tmp Int )( c_0 Int )( c_1 Int )( c_2 Int )( c_3 Int )( c_4 Int )( n_0 Int ) ) Bool
+	( and
+		( = c c_0 )
+		( = n n_0 )
+		( = c_0 0 )
+		( > n_0 0 )
+	)
 )
 
-(define-fun trans-f ((c Int)(n Int)(tmp Int)(c! Int)(n! Int)(tmp! Int)(c_24 Int)(c_27 Int)(c_28 Int)(c_33 Int)(n_0 Int)) Bool
-  (or
-    (and
-      (= c_33 c)
-      (= c_33 c!)
-      (= tmp tmp!)
-      (= n n!)
-      (= c c!)
-    )
-    (and
-      (= c_33 c)
-      (not (= c_33 n_0))
-      (= c_28 (+ c_33 1))
-      (= c_28 c!)
-      (= n n_0)
-      (= n! n_0)
-      (= tmp tmp!)
-    )
-    (and
-      (= c_33 c)
-      (= c_33 n_0)
-      (= c_27 1)
-      (= c_27 c!)
-      (= n n_0)
-      (= n! n_0)
-      (= tmp tmp!)
-    )
-  )
+( define-fun trans-f ( ( c Int )( n Int )( tmp Int )( c! Int )( n! Int )( tmp! Int )( c_0 Int )( c_1 Int )( c_2 Int )( c_3 Int )( c_4 Int )( n_0 Int ) ) Bool
+	( or
+		( and
+			( = c_1 c )
+			( = c_1 c! )
+			( = c c! )
+			( = n n! )
+			(= tmp tmp! )
+		)
+		( and
+			( = c_1 c )
+			( = c_1 n_0 )
+			( = c_2 1 )
+			( = c_3 c_2 )
+			( = c_3 c! )
+			(= n n_0 )
+			(= n! n_0 )
+			(= tmp tmp! )
+		)
+		( and
+			( = c_1 c )
+			( not ( = c_1 n_0 ) )
+			( = c_4 ( + c_1 1 ) )
+			( = c_3 c_4 )
+			( = c_3 c! )
+			(= n n_0 )
+			(= n! n_0 )
+			(= tmp tmp! )
+		)
+	)
 )
 
-(define-fun post-f ((c Int)(n Int)(tmp Int)(c_24 Int)(c_27 Int)(c_28 Int)(c_33 Int)(n_0 Int)) Bool
-  (or
-    (not
-      (and
-        (= c c_33)
-        (= n n_0)
-      )
-    )
-    (not
-      (and
-        (= c_33 n_0)
-        (not (>= c_33 0))
-      )
-    )
-  )
+( define-fun post-f ( ( c Int )( n Int )( tmp Int )( c_0 Int )( c_1 Int )( c_2 Int )( c_3 Int )( c_4 Int )( n_0 Int ) ) Bool
+	( or
+		( not
+			( and
+				( = c c_1)
+				( = n n_0)
+			)
+		)
+		( not
+			( and
+				( = c_1 n_0 )
+				( not ( >= c_1 0 ) )
+			)
+		)
+	)
 )
-
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (pre-f c n tmp c_24 c_27 c_28 c_33 n_0 )
-    (inv-f c n tmp )
-  )
+( assert ( not
+	( =>
+		( pre-f c n tmp c_0 c_1 c_2 c_3 c_4 n_0  )
+		( inv-f c n tmp )
+	)
 ))
 
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (and
-      (inv-f c n tmp )
-      (trans-f c n tmp c! n! tmp! c_24 c_27 c_28 c_33 n_0 )
-    )
-    (inv-f c! n! tmp! )
-  )
+( assert ( not
+	( =>
+		( and
+			( inv-f c n tmp )
+			( trans-f c n tmp c! n! tmp! c_0 c_1 c_2 c_3 c_4 n_0 )
+		)
+		( inv-f c! n! tmp! )
+	)
 ))
 
 SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop
-(assert (not
-  (=>
-    (inv-f c n tmp )
-    (post-f c n tmp c_24 c_27 c_28 c_33 n_0 )
-  )
+( assert ( not
+	( =>
+		( inv-f c n tmp  )
+		( post-f c n tmp c_0 c_1 c_2 c_3 c_4 n_0 )
+	)
 ))
 

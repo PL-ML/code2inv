@@ -39,5 +39,5 @@ python -u ootb_solver_main.py \
     -rl_batchsize $rl_batchsize \
     -file_list $file_list \
     -inv_reward_type $inv_reward_type \
-    -save_smt "result" \
+    -save_smt "results/result_$1" \
     2>&1 | tee $log_file

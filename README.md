@@ -58,5 +58,14 @@ where the last argument ```init_epoch``` stands for the model dump of correspond
 
 
 
+# Reference
+
+    @inproceedings{si2018nips,
+        author    = {Si, Xujie and Dai, Hanjun and Raghothaman, Mukund and Naik, Mayur and Song, Le},
+        title     = {Learning Loop Invariants for Program Verification.},
+        year      = {2018},
+        booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+    }
+
 
 

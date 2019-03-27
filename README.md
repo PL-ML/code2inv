@@ -1,4 +1,5 @@
 
+Note that this branch is the old (and original) implementation using the static analyzer [Sparrow](https://github.com/ropas/sparrow) as the frontend.
 
 # Environment Setup
 

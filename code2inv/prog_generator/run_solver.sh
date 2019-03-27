@@ -19,6 +19,8 @@ then
     mkdir -p $save_dir
 fi
 
+mkdir -p tests/results
+
 log_file=$save_dir/log-sample-${single_sample}-model-${model}-r-${inv_reward_type}-s2v-${s2v_level}-bsize-${rl_batchsize}-att-${att}-ac-${ac}-ce-${ce}.txt
 
 python -u ootb_solver_main.py \
@@ -39,5 +41,5 @@ python -u ootb_solver_main.py \
     -rl_batchsize $rl_batchsize \
     -file_list $file_list \
     -inv_reward_type $inv_reward_type \
-    -save_smt "results/result_$1" \
+    -save_smt "tests/results/result_$1" \
     2>&1 | tee $log_file

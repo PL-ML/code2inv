@@ -20,6 +20,6 @@ do
     fi
 done
 
-benchname=$(cat ../../benchmarks/names.txt | head -$(($fileno+1)) | tail -1)
+benchname=$(cat ../../../benchmarks/names.txt | head -$(($fileno+1)) | tail -1)
 
 echo $benchname $totaliter $runningtime $stats

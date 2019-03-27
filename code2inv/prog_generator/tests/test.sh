@@ -3,7 +3,11 @@
 num=$1
 
 # timeout 5m ./run_solver.sh $num
+cd ..
+
 ./run_solver.sh $num
+
+cd tests
 
 if [ $? -eq 124 ]
 then
@@ -12,11 +16,11 @@ then
     exit 1
 fi
 
-file=$(cat ../../benchmarks/names.txt | head -$(($num+1)) | tail -1)
+file=$(cat ../../../benchmarks/names.txt | head -$(($num+1)) | tail -1)
 
 mkdir -p tmp-test
 
-cp ../../clang-fe/benchmarks-copy/smt2/$file.smt tmp-test/smt2testfile_$num.smt
+cp ../../../benchmarks/smt2/$file.smt tmp-test/smt2testfile_$num.smt
 
 # slice files
 

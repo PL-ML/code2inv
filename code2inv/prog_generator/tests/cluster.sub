@@ -10,13 +10,13 @@
 
 # qsub will start a new process to execute the following commands 
 
-conda activate code2inv_env
+# conda activate code2inv_env
 
-cd /home/aadityanaik/code2inv/code2inv/prog_generator
+# cd /home/aadityanaik/code2inv/code2inv/prog_generator/tests
 
 echo "process benchmakr: $bench"
 echo "save log to $log"
-
+mkdir -p tmp
 ./test.sh $bench
 
 ./get_log.sh tmp/$bench.out > $log

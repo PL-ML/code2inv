@@ -1,4 +1,5 @@
 
+This clang-fe branch uses Clang compiler as the front-end, which is still under development by [Aaditya Naik](https://github.com/aadityanaik).
 
 # Environment Setup
 
@@ -12,13 +13,13 @@
 ## Z3 Setup
 code2inv uses the Z3 theorem prover to verify the correctness of generated loop invariants. Follow these steps to build Z3:
 
-1. Download and unzip the source code of Z3 from https://github.com/Z3Prover/z3/releases/tag/z3-4.4.0
+1. Clone the source code of Z3 from https://github.com/Z3Prover/z3
 2. Run ```python scripts/mk_make.py --prefix /usr/local/; cd build; make -j16; make install ```
 
 Remember to set environment variables DYLD_LIBRARY_PATH and PYTHONPATH to contain paths for Z3 shared libraries and Z3Py, respectively.  These paths will be indicated upon successful installation of Z3.
 
 ## Frontend Setup (Optional)
-The frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. The program graphs and VCs for our benchmarks are already included in the `benchmarks` directory.  To build the frontend, follow the instructions in README in `code2inv-fe`. 
+The frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. The program graphs and VCs for our benchmarks are already included in the `benchmarks` directory.  To build the frontend, follow the instructions in README in `clang-fe`. 
 
 
 # Experiments

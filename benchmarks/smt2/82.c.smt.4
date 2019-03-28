@@ -1,73 +1,74 @@
-
 )
 
-(define-fun pre-f ((i Int)(tmp Int)(x Int)(y Int)(i_28 Int)(i_33 Int)(i_38 Int)(x_0 Int)(y_0 Int)) Bool
-  (and
-    (= y y_0)
-    (= x x_0)
-    (= i i_28)
-    (= i_28 0)
-    (>= x_0 0)
-    (>= y_0 0)
-    (>= x_0 y_0)
-  )
+( define-fun pre-f ( ( i Int )( x Int )( y Int )( tmp Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( i_4 Int )( x_0 Int )( y_0 Int ) ) Bool
+	( and
+		( = i i_1 )
+		( = x x_0 )
+		( = y y_0 )
+		( = i_1 0 )
+		( >= x_0 0 )
+		( >= y_0 0 )
+		( >= x_0 y_0 )
+	)
 )
 
-(define-fun trans-f ((i Int)(tmp Int)(x Int)(y Int)(i! Int)(tmp! Int)(x! Int)(y! Int)(i_28 Int)(i_33 Int)(i_38 Int)(x_0 Int)(y_0 Int)) Bool
-  (or
-    (and
-      (= i_38 i)
-      (= i_38 i!)
-      (= y y!)
-      (= x x!)
-      (= tmp tmp!)
-      (= i i!)
-    )
-    (and
-      (= i_38 i)
-      (not (< i_38 y_0))
-      (= i_38 i!)
-      (= y y_0)
-      (= y! y_0)
-      (= x x!)
-      (= tmp tmp!)
-    )
-    (and
-      (= i_38 i)
-      (< i_38 y_0)
-      (= i_33 (+ i_38 1))
-      (= i_33 i!)
-      (= y y_0)
-      (= y! y_0)
-      (= x x!)
-      (= tmp tmp!)
-    )
-  )
+( define-fun trans-f ( ( i Int )( x Int )( y Int )( tmp Int )( i! Int )( x! Int )( y! Int )( tmp! Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( i_4 Int )( x_0 Int )( y_0 Int ) ) Bool
+	( or
+		( and
+			( = i_2 i )
+			( = i_2 i! )
+			( = i i! )
+			( = x x! )
+			( = y y! )
+			(= tmp tmp! )
+		)
+		( and
+			( = i_2 i )
+			( < i_2 y_0 )
+			( = i_3 ( + i_2 1 ) )
+			( = i_4 i_3 )
+			( = i_4 i! )
+			(= x x_0 )
+			(= x! x_0 )
+			(= y y_0 )
+			(= y! y_0 )
+			(= tmp tmp! )
+		)
+		( and
+			( = i_2 i )
+			( not ( < i_2 y_0 ) )
+			( = i_4 i_2 )
+			( = i_4 i! )
+			(= x x_0 )
+			(= x! x_0 )
+			(= y y_0 )
+			(= y! y_0 )
+			(= tmp tmp! )
+		)
+	)
 )
 
-(define-fun post-f ((i Int)(tmp Int)(x Int)(y Int)(i_28 Int)(i_33 Int)(i_38 Int)(x_0 Int)(y_0 Int)) Bool
-  (or
-    (not
-      (and
-        (= i i_38)
-        (= x x_0)
-        (= y y_0)
-      )
-    )
-    (not
-      (and
-        (>= i_38 x_0)
-        (> 0 i_38)
-        (not (>= i_38 y_0))
-      )
-    )
-  )
+( define-fun post-f ( ( i Int )( x Int )( y Int )( tmp Int )( i_0 Int )( i_1 Int )( i_2 Int )( i_3 Int )( i_4 Int )( x_0 Int )( y_0 Int ) ) Bool
+	( or
+		( not
+			( and
+				( = i i_2)
+				( = x x_0)
+				( = y y_0)
+			)
+		)
+		( not
+			( and
+				( >= i_2 x_0 )
+				( > 0 i_2 )
+				( not ( >= i_2 y_0 ) )
+			)
+		)
+	)
 )
-
-
-(assert (not
-  (=>
-    (inv-f i tmp x y )
-    (post-f i tmp x y i_28 i_33 i_38 x_0 y_0 )
-  )
+( assert ( not
+	( =>
+		( inv-f i x y tmp  )
+		( post-f i x y tmp i_0 i_1 i_2 i_3 i_4 x_0 y_0 )
+	)
 ))

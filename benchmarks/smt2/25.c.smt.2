@@ -1,45 +1,43 @@
-
 )
 
-(define-fun pre-f ((x Int)(x_13 Int)(x_14 Int)(x_19 Int)) Bool
-  (and
-    (= x x_13)
-    (= x_13 10000)
-  )
+( define-fun pre-f ( ( x Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int ) ) Bool
+	( and
+		( = x x_1 )
+		( = x_1 10000 )
+	)
 )
 
-(define-fun trans-f ((x Int)(x! Int)(x_13 Int)(x_14 Int)(x_19 Int)) Bool
-  (or
-    (and
-      (= x_19 x)
-      (= x_19 x!)
-    )
-    (and
-      (= x_19 x)
-      (> x_19 0)
-      (= x_14 (- x_19 1))
-      (= x_14 x!)
-    )
-  )
+( define-fun trans-f ( ( x Int )( x! Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int ) ) Bool
+	( or
+		( and
+			( = x_2 x )
+			( = x_2 x! )
+		)
+		( and
+			( = x_2 x )
+			( > x_2 0 )
+			( = x_3 ( - x_2 1 ) )
+			( = x_3 x! )
+		)
+	)
 )
 
-(define-fun post-f ((x Int)(x_13 Int)(x_14 Int)(x_19 Int)) Bool
-  (or
-    (not (= x x_19))
-    (not
-      (and
-        (not (> x_19 0))
-        (not (= x_19 0))
-      )
-    )
-  )
+( define-fun post-f ( ( x Int )( x_0 Int )( x_1 Int )( x_2 Int )( x_3 Int ) ) Bool
+	( or
+		( not
+			( = x x_2)
+		)
+		( not
+			( and
+				( not ( > x_2 0 ) )
+				( not ( = x_2 0 ) )
+			)
+		)
+	)
 )
-
-
-(assert (not
-  (=>
-    (pre-f x x_13 x_14 x_19 )
-    (inv-f x )
-  )
+( assert ( not
+	( =>
+		( pre-f x x_0 x_1 x_2 x_3  )
+		( inv-f x )
+	)
 ))
-

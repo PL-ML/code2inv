@@ -19,7 +19,7 @@ code2inv uses the Z3 theorem prover to verify the correctness of generated loop 
 Remember to set environment variables DYLD_LIBRARY_PATH and PYTHONPATH to contain paths for Z3 shared libraries and Z3Py, respectively.  These paths will be indicated upon successful installation of Z3.
 
 ## Frontend Setup (Optional)
-The frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. The program graphs and VCs for our benchmarks are already included in the `benchmarks` directory.  To build the frontend, follow the instructions in README in `code2inv-fe`. 
+The frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. The program graphs and VCs for our benchmarks are already included in the `benchmarks` directory.  To build the frontend, follow the instructions in README in `clang-fe`. 
 
 
 # Experiments

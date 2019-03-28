@@ -50,13 +50,15 @@
 #include "../include/Rewriter.h"
 #include "../include/MainVisitor.h"
 #include "../include/SSAWriter.h"
+#include "../include/SSAGraph.h"
 
 using namespace clang;
 using namespace ssa_transform;
 
 int main(int argc, const char **argv) {
-    if(argc > 1) {
-        for(int i = 1; i < argc; i++) {
+    if(argc > 2) {
+        std::string mode = argv[1];
+        for(int i = 2; i < argc; i++) {
             // argv[i] denotes the file name, content is the file's contents ie the code
             // we handle only 1 argument as of this point
             // gives a segfault if no files of the name exist
@@ -75,42 +77,24 @@ int main(int argc, const char **argv) {
 
             llvm::errs() << "Rewritten code is\n\n" << newContent << "\n";
 
-
-            /**
-             * @todo Merge the following two passes into one pass, so that the entire structure becomes a one pass structure
-             */
-
-
-
             // SECOND PASS- GETTING THE NECESSARY DATA STRUCTURES
             std::map<clang::SourceLocation, std::string> resVarReplacementMap;
             std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>> phiPlacementMap;
+            std::map<std::string, std::set<std::string>> variableMap;
+
             auto * mainClassAction = new ssa_transform::MainClassAction();
+
             mainClassAction->setReplacementMap(resVarReplacementMap);
             mainClassAction->setPhiPlaceMap(phiPlacementMap);
+            mainClassAction->setVariableMap(variableMap);
+
             clang::tooling::runToolOnCode(mainClassAction, newContent);
 
-            /*
-            llvm::errs() << "Out of tool\n";
-
-
-            for(auto x : phiPlacementMap) {
-                llvm::errs() << "block " << x.first << "\n";
-                for(auto var : x.second) {
-                    llvm::errs() << var.first << ": ";
-                    for(auto arg : var.second) {
-                        llvm::errs() << arg << " ";
-                    }
-
-                    llvm::errs() << "\n";
-                }
-            }*/
-
-
+            auto * ssaWriterFrontEndAction = new SSAWriterFrontAction(
+                    resVarReplacementMap, phiPlacementMap, variableMap, argv[i], mode);
 
             // THIRD PASS- MAKING THE SSA GRAPH
-            clang::tooling::runToolOnCode(new SSAWriterFrontAction(resVarReplacementMap, phiPlacementMap, argv[i]), newContent);
-
+            clang::tooling::runToolOnCode(ssaWriterFrontEndAction, newContent);
 
         }
     }

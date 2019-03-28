@@ -426,7 +426,6 @@ def reward_1(sample_index, holder, lambda_holder_eval, lambda_new_ice):
     # otherwise, call the old reward
     return reward_0(holder, lambda_holder_eval, lambda_new_ice, scores)
 
-
 def boogie_result(g, expr_root):
     #print("evaluate prog: ", g.sample_index)
     stat_counter.add(g.sample_index, 'boogie_result')
@@ -443,8 +442,16 @@ def boogie_result(g, expr_root):
     res = reward_1(g.sample_index, holder, lambda_holder_eval, lambda_new_ice)
     if res > 0:
         tqdm.write("found a solution for " + str(g.sample_index) + " , sol: " + str(expr_root))
+        # saving the expr_root object in a pickle
         stat_counter.report_once(g.sample_index)
         if cmd_args.exit_on_find:
+            if cmd_args.save_smt is not None:
+                filename = cmd_args.save_smt
+                tqdm.write("Writing invariant smt2 to " + filename)
+                with open(filename, 'w') as inv_fil:
+                    inv_fil.write(expr_root.to_smt2())
+                tqdm.write("Written smt2")
+
             sys.exit()
 
     return res

@@ -1,0 +1,22 @@
+#!/bin/bash
+#PBS -N mcts
+#PBS -q debug
+#PBS -l walltime=09:00:00
+#PBS -l nodes=1:ppn=1
+#PBS -k oe
+#PBS -m ae
+
+# Note that any line starting with "#PBS" will be treated as a task configuration
+
+# qsub will start a new process to execute the following commands 
+
+# conda activate code2inv_env
+
+# cd /home/aadityanaik/code2inv/code2inv/prog_generator/tests
+
+echo "process benchmakr: $bench"
+echo "save log to $log"
+mkdir -p tmp
+./test.sh $bench
+
+./get_log.sh tmp/$bench.out > $log

@@ -43,6 +43,10 @@ namespace ssa_transform {
             return blockPhiFuncMap;
         }
 
+        std::map <std::string, std::set<std::string>> getVariableMap() {
+            return variables;
+        }
+
     private:
         clang::ASTContext *Context;
 
@@ -70,7 +74,7 @@ namespace ssa_transform {
         };
 
         // set of variables in the parsed code
-        std::set<std::string> variables;
+        std::map<std::string, std::set<std::string>> variables;
 
         // a map between a CFGBlock and the information of all variables in that block
         std::map<clang::CFGBlock *, std::set<varStmtStruct>> blockVariableMap;
@@ -89,6 +93,7 @@ namespace ssa_transform {
 
         // a map between the location of a variable and its replacement
         std::map<clang::SourceLocation, std::string> varReplacementMap;
+
 
         clang::CFGStmtMap *cm;
 
@@ -134,6 +139,7 @@ namespace ssa_transform {
     class MainClassAction : public clang::ASTFrontendAction {
     private:
         MainFunctionConsumer* consumer;
+        std::map<std::string, std::set<std::string>>* variableMap;
         std::map<clang::SourceLocation, std::string>* varReplacementMap;
         std::map<int, std::list<std::pair<std::string, std::vector<std::string>>>>* phiPlacementMap;
         clang::SourceManager* sm;
@@ -147,6 +153,10 @@ namespace ssa_transform {
             phiPlacementMap = &map;
         }
 
+        void setVariableMap(std::map<std::string, std::set<std::string>>& map) {
+            variableMap = &map;
+        }
+
         void setSM(clang::SourceManager& SM) {
             sm = &SM;
         }
@@ -155,6 +165,8 @@ namespace ssa_transform {
             *varReplacementMap = consumer->getVisitor().getVarReplacementMap();
 
             *phiPlacementMap = consumer->getVisitor().getBlockPhiPlacementMap();
+
+            *variableMap = consumer->getVisitor().getVariableMap();
         }
 
         virtual std::unique_ptr<clang::ASTConsumer>

@@ -39,6 +39,9 @@ cmd_opt.add_argument('-exit_on_find', default=0, type=int, help='exit when found
 cmd_opt.add_argument('-decoder_model', default='AssertAwareRNN', help='decoder model')
 cmd_opt.add_argument('-learning_rate', default=0.001, type=float, help='random seed')
 
+# for testing purposes- saves smt version of generated invariant
+cmd_opt.add_argument('-save_smt', default=None, type=str, help='save smt version when invariant generated')
+
 cmd_args, _ = cmd_opt.parse_known_args()
 
 start_time = None

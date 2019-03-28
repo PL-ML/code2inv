@@ -8,6 +8,7 @@
 #include <set>
 #include <list>
 #include <llvm/Support/raw_ostream.h>
+#include <map>
 
 namespace ssa_transform {
 
@@ -32,6 +33,10 @@ namespace ssa_transform {
 
         void print(const std::string &indent);
 
+        std::string printInLine();
+
+        std::vector<std::string> getVarsReferenced();
+
         void printAsJSON(std::string indent, std::ostream &outStream);
     };
 
@@ -48,6 +53,11 @@ namespace ssa_transform {
 
         void print();
 
+        std::string printInLine();
+
+        std::vector<std::string> getVarsReferenced();
+        std::string getVarsAssigned();
+
         void printAsJSON(std::string indent, std::ostream &outStream);
 
         bool operator<(const SSANode &b) const {
@@ -55,16 +65,44 @@ namespace ssa_transform {
         }
     };
 
-
     class SSAGraph {
     private:
-        std::set<std::unique_ptr<SSANode>> nodes;
+        std::map<std::string, std::unique_ptr<SSANode>> nodes;
         std::set<std::pair<std::string, std::string>> control_flow;
         std::string altExitId;
+
+        void generatePrePath(std::vector<std::vector<std::string>>& path, std::string nodeID, std::string terminate, std::set<std::string>& visited);
+        std::string generateSMTCond(std::vector<std::string> path, std::string indent, std::map<std::string, std::string> lastAssignedVar);
+        std::map<std::string, std::string> generateLastRefVars(std::vector<std::string> path);
+
     public:
         void addNode(std::unique_ptr<SSANode> &node) {
-            nodes.insert(std::move(node));
+            nodes[node->id] = (std::move(node));
         }
+
+        std::vector<std::string> getNodeSuccessors(std::string nodeID) {
+            std::vector<std::string> successors;
+            for(auto pair : control_flow) {
+                if(pair.first == nodeID) {
+                    successors.push_back(pair.second);
+                }
+            }
+
+            return successors;
+        }
+
+        std::vector<std::string> getNodePredecessors(std::string nodeID) {
+            std::vector<std::string> predecessors;
+            for(auto pair : control_flow) {
+                if(pair.second == nodeID) {
+                    predecessors.push_back(pair.first);
+                }
+            }
+
+            return predecessors;
+        }
+
+        std::string getSMT(std::map<std::string, std::set<std::string>>& variables);
 
         void addFlow(std::string srcid, std::string destid) {
             control_flow.insert(std::pair<std::string, std::string>(srcid, destid));

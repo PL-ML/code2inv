@@ -56,14 +56,14 @@ tests: bin/clang-fe
 	@echo "The tests need to be manually verified. The json files are written into the same directory as the test cases."
 	@echo "For information about the rewritten code, CFG and the Dominator Tree, run make test-debug."
 	@cp tests/assert.h .
-	./bin/clang-fe $(shell ls tests/*.c) 2>/dev/null
+	./bin/clang-fe -ssa $(shell ls tests/*.c) 2>/dev/null
 	@rm assert.h
 
 test-debug: bin/clang-fe
 	@echo "The tests need to be manually verified. The json files are written into the same directory as the test cases."
 	@echo "For information about the rewritten code, CFG and the Dominator Tree, run make test-debug."
 	@cp tests/assert.h .
-	./bin/clang-fe $(shell ls tests/*.c)
+	./bin/clang-fe -ssa $(shell ls tests/*.c)
 	@rm assert.h
 
 clean:

@@ -151,7 +151,9 @@ namespace ssa_transform {
 
     void SSAGraph::generatePrePath(std::vector<std::vector<std::string>>& path, std::string nodeID, std::string terminate, std::set<std::string>& visited) {
 
+                // llvm::errs() << nodeID << "\n";
         if(visited.find(nodeID) == visited.end() && nodeID != terminate) {
+            // llvm::errs() << nodeID << "\n";
             visited.insert(nodeID);
             std::vector<std::string> successors;
             std::vector<std::string> predecessors;
@@ -174,13 +176,15 @@ namespace ssa_transform {
                 }
             }
 
+            // llvm::errs() << successors.size() << "\n";
+
             if (successors.size() == 1) {
                 for (auto &paths : path) {
                     paths.push_back(nodeID);
                 }
 
                 generatePrePath(path, successors[0], terminate, visited);
-            } else {
+            } else if(successors.size() == 2) {
                 for (auto &paths : path) {
                     paths.push_back(nodeID);
                 }
@@ -221,6 +225,10 @@ namespace ssa_transform {
 
                         path.push_back(p);
                     }
+                }
+            } else if(successors.size() == 0 && nodeID == "EXIT") {
+                for (auto &paths : path) {
+                    paths.push_back(nodeID);
                 }
             }
             /*
@@ -367,6 +375,9 @@ namespace ssa_transform {
         std::string res;
         if(type == "OP") {
             if(args.size() == 1) {
+                if(parent == "!") {
+                    return "( not " + args[0]->printInLine() + " )";
+                }
                 return "( " + parent + args[0]->printInLine() + " )";
             } else {
                 std::string op = parent;
@@ -376,8 +387,12 @@ namespace ssa_transform {
                 } else if(parent == "!=") {
                     op = "=";
                     return "( not ( " + op + " " + args[0]->printInLine() + " " + args[1]->printInLine() + " ) )";
-                } else if(parent == "!") {
-                    return "( not " + args[0]->printInLine() + " )";
+                } else if (parent == "||") {
+                    return "( or " + args[0]->printInLine() + " " + args[1]->printInLine() + " )";
+                } else if (parent == "&&") {
+                    return "( and " + args[0]->printInLine() + " " + args[1]->printInLine() + " )";
+                } else if (parent == "%") {
+                    return "( mod " + args[0]->printInLine() + " " + args[1]->printInLine() + " )";
                 }
                 return "( " + op + " " + args[0]->printInLine() + " " + args[1]->printInLine() + " )";
             }
@@ -399,6 +414,9 @@ namespace ssa_transform {
 
         if(rightChild != nullptr) {
             r = rightChild->printInLine();
+            if(rightChild->type == "UNK" && cmdName == "assign") {
+                r = "tmp";
+            }
         }
 
         if(cmdName == "assign") {
@@ -525,7 +543,7 @@ namespace ssa_transform {
         return referencedVars;
     }
 
-    std::string SSAGraph::getSMT(std::map<std::string, std::set<std::string>>& variables) {
+    std::string SSAGraph::getSMT(std::map<std::string, std::set<std::string>>& variables, std::string smtMode) {
         std::string smt;
 
         std::vector<std::string> orgArgs, auxArgs, assArgs;
@@ -557,16 +575,26 @@ namespace ssa_transform {
             if(tmpNeeded && var == tmpVar) {
                 tmpVar += "0";
             }
-            smt += "( declare-const " + var + " Int )\n";
+
+            if(smtMode == "-smt") {
+                smt += "( declare-const " + var + " Int )\n";
+                smt += "( declare-const " + var + "! Int )\n";
+            } else {
+                smt += "( declare-primed-var " + var + " Int )\n";
+            }
+
             orgArgs.push_back(var);
-            smt += "( declare-const " + var + "! Int )\n";
             auxArgs.push_back(var + "!");
         }
 
         if(tmpNeeded) {
-            smt += "( declare-const " + tmpVar + " Int )\n";
+            if(smtMode == "-smt") {
+                smt += "( declare-const " + tmpVar + " Int )\n";
+                smt += "( declare-const " + tmpVar + "! Int )\n";
+            } else {
+                smt += "( declare-primed-var " + tmpVar + " Int )\n";
+            }
             orgArgs.push_back(tmpVar);
-            smt += "( declare-const " + tmpVar + "! Int )\n";
             auxArgs.push_back(tmpVar + "!");
         }
 
@@ -574,22 +602,40 @@ namespace ssa_transform {
 
         for(auto var : usedVars) {
             for(auto ssVar : variables[var]) {
-                smt += "( declare-const " + ssVar + " Int )\n";
+                if(smtMode == "-smt") {
+                    smt += "( declare-const " + ssVar + " Int )\n";
+                } else {
+                    smt += "( declare-primed-var " + ssVar + " Int )\n";
+                }
                 assArgs.push_back(ssVar);
             }
         }
 
         smt += "\n";
 
-        smt += "( define-fun inv-f( ";
+        std::string smt2placeholder = "SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop";
 
-        for(auto arg : orgArgs) {
-            smt += "( " + arg + " Int )";
+        if(smtMode == "-smt") {
+            smt += "( define-fun inv-f( ";
+
+            for (auto arg : orgArgs) {
+                smt += "( " + arg + " Int )";
+            }
+
+            smt += " ) Bool\n" + smt2placeholder + "\n)\n\n";
+        } else {
+            smt += "( synth-inv inv-f( ";
+
+            for(auto arg : orgArgs) {
+                smt += "( " + arg + " Int )";
+            }
+
+            for(auto arg : assArgs) {
+                smt += "( " + arg + " Int )";
+            }
+
+            smt += " ) )\n\n";
         }
-
-        std::string placeholder = "SPLIT_HERE_asdfghjklzxcvbnmqwertyuiop";
-
-        smt += " ) Bool\n" + placeholder + "\n)\n\n";
 
         std::set<std::string> visited;
 
@@ -663,14 +709,20 @@ namespace ssa_transform {
             indent += "\t";
 
             for(auto pathBranch : path) {
-                smt += indent + "( and\n";
-                // smt += generateLastRefVars(pathBranch, variables, indent + "\t");
-                auto lastRefMap = generateLastRefVars(pathBranch);
-                for(auto pair : lastRefMap) {
-                    smt += indent + "\t( = " + pair.first + " " + pair.second + " )\n";
+                // llvm::errs() << "NEW PRE PATH\n";
+                // for (auto x : pathBranch) {
+                //     llvm::errs() << x << "\n";
+                // }
+                if(std::find(pathBranch.begin(), pathBranch.end(), "EXIT") == pathBranch.end()) {
+                    smt += indent + "( and\n";
+                    // smt += generateLastRefVars(pathBranch, variables, indent + "\t");
+                    auto lastRefMap = generateLastRefVars(pathBranch);
+                    for(auto pair : lastRefMap) {
+                        smt += indent + "\t( = " + pair.first + " " + pair.second + " )\n";
+                    }
+                    smt += generateSMTCond(pathBranch, indent + "\t", lastAssignedVar);
+                    smt += indent + ")\n";
                 }
-                smt += generateSMTCond(pathBranch, indent + "\t", lastAssignedVar);
-                smt += indent + ")\n";
             }
 
             indent.pop_back();
@@ -693,14 +745,30 @@ namespace ssa_transform {
         // for trans paths
 
         smt += "( define-fun trans-f ( ";
-        for(auto arg: orgArgs) {
-            smt += "( " + arg + " Int )";
-        }
-        for(auto arg: auxArgs) {
-            smt += "( " + arg + " Int )";
-        }
-        for(auto arg: assArgs) {
-            smt += "( " + arg + " Int )";
+
+        if(smtMode == "-smt") {
+            for (auto arg: orgArgs) {
+                smt += "( " + arg + " Int )";
+            }
+            for (auto arg: auxArgs) {
+                smt += "( " + arg + " Int )";
+            }
+            for (auto arg: assArgs) {
+                smt += "( " + arg + " Int )";
+            }
+        } else {
+            for(auto arg: orgArgs) {
+                smt += "( " + arg + " Int )";
+            }
+            for(auto arg: assArgs) {
+                smt += "( " + arg + " Int )";
+            }
+            for(auto arg: orgArgs) {
+                smt += "( " + arg + "! Int )";
+            }
+            for(auto arg: assArgs) {
+                smt += "( " + arg + "! Int )";
+            }
         }
 
         smt += " ) Bool\n";
@@ -892,90 +960,95 @@ namespace ssa_transform {
         smt += indent + ")\n";
 
         // at the end
-        smt += placeholder + "\n" + "( assert ( not\n";
-        indent = "\t";
-        smt += indent + "( =>\n";
-        indent += "\t";
 
-        smt += indent + "( pre-f ";
-        for(auto arg : orgArgs) {
-            smt += arg + " ";
+        if(smtMode == "-smt") {
+            smt += smt2placeholder + "\n" + "( assert ( not\n";
+            indent = "\t";
+            smt += indent + "( =>\n";
+            indent += "\t";
+
+            smt += indent + "( pre-f ";
+            for (auto arg : orgArgs) {
+                smt += arg + " ";
+            }
+            for (auto arg : assArgs) {
+                smt += arg + " ";
+            }
+            smt += " )\n";
+
+            smt += indent + "( inv-f ";
+            for (auto arg : orgArgs) {
+                smt += arg + " ";
+            }
+            smt += ")\n";
+
+            indent.pop_back();
+            smt += indent + ")\n";
+            smt += "))\n\n";
+
+
+            smt += smt2placeholder + "\n" + "( assert ( not\n";
+            indent = "\t";
+            smt += indent + "( =>\n";
+            indent += "\t";
+            smt += indent + "( and\n";
+            indent += "\t";
+            smt += indent + "( inv-f ";
+            for (auto arg : orgArgs) {
+                smt += arg + " ";
+            }
+            smt += ")\n";
+            smt += indent + "( trans-f ";
+            for (auto arg : orgArgs) {
+                smt += arg + " ";
+            }
+            for (auto arg : auxArgs) {
+                smt += arg + " ";
+            }
+            for (auto arg : assArgs) {
+                smt += arg + " ";
+            }
+            smt += ")\n";
+
+            indent.pop_back();
+            smt += indent + ")\n";
+
+            smt += indent + "( inv-f ";
+            for (auto arg : auxArgs) {
+                smt += arg + " ";
+            }
+            smt += ")\n";
+
+            indent.pop_back();
+            smt += indent + ")\n";
+            smt += "))\n\n";
+
+            smt += smt2placeholder + "\n" + "( assert ( not\n";
+            indent = "\t";
+            smt += indent + "( =>\n";
+            indent += "\t";
+
+            smt += indent + "( inv-f ";
+            for (auto arg : orgArgs) {
+                smt += arg + " ";
+            }
+            smt += " )\n";
+
+            smt += indent + "( post-f ";
+            for (auto arg : orgArgs) {
+                smt += arg + " ";
+            }
+            for (auto arg : assArgs) {
+                smt += arg + " ";
+            }
+            smt += ")\n";
+
+            indent.pop_back();
+            smt += indent + ")\n";
+            smt += "))\n\n";
+        } else {
+            smt += "\n( inv-constraint inv-f pre-f trans-f post-f )\n( check-synth )\n";
         }
-        for(auto arg : assArgs) {
-            smt += arg + " ";
-        }
-        smt += " )\n";
-
-        smt += indent + "( inv-f ";
-        for(auto arg : orgArgs) {
-            smt += arg + " ";
-        }
-        smt += ")\n";
-
-        indent.pop_back();
-        smt += indent + ")\n";
-        smt += "))\n\n";
-
-
-        smt += placeholder + "\n" + "( assert ( not\n";
-        indent = "\t";
-        smt += indent + "( =>\n";
-        indent += "\t";
-        smt += indent + "( and\n";
-        indent += "\t";
-        smt += indent + "( inv-f ";
-        for(auto arg : orgArgs) {
-            smt += arg + " ";
-        }
-        smt += ")\n";
-        smt += indent + "( trans-f ";
-        for(auto arg : orgArgs) {
-            smt += arg + " ";
-        }
-        for(auto arg : auxArgs) {
-            smt += arg + " ";
-        }
-        for(auto arg : assArgs) {
-            smt += arg + " ";
-        }
-        smt += ")\n";
-
-        indent.pop_back();
-        smt += indent + ")\n";
-
-        smt += indent + "( inv-f ";
-        for(auto arg : auxArgs) {
-            smt += arg + " ";
-        }
-        smt += ")\n";
-
-        indent.pop_back();
-        smt += indent + ")\n";
-        smt += "))\n\n";
-
-        smt += placeholder + "\n" + "( assert ( not\n";
-        indent = "\t";
-        smt += indent + "( =>\n";
-        indent += "\t";
-
-        smt += indent + "( inv-f ";
-        for(auto arg : orgArgs) {
-            smt += arg + " ";
-        }
-        smt += " )\n";
-
-        smt += indent + "( post-f ";
-        for(auto arg : orgArgs) {
-            smt += arg + " ";
-        }
-        for(auto arg : assArgs) {
-            smt += arg + " ";
-        }
-        smt += ")\n";
-
-        indent.pop_back();
-        smt += indent + ")\n";
-        smt += "))\n\n";
 
         return smt;
 

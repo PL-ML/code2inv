@@ -18,6 +18,24 @@ from code2inv.common.constants import NUM_EDGE_TYPES
 from code2inv.common.cmd_args import cmd_args
 from code2inv.common.pytorch_util import weights_init, gnn_spmm, get_torch_version
 from code2inv.graph_encoder.s2v_lib import S2VLIB, S2VGraph
+from code2inv.common.pytorch_util import glorot_uniform
+
+
+class ParamEmbed(nn.Module):
+    def __init__(self, latent_dim, num_nodes):
+        super(ParamEmbed, self).__init__()
+        self.latent_dim = latent_dim
+        self.num_nodes = num_nodes
+
+        node_embed = torch.Tensor(num_nodes, latent_dim)
+        glorot_uniform(node_embed)
+        self.node_embed = Parameter(node_embed)
+
+    def forward(self, graph, istraining=True):
+        # assert len(graph) == 1
+        assert graph.pg.num_nodes() == self.num_nodes
+        return self.node_embed
+
 
 class LSTMEmbed(nn.Module):
     def __init__(self, latent_dim, num_node_feats):

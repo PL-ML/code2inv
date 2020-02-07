@@ -75,6 +75,8 @@ namespace ssa_transform {
         std::string generateSMTCond(std::vector<std::string> path, std::string indent, std::map<std::string, std::string> lastAssignedVar);
         std::map<std::string, std::string> generateLastRefVars(std::vector<std::string> path);
 
+        // std::string tmpVar;
+
     public:
         void addNode(std::unique_ptr<SSANode> &node) {
             nodes[node->id] = (std::move(node));
@@ -102,7 +104,7 @@ namespace ssa_transform {
             return predecessors;
         }
 
-        std::string getSMT(std::map<std::string, std::set<std::string>>& variables);
+        std::string getSMT(std::map<std::string, std::set<std::string>>& variables, std::string smtMode);
 
         void addFlow(std::string srcid, std::string destid) {
             control_flow.insert(std::pair<std::string, std::string>(srcid, destid));

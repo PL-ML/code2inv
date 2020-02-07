@@ -15,7 +15,7 @@ import torch.optim as optim
 from itertools import chain
 
 from code2inv.common.ssa_graph_builder import ProgramGraph, GraphNode
-from code2inv.common.constants import AC_CODE, NUM_EDGE_TYPES, LIST_PREDICATES, LIST_OP, MAX_DEPTH, MAX_AND, MAX_OR, INVALID_CODE, NORMAL_EXPR_CODE
+from code2inv.common.constants import *
 from code2inv.common.cmd_args import cmd_args
 from code2inv.common.pytorch_util import get_torch_version
 from code2inv.common.dataset import PickleDataset
@@ -25,7 +25,7 @@ from code2inv.graph_encoder.embedding import EmbedMeanField
 
 from code2inv.prog_generator.prog_encoder import LogicEncoder
 from code2inv.prog_generator.rl_helper import RLEnv, ExprNode, rollout, actor_critic_loss
-from code2inv.prog_generator import tree_decoder
+from code2inv.prog_generator.tree_decoder import GeneralDecoder
 
 
 def test_loop():
@@ -46,7 +46,7 @@ def test_loop():
         g = g_list[b]
         node_embedding = node_embedding_batch[embedding_offset : embedding_offset + g.pg.num_nodes(), :]
         embedding_offset += g.pg.num_nodes()
-        nll_list, value_list, reward_list, root = rollout(g, node_embedding, decoder, use_random = True, eps = 0.0)  
+        nll_list, value_list, reward_list, root, _ = rollout(g, node_embedding, decoder, use_random = True, eps = 0.0)  
         r += sum(reward_list)
     tqdm.write('avg test reward: %.4f\n' % (r / len(g_list)))
     if version >= 0.4:
@@ -63,10 +63,17 @@ if __name__ == '__main__':
 
     params = []
 
-    encoder = EmbedMeanField(cmd_args.embedding_size, len(dataset.node_type_dict), max_lv=cmd_args.s2v_level)
-    decoder_class = getattr(tree_decoder, cmd_args.decoder_model + 'Decoder')
-    decoder = decoder_class(cmd_args.embedding_size)
-    
+    if cmd_args.encoder_model == 'GNN':
+        encoder = EmbedMeanField(cmd_args.embedding_size, len(dataset.node_type_dict), max_lv=cmd_args.s2v_level)
+    elif cmd_args.encoder_model == 'LSTM':
+        encoder = LSTMEmbed(cmd_args.embedding_size, len(dataset.node_type_dict))
+    elif cmd_args.encoder_model == 'Param':
+        g_list = GraphSample(graph, vc_list, dataset.node_type_dict)
+        encoder = ParamEmbed(cmd_args.embedding_size, g_list.pg.num_nodes())
+    else:
+        raise NotImplementedError
+
+    decoder = GeneralDecoder(cmd_args.embedding_size)
     if cmd_args.init_model_dump is not None and os.path.isfile(cmd_args.init_model_dump + '.encoder'):
         encoder.load_state_dict(torch.load(cmd_args.init_model_dump + '.encoder'))
         decoder.load_state_dict(torch.load(cmd_args.init_model_dump + '.decoder'))
@@ -77,6 +84,7 @@ if __name__ == '__main__':
     optimizer = optim.Adam(chain.from_iterable(params), lr=cmd_args.learning_rate)    
     
     for epoch in range(cmd_args.num_epochs):
+        print("NUM EPOCHS", cmd_args.num_epochs)
         best_reward = -5.0
         best_root = None
         tested_roots = []
@@ -103,7 +111,7 @@ if __name__ == '__main__':
                 else:
                     g = g_list[0]
                     node_embedding = node_embedding_batch
-                nll_list, value_list, reward_list, root = rollout(g, node_embedding, decoder, use_random = True, eps = 0.05)  
+                nll_list, value_list, reward_list, root, _ = rollout(g, node_embedding, decoder, use_random = True, eps = 0.05)  
 
                 tested_roots.append(root)
                 if reward_list[-1] > best_reward:
@@ -121,8 +129,11 @@ if __name__ == '__main__':
         
         g = dataset.sample_minibatch(1, replacement = True)[0]
         node_embedding = encoder(g)
-        _, _, _, root = rollout(g, node_embedding, decoder, use_random = True, eps = 0.0)
-        
+        while True:
+            _, _, _, root, trivial = rollout(g, node_embedding, decoder, use_random = True, eps = 0.0)
+            print("ROOT", root)
+            if trivial == False:
+                break
         print('epoch: %d, average reward: %.4f, Random: %s, result_r: %.4f' % (epoch, acc_reward / 100.0, root, boogie_result(g, root)))
         print("best_reward:", best_reward, ", best_root:", best_root)
         if cmd_args.save_dir is not None and cmd_args.phase == 'train':

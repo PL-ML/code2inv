@@ -48,9 +48,9 @@ namespace ssa_transform {
              */
             if(genmode == "-ssa") {
                 ssaGraph.printAsJSON(std::cout);
-            } else if(genmode == "-smt") {
+            } else if(genmode == "-smt" || genmode == "-sygus") {
                 llvm::errs() << "Generating SMT\n";
-                llvm::outs() << ssaGraph.getSMT(variableMap);
+                llvm::outs() << ssaGraph.getSMT(variableMap, genmode);
                 llvm::errs() << "SMT Generated\n";
 
             } else {
@@ -80,7 +80,7 @@ namespace ssa_transform {
             if(llvm::isa<DeclRefExpr>(functnDeclExpr)) {
                 auto ref = llvm::dyn_cast<DeclRefExpr>(functnDeclExpr);
                 subNode->parent = ref->getDecl()->getName();
-                if(subNode->parent == "unknown") {
+                if(subNode->parent == "unknown" || subNode->parent.find("__VERIFIER_nondet_") != std::string::npos) {
                     subNode->type = "UNK";
                     subNode->parent = "UNK_VAL";
                 } else {

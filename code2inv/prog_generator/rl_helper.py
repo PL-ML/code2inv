@@ -14,27 +14,34 @@ import torch.nn.functional as F
 import torch.optim as optim
 from itertools import chain
 from tqdm import tqdm
-
+import importlib
 
 from code2inv.common.ssa_graph_builder import ProgramGraph, GraphNode, ExprNode
-from code2inv.common.constants import AC_CODE, NUM_EDGE_TYPES, LIST_PREDICATES, LIST_OP, MAX_DEPTH, MAX_AND, MAX_OR, INVALID_CODE, NORMAL_EXPR_CODE
+from code2inv.common.constants import *
 from code2inv.common.cmd_args import cmd_args
 from code2inv.common.checker import boogie_result, z3_precheck, z3_precheck_expensive, stat_counter
-
+from code2inv.prog_generator.tree_decoder import genExprTree, GeneralDecoder, InvariantTreeNode, fully_expanded_node
+checker_module = importlib.import_module(cmd_args.inv_checker)
 
 class RLEnv(object):
-    def __init__(self, s2v_graph):
+    def __init__(self, s2v_graph, decoder):
         self.s2v_graph = s2v_graph
         self.pg = s2v_graph.pg
+        self.decoder = decoder
         self.reset()
 
     def reset(self):
-        self.root = None
-        self.terminal = False
-        self.trivial_subexpr = False
-        self.expr_in_and = set()
-        self.expr_in_or = set()
-        self.used_core_vars = set()
+        try:
+            self.root = None
+            self.inv_candidate = None
+            self.terminal = False
+            self.trivial_subexpr = False
+            self.expr_in_and = set()
+            self.expr_in_or = set()
+            self.used_core_vars = set()
+        except RecursionError:
+            print("ERROR- Non Terminating grammar found")
+            exit(-1)
 
     def num_vars(self):
         return len(self.pg.raw_variable_nodes)
@@ -52,114 +59,93 @@ class RLEnv(object):
     def constraint_satisfied(self):
         return len(self.used_core_vars) == len(self.pg.core_vars)
 
-    def step(self, and_or, sub_expr_node):
-        reward = 0.0        
-        if and_or is None:
-            assert sub_expr_node is None
-            assert self.root is not None
-            self.terminal = True
-        else:
-            if self.root is None:
-                self.root = ExprNode('&&')
-                assert and_or == '&&'
-            if and_or == '&&': # a new and branch
-                self.expr_in_or.clear()
-                if len(self.root.children): # finished an existing and branch
-                    self.expr_in_and.add( str(self.root.children[-1]) )
-                self.root.children.append( ExprNode('||') )
-            else:
-                assert and_or == '||'
-            cur_node = self.root.children[-1]
-            cur_node.children.append(sub_expr_node)
-
-            if len(self.root.children) == MAX_AND and len(self.root.children[-1].children) == MAX_OR:
-                self.terminal = True
+    def insert_subexpr(self, node, subexpr_node, eps = 0.05):
+        if node is None:
+            node = genExprTree(RULESET, "S")
+            return self.insert_subexpr(node, subexpr_node)
+        elif node.name == "" and node.rule == "p" and node.expanded is None:
+            node = subexpr_node
+            node.expanded = True
+            return node, True
+        elif node.name == "" and node.rule == "p" and node.expanded == True:
+            return node, False
+        elif node.rule is not None and len(node.children) == 0:
+            w = nn.Linear(cmd_args.embedding_size, len(RULESET[node.rule]))
+            logits = w(self.decoder.latent_state)
             
-            self.root.state = None
-            str_expr = str(sub_expr_node)
-            if str_expr in self.expr_in_or: # each expr in same disjuction should be different
-                self.trivial_subexpr = True 
-            elif str(cur_node) in self.expr_in_and: # each and branch should be different
-                self.trivial_subexpr = True 
-            elif cmd_args.aggressive_check:
-                if cur_node.has_trivial_pattern():
-                    self.trivial_subexpr = True  
-                if not self.trivial_subexpr:    
-                    stat_counter.add(self.s2v_graph.sample_index, 'impl')
-                    if cur_node.has_internal_implications(self.pg):
-                        self.trivial_subexpr = True
-                if not self.trivial_subexpr: 
-                    stat_counter.add(self.s2v_graph.sample_index, 'z3_exp_pre')
-                    # trivial or expr, e.g. (c <0 || c >= 0) 
-                    if z3_precheck_expensive(self.pg, cur_node.to_z3()) != NORMAL_EXPR_CODE: 
-                        self.trivial_subexpr = True             
-            else:
-                stat_counter.add(self.s2v_graph.sample_index, 'z3_pre')
-                if z3_precheck(self.pg, str(sub_expr_node)) != NORMAL_EXPR_CODE: # trivial expr itself
-                    self.trivial_subexpr = True             
+            ll = F.log_softmax(logits, dim=1)
+
+            if self.use_random:
+                scores = torch.exp(ll) * (1 - eps) + eps / ll.shape[1]
+                picked = torch.multinomial(scores, 1)
+            else:            
+                _, picked = torch.max(ll, 1)
+            picked = picked.view(-1)        
+
+            node = genExprTree(RULESET, node.rule, picked)
+            return self.insert_subexpr(node, subexpr_node)
+
+        elif len(node.children) > 0:
+            last_junct = ""
+            for i in range(len(node.children)):
+                node.children[i], node_update = self.insert_subexpr(node.children[i], subexpr_node)
+                if node_update:
+                    return node, node_update
+            return node, False
+        else:
+            return node, False
+
+
+    def step(self, subexpr_node, node_embedding, use_random, eps):
+        self.use_random = use_random
+        reward = 0.0        
+        self.inv_candidate, updated = self.insert_subexpr(self.inv_candidate, subexpr_node)
+        self.root = self.inv_candidate.clone_expanded()
+
+        self.terminal = fully_expanded_node(self.inv_candidate)
+        self.root.state = None
+        if self.inv_candidate.check_rep_pred():
+            self.trivial_subexpr = True
+        else:
+            try:
+                if checker_module.is_trivial(cmd_args.input_vcs, str(subexpr_node)):
+                    self.trivial_subexpr = True
                 else:
                     reward += 0.5
+            except Exception as e:
+                reward += 0.5
 
-            if self.trivial_subexpr:
-                reward += -2.0
-                self.terminal = True
-                
-            self.expr_in_or.add(str_expr)
+        if self.trivial_subexpr:
+            reward += -2.0
+            self.terminal = True
 
         if self.terminal:
             if not self.trivial_subexpr: #self.constraint_satisfied():
-                r = boogie_result(self.s2v_graph, self.root)
-                reward += r
+                try:
+                    r = boogie_result(self.s2v_graph, self.root)
+                    reward += r
+                except Exception as e:
+                    if str(e) == "Not implemented yet":
+                        raise e
+                    reward += -6.0
             else:
                 reward += -4.0
-            
-        return self.terminal, reward
+        return reward, self.trivial_subexpr
 
-    def core_var_budget(self, cur_used, new_and_branch):
-        subexpr_budget = 2 ** (MAX_DEPTH - 1) + 1
+    def available_var_indices(self, list_vars):
+        list_indices = []
+        if list_vars and len(list_vars) > 0:
+            for var in self.pg.raw_variable_nodes:
+                if var in list_vars:
+                    list_indices.append(self.pg.raw_variable_nodes[var].index)
+            list_indices.sort()
 
-        if self.root is None:
-            used_and = 0
-            used_or = 0
+            if len(list_indices) == 0:
+                list_indices = list(range(len(self.pg.raw_variable_nodes)))
+
+            return list_indices
         else:
-            used_and = len(self.root.children)
-            used_or = len(self.root.children[-1].children)
-
-        future_and = (MAX_AND - used_and)
-        if new_and_branch:
-            future_and -= 1
-            used_or = 0
-
-        remain = (future_and * MAX_OR + MAX_OR - used_or) * subexpr_budget
-        remain -= cur_used
-        task = self.pg.core_vars - self.used_core_vars
-
-        return remain - len(task)
-
-    def available_var_indices(self, cur_used, new_and_branch):
-        if len(self.used_core_vars) == len(self.pg.core_vars): # condition already satisfied
             return list(range(len(self.pg.raw_variable_nodes)))
-        
-        remain_budget = self.core_var_budget(cur_used, new_and_branch)
-        assert remain_budget >= 0 # a valid solution should always be guaranteed
-        
-        if remain_budget:
-            return list(range(len(self.pg.raw_variable_nodes)))
-
-        task = self.pg.core_vars - self.used_core_vars
-        indices = [self.pg.raw_variable_nodes[w].index for w in task]
-        indices.sort()
-        return indices
-
-    def and_budget(self):
-        if self.root is None:
-            return MAX_AND
-        return MAX_AND - len(self.root.children)
-    
-    def or_budget(self):
-        if self.root is None:
-            return MAX_OR
-        return MAX_OR - len(self.root.children[-1].children)
 
     def is_finished(self):
         return self.terminal
@@ -168,23 +154,30 @@ def rollout(g, node_embedding, decoder, use_random, eps):
     nll_list = []
     value_list = []
     reward_list = []
-
-    env = RLEnv(g)    
+    trivial = False
+    env = RLEnv(g, decoder)
     while not env.is_finished():
-        
-        and_or, subexpr_node, nll, vs = decoder(env, node_embedding, use_random=use_random, eps = eps)
-        nll_list.append(nll)
-        value_list.append(vs)
+        try:
+            and_or, subexpr_node, nll, vs, latent_state = decoder(env, node_embedding, use_random=use_random, eps = eps)
 
-        _, reward = env.step(and_or, subexpr_node)
-
-        reward_list.append(reward)
+            reward, trivial = env.step(subexpr_node, node_embedding, use_random, eps)
+            nll_list.append(nll)
+            value_list.append(vs)
+            
+            root = env.root
+            reward_list.append(reward)
+        except Exception as e:
+            # print("EXCEPTION", e)
+            nll_list.append(decoder.nll)
+            value_list.append(decoder.est)
+            reward_list.append(-6.0)
+            pass
 
     if not env.trivial_subexpr:
         if cmd_args.decoder_model == 'AssertAware':            
             assert env.constraint_satisfied()
 
-    return nll_list, value_list, reward_list, env.root
+    return nll_list, value_list, reward_list, root, trivial
 
 def actor_critic_loss(nll_list, value_list, reward_list):
     r = 0.0

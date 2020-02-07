@@ -36,7 +36,6 @@ class Dataset(object):
         self.sample_graphs = []
         self.file_names = []
         self.ordered_pre_post = []
-        
         self.setup(GraphSample)
 
     def load_pg_list(self, fname):
@@ -45,6 +44,7 @@ class Dataset(object):
             self.pg_list.append( ProgramGraph(graph_json) )
 
     def setup(self, classname):
+        print("running setup")
         with open(cmd_args.data_root + '/' + cmd_args.file_list, 'r') as f:
             for row in f:
                 self.file_names.append(row.strip())
@@ -57,7 +57,6 @@ class Dataset(object):
                     else:
                         with open(cmd_args.data_root + '/boogie/' + row.strip() + '.bpl.%d' % i, 'r') as gf:
                             tpl.append(gf.read())
-                    
                 self.ordered_pre_post.append( tpl )
 
         self.build_node_type_dict()

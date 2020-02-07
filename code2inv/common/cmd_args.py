@@ -4,6 +4,11 @@ import os
 cmd_opt = argparse.ArgumentParser(description='Argparser')
 cmd_opt.add_argument('-data_root', default=None, help='root of dataset')
 cmd_opt.add_argument('-file_list', default=None, help='list of programs')
+cmd_opt.add_argument('-input_graph', default=None, help='path to single input json graph')
+cmd_opt.add_argument('-input_vcs', default=None, help='path to input smt2 format VCs')
+cmd_opt.add_argument('-inv_grammar', default=None, help='path to invariant grammar file')
+cmd_opt.add_argument('-inv_checker', default=None, help='path to solver module')
+cmd_opt.add_argument('-var_format', default=None, help='format of invariant variables')
 cmd_opt.add_argument('-init_model_dump', default=None, help='init model dump')
 cmd_opt.add_argument('-save_dir', default=None, help='root for output')
 cmd_opt.add_argument('-att_dir', default=None, help='root for att output')
@@ -27,15 +32,10 @@ cmd_opt.add_argument('-embedding_size', default=128, type=int, help='embedding s
 cmd_opt.add_argument('-s2v_level', default=10, type=int, help='# propagations of s2v')
 cmd_opt.add_argument('-ce_batchsize', default=100, type=int, help='batchsize for counter example check')
 
-cmd_opt.add_argument('-list_pred', default='>,<,==,>=,<=', help='list of predicates allowed')
-cmd_opt.add_argument('-list_op', default='+,-,*', help='list of operators allowed')
-cmd_opt.add_argument('-max_depth', default=2, type=int, help='max depth of sub_expr')
-cmd_opt.add_argument('-max_and', default=2, type=int, help='max # and allowed')
-cmd_opt.add_argument('-max_or', default=1, type=int, help='max # or allowed')
-
 cmd_opt.add_argument('-attention', default=1, type=int, help='attention for embedding')
 cmd_opt.add_argument('-exit_on_find', default=0, type=int, help='exit when found')
 
+cmd_opt.add_argument('-encoder_model', default='GNN', help='encoder model', choices=['GNN', 'LSTM', 'Param'])
 cmd_opt.add_argument('-decoder_model', default='AssertAwareRNN', help='decoder model')
 cmd_opt.add_argument('-learning_rate', default=0.001, type=float, help='random seed')
 

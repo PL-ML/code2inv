@@ -4,7 +4,7 @@ dropbox=../../dropbox
 
 dataset=$1
 
-data_folder=$dropbox/sc_hard/py2_training_${dataset}
+data_folder=../../benchmarks/pre-train-study/py2_training_${dataset}
 file_list=list.txt
 
 inv_reward_type=ordered
@@ -16,8 +16,9 @@ att=1
 agg_check=$3
 ce=1
 model=AssertAwareTreeLSTM
+grammar_file="$5"
 
-save_dir=$HOME/scratch/results/learn_loop_invariant/sc_hard-$dataset/model-${model}-r-${inv_reward_type}-s2v-${s2v_level}-sample-${single_sample}-att-${att}-ac-${agg_check}-ce-${ce}
+save_dir=$HOME/scratch/results/learn_loop_invariant/$dataset/model-${model}-r-${inv_reward_type}-s2v-${s2v_level}-sample-${single_sample}-att-${att}-ac-${agg_check}-ce-${ce}
 
 if [ ! -e $save_dir ]; 
 then
@@ -34,20 +35,19 @@ python -u train_test.py \
     -data_root $data_folder \
     -tune_test 1 \
     -attention $att \
-    -num_epochs 52 \
     -aggressive_check $agg_check \
     -init_model_dump $save_dir/epoch-${init_epoch} \
-    -phase test \
+    -phase "test" \
     -single_sample $single_sample \
+    -encoder_model "GNN"\
     -decoder_model $model \
-    -max_and 3 \
-    -max_or 2 \
-    -max_depth 2 \
-    -list_op +,- \
     -s2v_level $s2v_level \
     -embedding_size $embedding \
     -rl_batchsize $rl_batchsize \
     -file_list $file_list \
     -inv_reward_type $inv_reward_type \
+    -inv_grammar $(sed "1q;d" $grammar_file)\
+    -inv_checker $(sed "2q;d" $grammar_file)\
+    -var_format "$(sed '3q;d' $grammar_file)"\
     2>&1 | tee $log_file
 

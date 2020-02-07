@@ -1,0 +1,8 @@
+nl-1-chc    (= V0 (* V1 V1))
+nl-2-chc    (and (>= V0 0) (<= V1 (* V0 V0)))
+nl-3-chc    (and (<= V1 (* V0 V0)) (>= V0 0) (<= V1 1000))
+nl-4-chc    (and (= V2 (* V1 V0)) (>= V0 0))
+nl-5-chc    (= V1 (* V0 V2))
+nl-6-chc    (or (and (<= V0 V1) (= V2 V3)) (and (> V0 V1) (= V3 (* V2 V1))))
+nl-7-chc    (and (<= V3 V1) (= V2 (* V0 V3)))
+n2-rule     (<= (* V1 V1) (+ V0 V0))

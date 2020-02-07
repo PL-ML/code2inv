@@ -10,7 +10,7 @@ Refer [INSTALL.md](INSTALL.md).
 
 To run any of the test codes inside the tests directory, cd into tests/ and run `../bin/clang-fe -ssa filename.c`. This will produce a json file of the same name with the ssa graph in it. To run all tests, run `make tests` (for no debug output) or `make test-debug` for debug output (which includes the CFG, Dominator Tree and the SSA Graph).
 
-To generate Verification Conditions, run `./bin/clang-fe -smt ../benchmarks/c/<filename>`. Only the files under benchmarks have been tested with VC Generation. To only store the SMT graph, run `./bin/clang-fe -smt ../benchmarks/c/<filename> > smtfile.smt 2>/dev/null`.
+To generate Verification Conditions, run `./bin/clang-fe -smt ../benchmarks/C_instances/c/<filename>`. Only the files under benchmarks have been tested with VC Generation. To only store the SMT graph, run `./bin/clang-fe -smt ../benchmarks/C_instances/c/<filename> > smtfile.smt 2>/dev/null`. To generate the Verification Conditions in the SyGuS format, replace the -smt option with -sygus.
 
 ## Notes
 The renaming and phi function placement algorithms are taken from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.100.6361&rep=rep1&type=pdf.

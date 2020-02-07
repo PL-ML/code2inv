@@ -110,24 +110,24 @@ class S2VGraph(object):
             num_edges = len(edges)
             n2n_idxes = torch.LongTensor(2,  num_edges)
             n2n_vals = torch.FloatTensor(num_edges) 
-
-            x, y = zip(*edges)            
-            edge_pairs = np.ndarray(shape=(num_edges, 2), dtype=np.int32)
-            edge_pairs[:, 0] = x
-            edge_pairs[:, 1] = y
-            edge_pairs = edge_pairs.flatten()
-            
-            S2VLIB.lib.n2n_construct(pg.num_nodes(),
-                                    num_edges,
-                                    ctypes.c_void_p(degrees.ctypes.data), 
-                                    ctypes.c_void_p(edge_pairs.ctypes.data), 
-                                    ctypes.c_void_p(n2n_idxes.numpy().ctypes.data), 
-                                    ctypes.c_void_p(n2n_vals.numpy().ctypes.data), 
-                                    )
-                                    
-            n2n_sp = torch.sparse.FloatTensor(n2n_idxes, n2n_vals, torch.Size([pg.num_nodes(), pg.num_nodes()]))
-            
-            self.n2n_sp_list.append(n2n_sp)
+            if num_edges > 0:
+                x, y = zip(*edges)            
+                edge_pairs = np.ndarray(shape=(num_edges, 2), dtype=np.int32)
+                edge_pairs[:, 0] = x
+                edge_pairs[:, 1] = y
+                edge_pairs = edge_pairs.flatten()
+                
+                S2VLIB.lib.n2n_construct(pg.num_nodes(),
+                                        num_edges,
+                                        ctypes.c_void_p(degrees.ctypes.data), 
+                                        ctypes.c_void_p(edge_pairs.ctypes.data), 
+                                        ctypes.c_void_p(n2n_idxes.numpy().ctypes.data), 
+                                        ctypes.c_void_p(n2n_vals.numpy().ctypes.data), 
+                                        )
+                                        
+                n2n_sp = torch.sparse.FloatTensor(n2n_idxes, n2n_vals, torch.Size([pg.num_nodes(), pg.num_nodes()]))
+                
+                self.n2n_sp_list.append(n2n_sp)
         
         self.node_feat = torch.zeros(pg.num_nodes(), len(node_type_dict))
         
@@ -149,4 +149,3 @@ if __name__ == '__main__':
 
     new_feat = S2VLIB.ConcatNodeFeats(s2v_graphs[0:2])
     print(new_feat)
-    # print(len(s2v_graphs))

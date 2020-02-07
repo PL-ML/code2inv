@@ -36,6 +36,7 @@ setup(
     packages=['code2inv'],
     install_requires=[
         'torch',
+        'pysmt',
     ],
     cmdclass={
         'develop': custom_develop,

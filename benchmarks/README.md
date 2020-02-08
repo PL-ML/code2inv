@@ -1,10 +1,10 @@
 
 # Directory Structure
-- The directory `c` consists of 133 C programs we collected to evaluate Code2Inv.
+- The directory `C_instances` consists of 133 C programs, their program graphs and their verification conditions we collected to evaluate Code2Inv.
 
-- The directory `graph` consists of the corresponding 133 program graphs.
+- The directory `CHC_instances` consists of 120 CHC constraints and their corresponding program graphs we collected to evaluate Code2Inv.
 
-- The directory `smt2` consists of the corresponding verification conditions.
+- The directory `nl-bench` consists of the non linear programs used to evaluate Code2Inv.
 
 - The directory `pre-train-study` consists of generated (i.e. inserting confounding variables/statements) C programs and corresponding graphs and VCs.
 
@@ -46,6 +46,6 @@ Each node represents a statement/command, e.g. `assert (x > y); y = y + 1`. The 
 
 # Verification Condition Format
 
-The verification condition format is the same as the one used in [SyGus 2017 Invariant Track](http://sygus.seas.upenn.edu/SyGuS-COMP2017.html).
+The verification condition format for the C instances is the same as the one used in [SyGus 2017 Invariant Track](http://sygus.seas.upenn.edu/SyGuS-COMP2017.html). It consists of three parts: `pre-f`, `trans-f` and `post-f`, which corresponds the pre-condition, loop body and post-condition, respectively.
 
-It consists of three parts: `pre-f`, `trans-f` and `post-f`, which corresponds the pre-condition, loop body and post-condition, respectively.
+The CHC constraints serve as their own verification conditions.

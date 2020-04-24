@@ -1,0 +1,3 @@
+unsat
+(forall ((A Int) (B Int))
+  (! (= (main@_bb A B) (or (not (<= B 0)) (not (>= A (- 49))))) :weight 0))

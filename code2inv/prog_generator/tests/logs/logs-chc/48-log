@@ -1,0 +1,2 @@
+sygus-bench-22.c.smt | "( and ( >= V1 V1 ) ( > V2 0 ) ( > V1 0 ) )" | 3438 | 41669.07  | {'ce-T:': 480419, 'ce-I:': 457935, 'boogie_result': 34083, 'ce-F:': 34064, 'actual_z3': 33}
+{'ce-T:': 480419, 'ce-I:': 457935, 'boogie_result': 34083, 'ce-F:': 34064, 'actual_z3': 33}

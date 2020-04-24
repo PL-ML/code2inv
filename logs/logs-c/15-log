@@ -1,0 +1,2 @@
+114.c | "( ( x == ( 0 + sn ) ) && ( sn == ( x - 0 ) || sn <= x ) )" | 9 | 11.14  | {'ce-I:': 302, 'ce-F:': 129, 'boogie_result': 92, 'ce-T:': 91, 'actual_z3': 28}
+{'ce-I:': 302, 'ce-F:': 129, 'boogie_result': 92, 'ce-T:': 91, 'actual_z3': 28}

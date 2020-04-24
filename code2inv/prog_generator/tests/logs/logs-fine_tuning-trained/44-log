@@ -1,0 +1,41 @@
+tmp/44.out
+                                       found a solution for 93 , sol: ( ( n >= ( 981 - 2 ) || n >= 1 ) && ( n >= 0 || junk_0 >= ( 981 - 2 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 91 , sol: ( ( n >= ( 175 - 927 ) ) && ( n >= 1 || c >= ( 175 - 5 ) ) && ( n >= 0 || c >= ( 927 - 927 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 92 , sol: ( ( n >= ( 283 - 283 ) ) && ( n >= 1 || c >= ( 283 - 283 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 96 , sol: ( ( n >= ( 8 - 8 ) ) && ( n >= 1 ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 96 , sol: ( ( n >= ( 8 - 8 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 98 , sol: ( ( n >= ( 4 - 923 ) || n >= 0 ) && ( n >= 1 ) && ( c >= ( 4 - 4 ) || n >= 0 ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 92 , sol: ( ( n >= ( 283 - 283 ) || n >= 0 ) && ( n >= 0 || junk_0 >= ( 283 - 283 ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]avg reward: -1.6500:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -1.6500:   1%|          | 1/100 [00:02<04:29,  2.72s/it]                                                                    found a solution for 99 , sol: ( ( n >= ( 5 - 5 ) || n >= 1 ) )
+avg reward: -1.6500:   1%|          | 1/100 [00:03<04:29,  2.72s/it]                                                                    found a solution for 95 , sol: ( ( n >= ( 5 - 5 ) || n >= 0 ) && ( n >= 1 ) && ( c >= ( -35 - -35 ) || n >= 1 ) )
+avg reward: -1.6500:   1%|          | 1/100 [00:03<04:29,  2.72s/it]                                                                    found a solution for 93 , sol: ( ( n >= ( 680 - 680 ) || n >= 0 ) )
+avg reward: -1.6500:   1%|          | 1/100 [00:03<04:29,  2.72s/it]                                                                    found a solution for 95 , sol: ( ( n >= ( -35 - -35 ) ) && ( n >= 1 ) && ( junk_0 >= ( 5 - 5 ) || n >= 1 ) )
+avg reward: -1.6500:   1%|          | 1/100 [00:03<04:29,  2.72s/it]                                                                    found a solution for 99 , sol: ( ( n >= ( 5 - 5 ) || n >= 1 ) && ( n >= 0 ) )
+avg reward: -1.6500:   1%|          | 1/100 [00:03<04:29,  2.72s/it]                                                                    found a solution for 94 , sol: ( ( n >= ( 1 - 8 ) ) && ( n >= ( 8 - 8 ) ) )
+avg reward: -1.6500:   1%|          | 1/100 [00:04<04:29,  2.72s/it]                                                                    found a solution for 92 , sol: ( ( n >= ( 283 - 283 ) || n >= 1 ) )
+avg reward: -1.6500:   1%|          | 1/100 [00:04<04:29,  2.72s/it]avg reward: -0.8250:   1%|          | 1/100 [00:05<04:29,  2.72s/it]avg reward: -0.8250:   2%|▏         | 2/100 [00:05<04:21,  2.66s/it]                                                                    found a solution for 98 , sol: ( ( n >= ( 923 - 4 ) || n >= 0 ) && ( n >= 1 ) )
+avg reward: -0.8250:   2%|▏         | 2/100 [00:05<04:21,  2.66s/it]                                                                    found a solution for 92 , sol: ( ( n > ( 283 - 283 ) ) && ( n >= 1 || c == ( 283 - 283 ) ) && ( n >= 1 || c >= ( 283 - 283 ) ) )
+avg reward: -0.8250:   2%|▏         | 2/100 [00:06<04:21,  2.66s/it]                                                                    found a solution for 92 , sol: ( ( c >= ( 283 - 283 ) ) )
+avg reward: -0.8250:   2%|▏         | 2/100 [00:06<04:21,  2.66s/it]                                                                    found a solution for 94 , sol: ( ( n >= ( 8 + 8 ) || n >= 0 ) && ( n >= 1 || c >= ( 0 - 8 ) ) )
+avg reward: -0.8250:   2%|▏         | 2/100 [00:06<04:21,  2.66s/it]                                                                    found a solution for 90 , sol: ( ( n >= ( 860 - 860 ) ) && ( n >= 0 || junk_0 >= ( 860 - 860 ) ) )
+avg reward: -0.8250:   2%|▏         | 2/100 [00:06<04:21,  2.66s/it]                                                                    found a solution for 92 , sol: ( ( n >= ( 283 - 283 ) || n >= 0 ) && ( n >= 0 ) )
+avg reward: -0.8250:   2%|▏         | 2/100 [00:06<04:21,  2.66s/it]                                                                    found a solution for 98 , sol: ( ( n >= ( 4 - 4 ) ) )
+avg reward: -0.8250:   2%|▏         | 2/100 [00:06<04:21,  2.66s/it]avg reward: -0.1167:   2%|▏         | 2/100 [00:07<04:21,  2.66s/it]avg reward: -0.1167:   3%|▎         | 3/100 [00:07<04:14,  2.62s/it]                                                                    found a solution for 96 , sol: ( ( n >= ( 8 - 8 ) || n >= 0 ) && ( n >= 1 || c >= ( 8 - 8 ) ) )
+avg reward: -0.1167:   3%|▎         | 3/100 [00:08<04:14,  2.62s/it]                                                                    found a solution for 98 , sol: ( ( n >= ( 923 - 923 ) || n >= 0 ) )
+avg reward: -0.1167:   3%|▎         | 3/100 [00:08<04:14,  2.62s/it]                                                                    found a solution for 91 , sol: ( ( n >= ( 5 - 5 ) ) )
+avg reward: -0.1167:   3%|▎         | 3/100 [00:08<04:14,  2.62s/it]                                                                    found a solution for 97 , sol: ( ( n >= ( 6 - 6 ) ) )
+avg reward: -0.1167:   3%|▎         | 3/100 [00:08<04:14,  2.62s/it]                                                                    found a solution for 92 , sol: ( ( n >= ( 283 - 283 ) ) && ( n >= 0 || c >= ( 283 - 0 ) ) && ( n >= 1 || junk_0 >= ( 283 - 283 ) ) )
+avg reward: -0.1167:   3%|▎         | 3/100 [00:08<04:14,  2.62s/it]                                                                    found a solution for 94 , sol: ( ( n >= ( 8 - 8 ) || n >= 1 ) )
+avg reward: -0.1167:   3%|▎         | 3/100 [00:09<04:14,  2.62s/it]                                                                    found a solution for 90 , sol: ( ( n >= ( 860 - 860 ) || n >= 0 ) )
+--
+4
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}

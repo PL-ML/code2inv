@@ -1,0 +1,47 @@
+tmp/56.out
+                                       found a solution for 93 , sol: ( ( n >= ( 1 + c ) || c > ( c - 0 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 98 , sol: ( ( n >= ( 1 + c ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]avg reward: -2.5000:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -2.5000:   1%|          | 1/100 [00:02<03:51,  2.34s/it]                                                                    found a solution for 99 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -2.5000:   1%|          | 1/100 [00:02<03:51,  2.34s/it]                                                                    found a solution for 93 , sol: ( ( n >= ( 1 + c ) || c > c ) )
+avg reward: -2.5000:   1%|          | 1/100 [00:02<03:51,  2.34s/it]                                                                    found a solution for 95 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -2.5000:   1%|          | 1/100 [00:03<03:51,  2.34s/it]avg reward: -2.0750:   1%|          | 1/100 [00:05<03:51,  2.34s/it]avg reward: -2.0750:   2%|▏         | 2/100 [00:05<04:06,  2.51s/it]                                                                    found a solution for 94 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > c || n > junk_0 ) )
+avg reward: -2.0750:   2%|▏         | 2/100 [00:06<04:06,  2.51s/it]avg reward: -1.9000:   2%|▏         | 2/100 [00:08<04:06,  2.51s/it]avg reward: -1.9000:   3%|▎         | 3/100 [00:08<04:15,  2.63s/it]                                                                    found a solution for 94 , sol: ( ( n >= ( 3 + c ) || n > c ) && ( junk_0 > c ) )
+avg reward: -1.9000:   3%|▎         | 3/100 [00:09<04:15,  2.63s/it]                                                                    found a solution for 97 , sol: ( ( n >= ( 1 + c ) || c > c ) && ( junk_0 > c || c > junk_0 ) )
+avg reward: -1.9000:   3%|▎         | 3/100 [00:09<04:15,  2.63s/it]avg reward: -1.7875:   3%|▎         | 3/100 [00:10<04:15,  2.63s/it]avg reward: -1.7875:   4%|▍         | 4/100 [00:10<04:12,  2.63s/it]                                                                    found a solution for 93 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -1.7875:   4%|▍         | 4/100 [00:11<04:12,  2.63s/it]                                                                    found a solution for 98 , sol: ( ( n >= ( -1 + c ) ) && ( n > c ) && ( n > ( junk_0 - junk_0 ) || c > ( 839 + -1 ) ) )
+avg reward: -1.7875:   4%|▍         | 4/100 [00:11<04:12,  2.63s/it]                                                                    found a solution for 91 , sol: ( ( n >= ( 1 + c ) || junk_0 > junk_0 ) && ( n > ( junk_0 - junk_0 ) ) )
+avg reward: -1.7875:   4%|▍         | 4/100 [00:12<04:12,  2.63s/it]avg reward: -1.5100:   4%|▍         | 4/100 [00:13<04:12,  2.63s/it]avg reward: -1.5100:   5%|▌         | 5/100 [00:13<04:20,  2.74s/it]                                                                    found a solution for 92 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -1.5100:   5%|▌         | 5/100 [00:14<04:20,  2.74s/it]                                                                    found a solution for 92 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -1.5100:   5%|▌         | 5/100 [00:15<04:20,  2.74s/it]                                                                    found a solution for 91 , sol: ( ( n >= ( 1 + c ) || c > c ) )
+avg reward: -1.5100:   5%|▌         | 5/100 [00:15<04:20,  2.74s/it]avg reward: -1.3333:   5%|▌         | 5/100 [00:16<04:20,  2.74s/it]avg reward: -1.3333:   6%|▌         | 6/100 [00:16<04:12,  2.68s/it]                                                                    found a solution for 92 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -1.3333:   6%|▌         | 6/100 [00:16<04:12,  2.68s/it]                                                                    found a solution for 94 , sol: ( ( n >= ( 1 + c ) || n > c ) && ( junk_0 > c ) )
+avg reward: -1.3333:   6%|▌         | 6/100 [00:17<04:12,  2.68s/it]                                                                    found a solution for 97 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -1.3333:   6%|▌         | 6/100 [00:18<04:12,  2.68s/it]                                                                    found a solution for 90 , sol: ( ( n >= ( 1 + c ) || c > c ) && ( c > ( -1 + 0 ) || junk_0 > c ) )
+avg reward: -1.3333:   6%|▌         | 6/100 [00:18<04:12,  2.68s/it]avg reward: -1.1286:   6%|▌         | 6/100 [00:19<04:12,  2.68s/it]avg reward: -1.1286:   7%|▋         | 7/100 [00:19<04:19,  2.79s/it]                                                                    found a solution for 92 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -1.1286:   7%|▋         | 7/100 [00:20<04:19,  2.79s/it]                                                                    found a solution for 91 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > c ) && ( junk_0 > c || c == ( 1 + c ) ) )
+avg reward: -1.1286:   7%|▋         | 7/100 [00:21<04:19,  2.79s/it]avg reward: -1.0250:   7%|▋         | 7/100 [00:22<04:19,  2.79s/it]avg reward: -1.0250:   8%|▊         | 8/100 [00:22<04:18,  2.81s/it]                                                                    found a solution for 94 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -1.0250:   8%|▊         | 8/100 [00:22<04:18,  2.81s/it]avg reward: -0.8944:   8%|▊         | 8/100 [00:25<04:18,  2.81s/it]avg reward: -0.8944:   9%|▉         | 9/100 [00:25<04:26,  2.93s/it]                                                                    found a solution for 91 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -0.8944:   9%|▉         | 9/100 [00:26<04:26,  2.93s/it]                                                                    found a solution for 95 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -0.8944:   9%|▉         | 9/100 [00:26<04:26,  2.93s/it]avg reward: -0.8454:   9%|▉         | 9/100 [00:27<04:26,  2.93s/it]avg reward: -0.8454:  10%|█         | 10/100 [00:27<04:10,  2.78s/it]                                                                     found a solution for 94 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > ( junk_0 - c ) || n > c ) )
+avg reward: -0.8454:  10%|█         | 10/100 [00:29<04:10,  2.78s/it]                                                                     found a solution for 98 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -0.8454:  10%|█         | 10/100 [00:29<04:10,  2.78s/it]                                                                     found a solution for 94 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -0.8454:  10%|█         | 10/100 [00:29<04:10,  2.78s/it]                                                                     found a solution for 92 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > ( c - junk_0 ) ) )
+avg reward: -0.8454:  10%|█         | 10/100 [00:29<04:10,  2.78s/it]                                                                     found a solution for 91 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -0.8454:  10%|█         | 10/100 [00:29<04:10,  2.78s/it]avg reward: -0.6504:  10%|█         | 10/100 [00:30<04:10,  2.78s/it]avg reward: -0.6504:  11%|█         | 11/100 [00:30<04:02,  2.72s/it]                                                                     found a solution for 98 , sol: ( ( n >= ( 1 + c ) ) )
+avg reward: -0.6504:  11%|█         | 11/100 [00:31<04:02,  2.72s/it]                                                                     found a solution for 92 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > ( junk_0 - junk_0 ) ) && ( junk_0 > c || junk_0 > 0 ) )
+avg reward: -0.6504:  11%|█         | 11/100 [00:31<04:02,  2.72s/it]                                                                     found a solution for 94 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > ( c - junk_0 ) ) )
+avg reward: -0.6504:  11%|█         | 11/100 [00:32<04:02,  2.72s/it]avg reward: -0.5712:  11%|█         | 11/100 [00:33<04:02,  2.72s/it]avg reward: -0.5712:  12%|█▏        | 12/100 [00:33<04:09,  2.84s/it]                                                                     found a solution for 90 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > ( n - junk_0 ) || junk_0 > c ) )
+avg reward: -0.5712:  12%|█▏        | 12/100 [00:33<04:09,  2.84s/it]                                                                     found a solution for 96 , sol: ( ( n >= ( 1 + c ) ) && ( junk_0 > ( c - c ) ) )
+avg reward: -0.5712:  12%|█▏        | 12/100 [00:34<04:09,  2.84s/it]                                                                     found a solution for 90 , sol: ( ( n >= ( 1 + c ) ) && ( c > ( c - junk_0 ) || junk_0 > c ) )
+--
+13
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 3, 'ce-I:': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 3, 'ce-F:': 1}
+{'ce-I:': 18, 'boogie_result': 9, 'actual_z3': 9, 'ce-T:': 6}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-I:': 5, 'ce-T:': 4}
+{'boogie_result': 13, 'actual_z3': 13, 'ce-I:': 12, 'ce-T:': 11}

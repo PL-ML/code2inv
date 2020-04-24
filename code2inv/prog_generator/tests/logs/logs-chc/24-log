@@ -1,0 +1,2 @@
+sygus-bench-121.c.smt | "( and ( = V1 ( - V0 1 ) ) ( or ( <= V0 ( + V1 1 ) ) ( = V0 ( + 1 8 ) ) ) ( <= V1 ( + 0 8 ) ) )" | 830 | 9903.17  | {'ce-I:': 173265, 'ce-F:': 21925, 'boogie_result': 8126, 'ce-T:': 8124, 'actual_z3': 38}
+{'ce-I:': 173265, 'ce-F:': 21925, 'boogie_result': 8126, 'ce-T:': 8124, 'actual_z3': 38}

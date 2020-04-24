@@ -1,0 +1,108 @@
+anfp-new.sl.0.c 23287 26853.98 {'ce-I:': 4200685, 'z3_pre': 1135855, 'ce-F:': 648714, 'boogie_result': 209948, 'ce-T:': 209947, 'actual_z3': 35}
+anfp.sl.0.c 6099 8484.16 {'ce-I:': 1074533, 'z3_pre': 278179, 'ce-F:': 111827, 'boogie_result': 56019, 'ce-T:': 56018, 'actual_z3': 34}
+array.c 3506 5190.61 {'ce-T:': 634532, 'ce-I:': 360884, 'z3_pre': 202256, 'boogie_result': 33221, 'ce-F:': 32183, 'actual_z3': 38}
+array-new.c 1882 3286.52 {'ce-T:': 373096, 'ce-I:': 162190, 'z3_pre': 110828, 'boogie_result': 18309, 'ce-F:': 17321, 'actual_z3': 38}
+array_simpl.c 1986 2758.26 {'ce-T:': 378036, 'z3_pre': 117185, 'ce-I:': 108318, 'boogie_result': 19042, 'ce-F:': 11561, 'actual_z3': 31}
+array_vars.c 1986 3274.91 {'ce-T:': 378036, 'z3_pre': 117185, 'ce-I:': 108318, 'boogie_result': 19042, 'ce-F:': 11561, 'actual_z3': 31}
+cegar1-new.sl.0.c 1649 2844.26 {'z3_pre': 88649, 'ce-T:': 70060, 'ce-I:': 42675, 'boogie_result': 14252, 'ce-F:': 14249, 'actual_z3': 22}
+cegar1-new.sl.1.c 56 79.11 {'ce-T:': 2734, 'z3_pre': 2582, 'ce-I:': 905, 'boogie_result': 474, 'ce-F:': 407, 'actual_z3': 20}
+cegar1.sl.0.c 121 326.45 {'z3_pre': 8559, 'ce-T:': 7480, 'boogie_result': 1785, 'ce-F:': 1782, 'ce-I:': 1772, 'actual_z3': 15}
+cegar1.sl.1.c 597 1134.71 {'ce-T:': 42224, 'z3_pre': 37827, 'ce-I:': 27663, 'boogie_result': 6328, 'ce-F:': 6261, 'actual_z3': 25}
+cegar1_vars-new.sl.0.c 1649 2820.46 {'z3_pre': 88649, 'ce-T:': 70060, 'ce-I:': 42675, 'boogie_result': 14252, 'ce-F:': 14249, 'actual_z3': 22}
+cegar1_vars-new.sl.1.c 56 78.85 {'ce-T:': 2734, 'z3_pre': 2582, 'ce-I:': 905, 'boogie_result': 474, 'ce-F:': 407, 'actual_z3': 20}
+cegar1_vars.sl.0.c 121 321.14 {'z3_pre': 8559, 'ce-T:': 7480, 'boogie_result': 1785, 'ce-F:': 1782, 'ce-I:': 1772, 'actual_z3': 15}
+cegar1_vars.sl.1.c 597 1121.34 {'ce-T:': 42224, 'z3_pre': 37827, 'ce-I:': 27663, 'boogie_result': 6328, 'ce-F:': 6261, 'actual_z3': 25}
+cegar2a.c 59 80.85 {'z3_pre': 2438, 'ce-T:': 2307, 'ce-I:': 1853, 'boogie_result': 485, 'ce-F:': 269, 'actual_z3': 16}
+cegar2b.c 217 437.41 {'ce-I:': 16095, 'z3_pre': 14008, 'ce-T:': 13356, 'ce-F:': 3288, 'boogie_result': 2741, 'actual_z3': 20}
+cegar2-newa.c 91 131.87 {'ce-I:': 4764, 'ce-T:': 4514, 'z3_pre': 4207, 'boogie_result': 757, 'ce-F:': 491, 'actual_z3': 18}
+cegar2-newb.c 15 13.02 {'ce-T:': 430, 'z3_pre': 308, 'ce-I:': 237, 'boogie_result': 108, 'ce-F:': 99, 'actual_z3': 11}
+cegar2_varsa.c 59 78.92 {'z3_pre': 2438, 'ce-T:': 2307, 'ce-I:': 1853, 'boogie_result': 485, 'ce-F:': 269, 'actual_z3': 16}
+cegar2_varsb.c 217 452.46 {'ce-I:': 16095, 'z3_pre': 14008, 'ce-T:': 13356, 'ce-F:': 3288, 'boogie_result': 2741, 'actual_z3': 20}
+cegar2_vars-newa.c 91 130.66 {'ce-I:': 4764, 'ce-T:': 4514, 'z3_pre': 4207, 'boogie_result': 757, 'ce-F:': 491, 'actual_z3': 18}
+cegar2_vars-newb.c 15 16.40 {'ce-T:': 430, 'z3_pre': 308, 'ce-I:': 237, 'boogie_result': 108, 'ce-F:': 99, 'actual_z3': 11}
+dec-new.sl.0.c 10 8.05 {'z3_pre': 139, 'ce-I:': 55, 'actual_z3': 25, 'boogie_result': 25, 'ce-T:': 24, 'ce-F:': 19}
+dec_simpl.sl.0.c 43 55.33 {'z3_pre': 1845, 'ce-T:': 1309, 'boogie_result': 332, 'ce-F:': 328, 'ce-I:': 319, 'actual_z3': 14}
+dec_simpl.sl.1.c 17 12.43 {'z3_pre': 469, 'ce-T:': 458, 'boogie_result': 117, 'ce-F:': 109, 'ce-I:': 95, 'actual_z3': 23}
+dec.sl.0.c 10 8.00 {'z3_pre': 139, 'ce-I:': 55, 'actual_z3': 25, 'boogie_result': 25, 'ce-T:': 24, 'ce-F:': 19}
+dec_vars.sl.0.c 43 43.01 {'z3_pre': 1845, 'ce-T:': 1309, 'boogie_result': 332, 'ce-F:': 328, 'ce-I:': 319, 'actual_z3': 14}
+dec_vars.sl.1.c 17 17.51 {'z3_pre': 469, 'ce-T:': 458, 'boogie_result': 117, 'ce-F:': 109, 'ce-I:': 95, 'actual_z3': 23}
+ex11-new.sl.0.c 7 8.37 {'ce-I:': 122, 'z3_pre': 111, 'actual_z3': 48, 'boogie_result': 48, 'ce-T:': 47, 'ce-F:': 45}
+ex11-new.sl.1.c 6 6.09 {'z3_pre': 65, 'ce-I:': 52, 'actual_z3': 32, 'boogie_result': 32, 'ce-T:': 31, 'ce-F:': 29}
+ex11-new.sl.2.c 1 1.94 {'z3_pre': 11, 'actual_z3': 3, 'boogie_result': 3, 'ce-T:': 2}
+ex11_simpla.c 2 3.22 {'z3_pre': 33, 'actual_z3': 5, 'boogie_result': 5, 'ce-I:': 4, 'ce-T:': 2}
+ex11_simplb.c 2 2.98 {'z3_pre': 23, 'ce-I:': 6, 'actual_z3': 5, 'boogie_result': 5, 'ce-T:': 4}
+ex11_simpl-new.sl.0.c 2 2.98 {'z3_pre': 28, 'actual_z3': 5, 'boogie_result': 5, 'ce-I:': 4, 'ce-T:': 3, 'ce-F:': 1}
+ex11_simpl-new.sl.1.c 3 3.15 {'z3_pre': 38, 'ce-T:': 10, 'actual_z3': 8, 'boogie_result': 8, 'ce-I:': 6, 'ce-F:': 5}
+ex11_simpl-new.sl.2.c 6 7.39 {'z3_pre': 117, 'ce-T:': 41, 'actual_z3': 22, 'boogie_result': 22, 'ce-I:': 15, 'ce-F:': 13}
+ex11_simpl-new.sl.3.c 2 3.19 {'z3_pre': 23, 'actual_z3': 4, 'boogie_result': 4, 'ce-T:': 3, 'ce-I:': 1}
+ex11_simpl-new.sl.4.c 1 1.96 {'z3_pre': 15, 'actual_z3': 4, 'boogie_result': 4, 'ce-T:': 3}
+ex11_simpl.sl.0.c 5 4.72 {'ce-I:': 87, 'z3_pre': 82, 'boogie_result': 24, 'ce-T:': 22, 'actual_z3': 14, 'ce-F:': 9}
+ex11_simpl.sl.1.c 17 20.45 {'z3_pre': 519, 'ce-I:': 353, 'ce-F:': 233, 'ce-T:': 182, 'boogie_result': 126, 'actual_z3': 17}
+ex11_simpl.sl.2.c 3 4.68 {'z3_pre': 57, 'ce-I:': 33, 'ce-T:': 31, 'boogie_result': 17, 'actual_z3': 16}
+ex11_simpl.sl.3.c 9 10.72 {'z3_pre': 227, 'ce-I:': 180, 'ce-T:': 90, 'boogie_result': 51, 'actual_z3': 25, 'ce-F:': 7}
+ex11_simpl.sl.4.c 1 1.87 {'z3_pre': 15, 'actual_z3': 4, 'boogie_result': 4, 'ce-T:': 3}
+ex11.sl.0.c 7 7.82 {'ce-I:': 122, 'z3_pre': 111, 'actual_z3': 48, 'boogie_result': 48, 'ce-T:': 47, 'ce-F:': 45}
+ex11.sl.1.c 6 6.52 {'z3_pre': 65, 'ce-I:': 52, 'actual_z3': 32, 'boogie_result': 32, 'ce-T:': 31, 'ce-F:': 29}
+ex11.sl.2.c 1 2.23 {'z3_pre': 11, 'actual_z3': 3, 'boogie_result': 3, 'ce-T:': 2}
+ex11_vars-new.sl.0.c 2 3.20 {'z3_pre': 28, 'actual_z3': 5, 'boogie_result': 5, 'ce-I:': 4, 'ce-T:': 3, 'ce-F:': 1}
+ex11_vars-new.sl.1.c 3 4.07 {'z3_pre': 38, 'ce-T:': 10, 'actual_z3': 8, 'boogie_result': 8, 'ce-I:': 6, 'ce-F:': 5}
+ex11_vars-new.sl.2.c 6 7.45 {'z3_pre': 117, 'ce-T:': 41, 'actual_z3': 22, 'boogie_result': 22, 'ce-I:': 15, 'ce-F:': 13}
+ex11_vars-new.sl.3.c 2 2.86 {'z3_pre': 23, 'actual_z3': 4, 'boogie_result': 4, 'ce-T:': 3, 'ce-I:': 1}
+ex11_vars-new.sl.4.c 2 2.61 {'z3_pre': 27, 'ce-T:': 5, 'actual_z3': 4, 'boogie_result': 4, 'ce-I:': 1}
+ex11_vars.sl.0.c 5 5.82 {'ce-I:': 87, 'z3_pre': 82, 'boogie_result': 24, 'ce-T:': 22, 'actual_z3': 14, 'ce-F:': 9}
+ex11_vars.sl.1.c 17 19.28 {'z3_pre': 519, 'ce-I:': 353, 'ce-F:': 233, 'ce-T:': 182, 'boogie_result': 126, 'actual_z3': 17}
+ex11_vars.sl.2.c 3 4.50 {'z3_pre': 57, 'ce-I:': 33, 'ce-T:': 31, 'boogie_result': 17, 'actual_z3': 16}
+ex14a.c 31 31.51 {'ce-T:': 1498, 'z3_pre': 1093, 'ce-I:': 612, 'boogie_result': 262, 'ce-F:': 221, 'actual_z3': 25}
+ex14b.c 37 199.13 {'ce-T:': 7914, 'z3_pre': 6447, 'ce-I:': 4250, 'boogie_result': 1122, 'ce-F:': 1092, 'actual_z3': 24}
+ex14-newa.c 31 39.15 {'ce-T:': 1498, 'z3_pre': 1093, 'ce-I:': 612, 'boogie_result': 262, 'ce-F:': 221, 'actual_z3': 25}
+ex14-newb.c 37 193.72 {'ce-T:': 7914, 'z3_pre': 6447, 'ce-I:': 4250, 'boogie_result': 1122, 'ce-F:': 1092, 'actual_z3': 24}
+ex14_simpa.c 182 463.17 {'ce-T:': 31327, 'z3_pre': 15121, 'ce-I:': 3327, 'boogie_result': 2526, 'ce-F:': 2414, 'actual_z3': 19}
+ex14_simpb.c 1184 1730.66 {'ce-T:': 135157, 'z3_pre': 70047, 'ce-I:': 64897, 'boogie_result': 11461, 'ce-F:': 11309, 'actual_z3': 22}
+ex14_varsa.c 182 452.65 {'ce-T:': 31327, 'z3_pre': 15121, 'ce-I:': 3327, 'boogie_result': 2526, 'ce-F:': 2414, 'actual_z3': 19}
+ex14_varsb.c 4390 5296.54 {'ce-T:': 477960, 'z3_pre': 244848, 'ce-I:': 153474, 'boogie_result': 40221, 'ce-F:': 38284, 'actual_z3': 20}
+ex23.sl.0.c 11 11.95 {'z3_pre': 332, 'ce-F:': 240, 'ce-I:': 122, 'ce-T:': 111, 'boogie_result': 75, 'actual_z3': 19}
+ex23.sl.2.c 4 4.73 {'z3_pre': 92, 'ce-T:': 25, 'actual_z3': 20, 'boogie_result': 20}
+ex_23_vars.sl.0.c 11 14.58 {'z3_pre': 332, 'ce-F:': 240, 'ce-I:': 122, 'ce-T:': 111, 'boogie_result': 75, 'actual_z3': 19}
+ex_23_vars.sl.2.c 4 6.00 {'z3_pre': 92, 'ce-T:': 25, 'actual_z3': 20, 'boogie_result': 20}
+ex7.sl.0.c 187 479.00 {'ce-T:': 14960, 'ce-I:': 14742, 'z3_pre': 14643, 'ce-F:': 7174, 'boogie_result': 2499, 'actual_z3': 25}
+ex7.sl.1.c 35 45.75 {'z3_pre': 1159, 'ce-T:': 1103, 'ce-I:': 400, 'boogie_result': 282, 'ce-F:': 258, 'actual_z3': 36}
+ex7.sl.2.c 7 9.05 {'ce-T:': 237, 'z3_pre': 192, 'boogie_result': 44, 'ce-F:': 34, 'actual_z3': 10}
+ex7_vars.sl.0.c 187 500.76 {'ce-T:': 14960, 'ce-I:': 14742, 'z3_pre': 14643, 'ce-F:': 7174, 'boogie_result': 2499, 'actual_z3': 25}
+ex7_vars.sl.1.c 35 35.62 {'z3_pre': 1159, 'ce-T:': 1103, 'ce-I:': 400, 'boogie_result': 282, 'ce-F:': 258, 'actual_z3': 36}
+ex7_vars.sl.2.c 7 8.99 {'ce-T:': 237, 'z3_pre': 192, 'boogie_result': 44, 'ce-F:': 34, 'actual_z3': 10}
+fig1-new.sl.0.c 26 26.04 {'ce-T:': 1192, 'z3_pre': 970, 'ce-I:': 606, 'boogie_result': 206, 'ce-F:': 179, 'actual_z3': 29}
+fig1.sl.0.c 26 26.82 {'ce-T:': 1192, 'z3_pre': 970, 'ce-I:': 606, 'boogie_result': 206, 'ce-F:': 179, 'actual_z3': 29}
+fig1_vars-new.sl.0.c 26 26.40 {'ce-T:': 1192, 'z3_pre': 970, 'ce-I:': 606, 'boogie_result': 206, 'ce-F:': 179, 'actual_z3': 29}
+fig1_vars.sl.0.c 26 31.95 {'ce-T:': 1192, 'z3_pre': 970, 'ce-I:': 606, 'boogie_result': 206, 'ce-F:': 179, 'actual_z3': 29}
+fig3a.sl.0.c 24192 25843.31 {'z3_pre': 1035726, 'ce-T:': 890573, 'ce-F:': 465908, 'boogie_result': 222647, 'ce-I:': 216340, 'actual_z3': 14}
+fig3b.sl.0.c 32303 39723.60 {'ce-I:': 1741881, 'z3_pre': 1590646, 'ce-T:': 1452411, 'ce-F:': 620058, 'boogie_result': 290636, 'actual_z3': 20}
+fig3_varsA.sl.0.c 24192 33714.04 {'z3_pre': 1035726, 'ce-T:': 890573, 'ce-F:': 465908, 'boogie_result': 222647, 'ce-I:': 216340, 'actual_z3': 14}
+fig3_varsB.sl.0.c 32303 47176.17 {'ce-I:': 1741881, 'z3_pre': 1590646, 'ce-T:': 1452411, 'ce-F:': 620058, 'boogie_result': 290636, 'actual_z3': 20}
+fig9.c 7 5.00 {'z3_pre': 146, 'ce-F:': 103, 'ce-I:': 66, 'boogie_result': 40, 'ce-T:': 39, 'actual_z3': 11}
+fig9_vars.c 7 7.05 {'z3_pre': 146, 'ce-F:': 103, 'ce-I:': 66, 'boogie_result': 40, 'ce-T:': 39, 'actual_z3': 11}
+hola.41.sl.0.c 57 83.18 {'ce-T:': 2998, 'z3_pre': 2288, 'ce-I:': 1840, 'ce-F:': 789, 'boogie_result': 504, 'actual_z3': 22}
+hola.44a.sl.0.c 21862 34919.62 {'ce-I:': 2534907, 'z3_pre': 1244919, 'ce-T:': 1009191, 'ce-F:': 411529, 'boogie_result': 202116, 'actual_z3': 28}
+hola.44a.sl.1.c 6619 8844.36 {'ce-I:': 920587, 'z3_pre': 380860, 'ce-T:': 370912, 'ce-F:': 196427, 'boogie_result': 61825, 'actual_z3': 34}
+hola.44b.sl.0.c 5 7.78 {'z3_pre': 179, 'ce-T:': 131, 'ce-I:': 100, 'boogie_result': 36, 'actual_z3': 20}
+hola.44b.sl.1.c 12202 20334.40 {'ce-I:': 1648903, 'ce-T:': 790981, 'z3_pre': 680263, 'ce-F:': 268478, 'boogie_result': 112822, 'actual_z3': 31}
+hola_add.sl.0.c 24052 35490.16 {'z3_pre': 1353015, 'ce-I:': 804235, 'ce-T:': 652040, 'ce-F:': 571738, 'boogie_result': 217354, 'actual_z3': 276}
+hola_countud.sl.0.c 18 180.59 {'z3_pre': 5133, 'ce-I:': 4152, 'ce-F:': 2957, 'ce-T:': 2003, 'boogie_result': 1003, 'actual_z3': 15}
+inc_simp.sl.0.c 350 594.48 {'z3_pre': 19365, 'ce-T:': 18873, 'ce-I:': 12576, 'ce-F:': 7334, 'boogie_result': 3824, 'actual_z3': 13}
+inc_simp.sl.1.c 36 27.89 {'ce-T:': 1336, 'ce-I:': 730, 'z3_pre': 544, 'boogie_result': 278, 'ce-F:': 273, 'actual_z3': 11}
+inc.sl.0.c 5 3.60 {'z3_pre': 63, 'actual_z3': 16, 'boogie_result': 16, 'ce-T:': 15, 'ce-F:': 13, 'ce-I:': 11}
+inc_vars.sl.0.c 350 597.02 {'z3_pre': 19365, 'ce-T:': 18873, 'ce-I:': 12576, 'ce-F:': 7334, 'boogie_result': 3824, 'actual_z3': 13}
+inc_vars.sl.1.c 36 25.80 {'ce-T:': 1336, 'ce-I:': 730, 'z3_pre': 544, 'boogie_result': 278, 'ce-F:': 273, 'actual_z3': 11}
+matrix2b.c 964 1910.87 {'ce-T:': 96577, 'ce-I:': 80767, 'z3_pre': 57779, 'boogie_result': 9794, 'ce-F:': 9530, 'actual_z3': 25}
+matrix2_simpA.c 2150 3802.50 {'ce-T:': 227650, 'z3_pre': 127717, 'ce-F:': 108868, 'ce-I:': 67022, 'boogie_result': 21003, 'actual_z3': 22}
+matrix2_simpB.c 5918 9256.99 {'ce-T:': 893711, 'ce-I:': 680830, 'z3_pre': 340643, 'ce-F:': 128473, 'boogie_result': 56775, 'actual_z3': 36}
+sum3.sl.0.c 1 1.87 {'actual_z3': 1, 'z3_pre': 1, 'boogie_result': 1}
+sum3.sl.1.c 1 1.51 {'actual_z3': 1, 'z3_pre': 1, 'boogie_result': 1}
+sum3_vars.sl.0.c 1 1.57 {'actual_z3': 1, 'z3_pre': 1, 'boogie_result': 1}
+sum3_vars.sl.1.c 1 1.85 {'actual_z3': 1, 'z3_pre': 1, 'boogie_result': 1}
+sum4.sl.1.c 41008 71485.26 {'ce-I:': 9423492, 'z3_pre': 2247072, 'ce-F:': 1288490, 'boogie_result': 370688, 'ce-T:': 370687, 'actual_z3': 60}
+treax1.sl.0.c 1 2.24 {'z3_pre': 15, 'ce-T:': 6, 'actual_z3': 5, 'boogie_result': 5}
+trex1_vars.sl.0.c 1 2.22 {'z3_pre': 15, 'ce-T:': 6, 'actual_z3': 5, 'boogie_result': 5}
+trex3a.c 4045 6639.68 {'ce-I:': 470563, 'ce-T:': 288247, 'z3_pre': 234727, 'ce-F:': 114962, 'boogie_result': 38914, 'actual_z3': 26}
+trex3b.c 1971 3454.42 {'ce-I:': 142880, 'ce-T:': 135281, 'z3_pre': 115766, 'ce-F:': 34546, 'boogie_result': 19333, 'actual_z3': 21}
+vsend.c 2 3.16 {'ce-T:': 39, 'z3_pre': 32, 'boogie_result': 10, 'actual_z3': 8, 'ce-I:': 2}
+w1.sl.0.c 1 2.16 {'z3_pre': 16, 'actual_z3': 2, 'boogie_result': 2, 'ce-I:': 1}

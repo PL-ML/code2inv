@@ -1,0 +1,96 @@
+"File" | "Invariant" | "Number of Iterations" | "Time" | "Other Logs"
+sygus-bench-78.c.smt | "( >= V0 0 )" | 66 | 297.65  | {'ce-T:': 3298, 'ce-F:': 1132, 'boogie_result': 664, 'ce-I:': 579, 'actual_z3': 13}
+sygus-bench-79.c.smt | "( and ( or ( <= V2 ( + V2 0 ) ) ( <= V2 ( + V1 V3 ) ) ) ( >= V0 0 ) )" | 0 | 2.52  | {'ce-T:': 30, 'boogie_result': 9, 'actual_z3': 8}
+sygus-bench-7.c.smt | "( <= V0 ( + V1 11 ) )" | 593 | 3730.27  | {'ce-T:': 45190, 'ce-I:': 18124, 'ce-F:': 11486, 'boogie_result': 5826, 'actual_z3': 16}
+sygus-bench-80.c.smt | "( < V3 ( + 1 V1 ) )" | 4 | 17.80  | {'ce-T:': 228, 'boogie_result': 42, 'ce-F:': 33, 'actual_z3': 10}
+sygus-bench-81.c.smt | "( and ( or ( <= V1 ( + 1 V1 ) ) ( > V0 ( + 1 V1 ) ) ) ( or ( = V0 0 ) ( <= V1 ( + V0 V1 ) ) ) )" | 70 | 350.61  | {'ce-T:': 4111, 'ce-F:': 1458, 'boogie_result': 696, 'ce-I:': 611, 'actual_z3': 15}
+sygus-bench-82.c.smt | "( and ( or ( <= V2 ( + V2 0 ) ) ( <= V2 ( + V1 V3 ) ) ) ( >= V0 0 ) )" | 0 | 2.60  | {'ce-T:': 30, 'boogie_result': 9, 'actual_z3': 8}
+sygus-bench-83.c.smt | "( or ( < V0 ( + 0 0 ) ) ( > V1 V0 ) )" | 100 | 463.24  | {'ce-T:': 5874, 'ce-I:': 1529, 'boogie_result': 987, 'ce-F:': 959, 'actual_z3': 28}
+sygus-bench-84.c.smt | "( or ( < V0 ( + 0 0 ) ) ( > V1 V0 ) )" | 100 | 461.54  | {'ce-T:': 5874, 'ce-I:': 1529, 'boogie_result': 987, 'ce-F:': 959, 'actual_z3': 28}
+sygus-bench-85.c.smt | "( or ( < V0 ( - V1 V1 ) ) ( > V1 ( - V1 V1 ) ) )" | 143 | 745.37  | {'ce-T:': 10281, 'ce-I:': 2352, 'boogie_result': 1417, 'ce-F:': 1389, 'actual_z3': 29}
+sygus-bench-86.c.smt | "( and ( or ( > V1 ( + V0 V1 ) ) ( > V1 0 ) ) ( or ( <= V1 V0 ) ( = V0 V0 ) ) )" | 105 | 515.35  | {'ce-T:': 6783, 'ce-I:': 1513, 'boogie_result': 1039, 'ce-F:': 1011, 'actual_z3': 29}
+sygus-bench-109.c.smt | "( or ( >= V0 ( + 0 V1 ) ) ( < V2 1 ) )" | 329 | 1861.93  | {'ce-T:': 26573, 'ce-F:': 5000, 'ce-I:': 3677, 'boogie_result': 3253, 'actual_z3': 16}
+sygus-bench-89.c.smt | "( or ( = V0 1 ) ( > V2 V3 ) )" | 240 | 1211.86  | {'ce-T:': 13993, 'ce-F:': 4436, 'ce-I:': 2768, 'boogie_result': 2367, 'actual_z3': 12}
+sygus-bench-8.c.smt | "( < V1 ( + 20 V0 ) )" | 89 | 448.84  | {'ce-T:': 6611, 'boogie_result': 891, 'ce-F:': 887, 'ce-I:': 697, 'actual_z3': 13}
+sygus-bench-95.c.smt | "( and ( or ( <= V1 ( - V1 0 ) ) ( = V0 V0 ) ) ( = V0 ( - V1 0 ) ) )" | 45 | 244.57  | {'ce-T:': 2140, 'ce-I:': 1396, 'ce-F:': 831, 'boogie_result': 458, 'actual_z3': 20}
+sygus-bench-96.c.smt | "( and ( or ( <= V1 ( - V1 0 ) ) ( = V0 V0 ) ) ( = V0 ( - V1 0 ) ) )" | 45 | 240.70  | {'ce-T:': 2140, 'ce-I:': 1396, 'ce-F:': 831, 'boogie_result': 458, 'actual_z3': 20}
+sygus-bench-99.c.smt | "( = V2 ( + V1 V0 ) )" | 1036 | 6584.70  | {'ce-I:': 61339, 'ce-F:': 32487, 'ce-T:': 30569, 'boogie_result': 10192, 'actual_z3': 27}
+sygus-bench-10.c.smt | "( and ( <= V1 ( + V0 3 ) ) ( < V1 ( + V1 3 ) ) )" | 136 | 815.65  | {'ce-T:': 11289, 'ce-I:': 2621, 'boogie_result': 1352, 'ce-F:': 1348, 'actual_z3': 17}
+sygus-bench-9.c.smt | "( > V1 ( - V0 4 ) )" | 221 | 1191.41  | {'ce-T:': 15683, 'ce-I:': 3930, 'boogie_result': 2193, 'ce-F:': 2189, 'actual_z3': 15}
+sygus-bench-110.c.smt | "( and ( or ( >= V1 ( - V0 0 ) ) ( = V2 1 ) ) ( = V2 ( + 1 V0 ) ) )" | 1007 | 7938.06  | {'ce-I:': 77997, 'ce-T:': 49489, 'ce-F:': 26773, 'boogie_result': 9905, 'actual_z3': 29}
+sygus-bench-112.c.smt | "( and ( or ( = V2 ( + 1 V0 ) ) ( <= V0 ( - V0 1 ) ) ) ( or ( <= V0 ( - V0 0 ) ) ( >= V1 ( + V1 V0 ) ) ) ( or ( = V2 ( - 1 0 ) ) ( <= V0 ( - V1 0 ) ) ) )" | 2187 | 18643.07  | {'ce-I:': 198627, 'ce-T:': 114341, 'ce-F:': 61444, 'boogie_result': 21535, 'actual_z3': 30}
+sygus-bench-114.c.smt | "( = V0 V1 )" | 5 | 22.73  | {'ce-T:': 188, 'ce-I:': 90, 'boogie_result': 53, 'ce-F:': 44, 'actual_z3': 19}
+sygus-bench-115.c.smt | "( = V0 V1 )" | 5 | 22.66  | {'ce-T:': 188, 'ce-I:': 79, 'boogie_result': 53, 'ce-F:': 44, 'actual_z3': 18}
+sygus-bench-116.c.smt | "( or ( < V1 ( - V1 0 ) ) ( = V0 ( - V1 0 ) ) )" | 8 | 34.19  | {'ce-T:': 308, 'ce-I:': 121, 'boogie_result': 82, 'ce-F:': 73, 'actual_z3': 15}
+sygus-bench-117.c.smt | "( = V0 V1 )" | 16 | 85.02  | {'ce-T:': 620, 'ce-I:': 527, 'ce-F:': 196, 'boogie_result': 160, 'actual_z3': 17}
+sygus-bench-100.c.smt | "( and ( or ( > V2 ( + V1 1 ) ) ( <= V0 ( + V0 0 ) ) ) ( or ( >= V1 ( - 1 0 ) ) ( <= V0 ( + V2 0 ) ) ) ( = V2 ( + V1 V0 ) ) )" | 292 | 1403.84  | {'ce-T:': 8666, 'ce-F:': 8643, 'ce-I:': 5468, 'boogie_result': 2891, 'actual_z3': 21}
+sygus-bench-118.c.smt | "( and ( or ( >= V1 ( - V0 0 ) ) ( = V2 1 ) ) ( = V2 ( + 1 V0 ) ) )" | 1007 | 7966.96  | {'ce-I:': 77997, 'ce-T:': 49489, 'ce-F:': 26773, 'boogie_result': 9905, 'actual_z3': 29}
+sygus-bench-11.c.smt | "( and ( > V1 ( - V0 20 ) ) ( or ( < V2 V1 ) ( = V0 ( + 0 V0 ) ) ) )" | 228 | 1481.14  | {'ce-T:': 20460, 'ce-I:': 5487, 'ce-F:': 3573, 'boogie_result': 2264, 'actual_z3': 18}
+sygus-bench-120.c.smt | "( and ( = V1 ( - V0 1 ) ) ( or ( <= V0 ( + V1 1 ) ) ( = V0 ( + 1 8 ) ) ) ( <= V1 ( + 0 8 ) ) )" | 830 | 9833.21  | {'ce-I:': 173265, 'ce-F:': 21925, 'boogie_result': 8126, 'ce-T:': 8124, 'actual_z3': 38}
+sygus-bench-121.c.smt | "( and ( = V1 ( - V0 1 ) ) ( or ( <= V0 ( + V1 1 ) ) ( = V0 ( + 1 8 ) ) ) ( <= V1 ( + 0 8 ) ) )" | 830 | 9903.17  | {'ce-I:': 173265, 'ce-F:': 21925, 'boogie_result': 8126, 'ce-T:': 8124, 'actual_z3': 38}
+sygus-bench-122.c.smt | "( and ( or ( = V2 ( + 1 V0 ) ) ( <= V0 ( - V0 1 ) ) ) ( or ( <= V0 ( - V0 0 ) ) ( >= V1 ( + V1 V0 ) ) ) ( or ( = V2 ( - 1 0 ) ) ( <= V0 ( - V1 0 ) ) ) )" | 2187 | 18400.68  | {'ce-I:': 198627, 'ce-T:': 114341, 'ce-F:': 61444, 'boogie_result': 21535, 'actual_z3': 30}
+sygus-bench-101.c.smt | "( or ( <= V0 ( - 1 V0 ) ) ( <= V0 ( + V1 0 ) ) )" | 26 | 123.64  | {'ce-T:': 1250, 'ce-F:': 503, 'boogie_result': 263, 'ce-I:': 262, 'actual_z3': 12}
+sygus-bench-128.c.smt | "( and ( or ( < V1 ( + V0 V1 ) ) ( > V1 ( + V1 1 ) ) ) ( or ( < V1 ( - V0 V1 ) ) ( >= V1 ( - V1 V0 ) ) ) )" | 1 | 5.38  | {'ce-T:': 52, 'boogie_result': 16, 'actual_z3': 14}
+sygus-bench-129.c.smt | "( and ( or ( < V1 ( + V0 V1 ) ) ( > V1 ( + V1 1 ) ) ) ( or ( < V1 ( - V0 V1 ) ) ( >= V1 ( - V1 V0 ) ) ) )" | 1 | 5.66  | {'ce-T:': 60, 'boogie_result': 16, 'actual_z3': 11}
+sygus-bench-12.c.smt | "( >= V0 ( - V1 11 ) )" | 32 | 143.03  | {'ce-T:': 1541, 'ce-I:': 374, 'boogie_result': 322, 'ce-F:': 318, 'actual_z3': 12}
+sygus-bench-130.c.smt | "( or ( >= V1 0 ) ( > V0 ( - 1 1 ) ) )" | 93 | 537.15  | {'ce-T:': 7083, 'ce-F:': 1534, 'ce-I:': 1367, 'boogie_result': 923, 'actual_z3': 14}
+sygus-bench-131.c.smt | "( or ( >= V2 ( + 0 0 ) ) ( < V1 ( + V0 V1 ) ) )" | 114 | 636.84  | {'ce-T:': 7211, 'ce-F:': 2157, 'ce-I:': 2124, 'boogie_result': 1138, 'actual_z3': 12}
+sygus-bench-132.c.smt | "( >= V0 ( - V0 V0 ) )" | 43 | 226.89  | {'ce-T:': 2802, 'ce-I:': 832, 'ce-F:': 523, 'boogie_result': 437, 'actual_z3': 13}
+sygus-bench-133.c.smt | "( and ( >= V1 ( - 0 V1 ) ) ( or ( > V1 V1 ) ( > V1 ( - V0 1 ) ) ) ( or ( < V1 ( + 0 0 ) ) ( >= V1 0 ) ) )" | 10 | 39.04  | {'ce-T:': 297, 'ce-F:': 165, 'boogie_result': 103, 'ce-I:': 92, 'actual_z3': 33}
+sygus-bench-13.c.smt | "( >= V1 ( - V0 2 ) )" | 32 | 169.15  | {'ce-T:': 2157, 'ce-I:': 460, 'boogie_result': 326, 'ce-F:': 322, 'actual_z3': 14}
+sygus-bench-14.c.smt | "( <= V1 ( + 2 V0 ) )" | 228 | 1444.19  | {'ce-T:': 23115, 'ce-I:': 3919, 'boogie_result': 2261, 'ce-F:': 2257, 'actual_z3': 20}
+sygus-bench-102.c.smt | "( or ( <= V0 ( - 1 V0 ) ) ( <= V0 ( + V1 0 ) ) )" | 26 | 124.53  | {'ce-T:': 1250, 'ce-F:': 503, 'boogie_result': 263, 'ce-I:': 262, 'actual_z3': 12}
+sygus-bench-15.c.smt | "( or ( > V3 ( - V1 0 ) ) ( <= V3 ( - 0 V1 ) ) )" | 755 | 7139.58  | {'ce-T:': 71373, 'ce-I:': 71235, 'ce-F:': 12804, 'boogie_result': 7445, 'actual_z3': 27}
+sygus-bench-16.c.smt | "( and ( or ( > V3 1 ) ( >= V1 ( - 0 0 ) ) ) ( <= V1 ( + V2 0 ) ) ( >= V1 ( - 0 0 ) ) )" | 208 | 1471.08  | {'ce-I:': 14127, 'ce-T:': 11643, 'boogie_result': 2060, 'ce-F:': 2049, 'actual_z3': 22}
+sygus-bench-17.c.smt | "( and ( or ( < V1 V3 ) ( < V1 2 ) ) ( or ( <= V3 V3 ) ( >= V1 ( + V2 V2 ) ) ) )" | 531 | 3492.99  | {'ce-T:': 37315, 'ce-I:': 22618, 'ce-F:': 9885, 'boogie_result': 5261, 'actual_z3': 22}
+sygus-bench-18.c.smt | "( and ( or ( >= V1 V3 ) ( < V1 ( + V1 V1 ) ) ) ( > V2 ( - V1 V2 ) ) ( or ( <= V0 ( + V2 2 ) ) ( >= V1 ( - 1 2 ) ) ) )" | 61 | 367.43  | {'ce-T:': 4123, 'ce-I:': 1979, 'boogie_result': 616, 'ce-F:': 597, 'actual_z3': 18}
+sygus-bench-19.c.smt | "( or ( >= V1 ( + V1 V1 ) ) ( > V3 ( + V1 0 ) ) )" | 306 | 2223.12  | {'ce-T:': 27433, 'ce-I:': 14424, 'ce-F:': 3254, 'boogie_result': 3028, 'actual_z3': 23}
+sygus-bench-1.c.smt | "( and ( or ( > V0 0 ) ( = V0 ( - V0 1 ) ) ) ( or ( = V0 ( + V1 1 ) ) ( <= V1 ( + V1 V1 ) ) ) ( <= V1 V0 ) )" | 302 | 3004.82  | {'ce-I:': 48753, 'ce-F:': 5337, 'boogie_result': 2956, 'ce-T:': 2955, 'actual_z3': 33}
+sygus-bench-20.c.smt | "( and ( >= V1 ( - 1 1 ) ) ( or ( = V0 ( - 1 V0 ) ) ( <= V1 V2 ) ) )" | 1535 | 14861.04  | {'ce-I:': 197143, 'ce-T:': 109841, 'boogie_result': 15102, 'ce-F:': 15091, 'actual_z3': 28}
+sygus-bench-21.c.smt | "( or ( < V1 V3 ) ( = V1 ( - 1 0 ) ) )" | 32 | 160.28  | {'ce-T:': 1912, 'ce-I:': 395, 'boogie_result': 325, 'ce-F:': 306, 'actual_z3': 15}
+sygus-bench-22.c.smt | "( and ( >= V1 V1 ) ( > V2 0 ) ( > V1 0 ) )" | 3438 | 41669.07  | {'ce-T:': 480419, 'ce-I:': 457935, 'boogie_result': 34083, 'ce-F:': 34064, 'actual_z3': 33}
+sygus-bench-103.c.smt | "( and ( <= V0 ( + V0 0 ) ) ( <= V0 ( + 100 0 ) ) ( or ( = V0 ( - 0 100 ) ) ( <= V0 ( + 0 V0 ) ) ) )" | 11 | 46.96  | {'ce-I:': 355, 'boogie_result': 113, 'ce-T:': 111, 'ce-F:': 110, 'actual_z3': 68}
+sygus-bench-25.c.smt | "( and ( or ( > V0 ( - V0 10000 ) ) ( > V0 ( + 1 V0 ) ) ) ( or ( > V0 V0 ) ( >= V0 ( + 0 0 ) ) ) ( or ( <= V0 ( + 10000 V0 ) ) ( > V0 ( + 1 10000 ) ) ) )" | 0 | 1.74  | {'boogie_result': 10, 'actual_z3': 10, 'ce-T:': 9}
+sygus-bench-28.c.smt | "( or ( <= V1 V0 ) ( >= V0 ( - V0 V0 ) ) )" | 61 | 257.41  | {'ce-T:': 2403, 'ce-F:': 1168, 'boogie_result': 608, 'ce-I:': 586, 'actual_z3': 24}
+sygus-bench-29.c.smt | "( or ( <= V1 V0 ) ( >= V0 ( - V0 V0 ) ) )" | 61 | 258.95  | {'ce-T:': 2403, 'ce-F:': 1168, 'boogie_result': 608, 'ce-I:': 586, 'actual_z3': 24}
+sygus-bench-30.c.smt | "( and ( or ( > V0 ( - V0 100 ) ) ( > V0 ( + 1 V0 ) ) ) ( or ( > V0 V0 ) ( >= V0 ( + 0 0 ) ) ) ( or ( <= V0 ( + 100 V0 ) ) ( > V0 ( + 1 100 ) ) ) )" | 0 | 1.76  | {'boogie_result': 10, 'actual_z3': 10, 'ce-T:': 9}
+sygus-bench-104.c.smt | "( or ( < V0 ( - 1 V0 ) ) ( >= V1 ( + V0 0 ) ) )" | 149 | 736.46  | {'ce-T:': 5825, 'ce-F:': 4466, 'ce-I:': 2375, 'boogie_result': 1461, 'actual_z3': 12}
+sygus-bench-33.c.smt | "( or ( <= V1 V0 ) ( >= V0 ( - V0 V0 ) ) )" | 61 | 258.14  | {'ce-T:': 2403, 'ce-F:': 1168, 'boogie_result': 608, 'ce-I:': 586, 'actual_z3': 24}
+sygus-bench-34.c.smt | "( or ( <= V1 V0 ) ( >= V0 ( - V0 V0 ) ) )" | 61 | 259.42  | {'ce-T:': 2403, 'ce-F:': 1168, 'boogie_result': 608, 'ce-I:': 586, 'actual_z3': 24}
+sygus-bench-35.c.smt | "( and ( or ( = V0 ( + 1 V0 ) ) ( >= V0 ( - V1 V1 ) ) ) ( or ( < V0 ( + 40 V1 ) ) ( >= V0 V1 ) ) )" | 2 | 7.80  | {'ce-T:': 75, 'boogie_result': 21, 'actual_z3': 21, 'ce-I:': 1}
+sygus-bench-36.c.smt | "( < V0 41 )" | 7 | 35.57  | {'ce-T:': 285, 'ce-I:': 133, 'ce-F:': 118, 'boogie_result': 77, 'actual_z3': 11}
+sygus-bench-38.c.smt | "( and ( or ( > V0 ( + 1 V2 ) ) ( >= V0 ( - V1 V1 ) ) ) ( <= V2 ( + 0 V2 ) ) ( or ( < V1 V0 ) ( <= V0 V1 ) ) )" | 8 | 36.80  | {'ce-T:': 388, 'ce-I:': 116, 'boogie_result': 85, 'ce-F:': 66, 'actual_z3': 18}
+sygus-bench-3.c.smt | "( or ( <= V2 V1 ) ( = V0 ( - 5 5 ) ) )" | 263 | 2151.51  | {'ce-I:': 21137, 'ce-T:': 21087, 'boogie_result': 2606, 'ce-F:': 2603, 'actual_z3': 22}
+sygus-bench-40.c.smt | "( and ( or ( > V1 ( + 0 V0 ) ) ( < V1 ( + 1 1 ) ) ) ( > V0 ( - 0 1 ) ) )" | 7 | 30.01  | {'ce-T:': 368, 'boogie_result': 80, 'ce-F:': 71, 'actual_z3': 12}
+sygus-bench-41.c.smt | "( > V1 ( + 0 V0 ) )" | 8 | 39.14  | {'ce-T:': 403, 'ce-I:': 122, 'boogie_result': 87, 'ce-F:': 78, 'actual_z3': 14}
+sygus-bench-42.c.smt | "( and ( or ( >= V0 0 ) ( >= V0 ( - V1 V2 ) ) ) ( or ( >= V1 ( - 0 0 ) ) ( = V1 ( - 0 V1 ) ) ) )" | 0 | 1.76  | {'ce-T:': 16, 'boogie_result': 9, 'actual_z3': 9}
+sygus-bench-45.c.smt | "( > V0 ( - 0 1 ) )" | 50 | 280.04  | {'ce-T:': 2453, 'ce-F:': 1866, 'ce-I:': 834, 'boogie_result': 497, 'actual_z3': 19}
+sygus-bench-105.c.smt | "( or ( < V0 ( - 1 V0 ) ) ( >= V1 ( + V0 0 ) ) )" | 149 | 738.18  | {'ce-T:': 5825, 'ce-F:': 4466, 'ce-I:': 2375, 'boogie_result': 1461, 'actual_z3': 12}
+sygus-bench-46.c.smt | "( and ( or ( < V1 V2 ) ( >= V1 1 ) ) ( or ( = V0 1 ) ( >= V1 1 ) ) ( or ( <= V0 ( - V1 0 ) ) ( > V1 ( + V1 V0 ) ) ) )" | 22 | 115.24  | {'ce-T:': 1216, 'ce-I:': 589, 'boogie_result': 223, 'ce-F:': 214, 'actual_z3': 18}
+sygus-bench-47.c.smt | "( and ( or ( >= V0 0 ) ( >= V0 ( - V1 V2 ) ) ) ( or ( >= V1 ( - 0 0 ) ) ( = V1 ( - 0 V1 ) ) ) )" | 0 | 1.75  | {'ce-T:': 16, 'boogie_result': 9, 'actual_z3': 9}
+sygus-bench-4.c.smt | "( or ( <= V0 1 ) ( <= V2 V1 ) )" | 89 | 568.15  | {'ce-T:': 6073, 'ce-I:': 3917, 'boogie_result': 893, 'ce-F:': 890, 'actual_z3': 18}
+sygus-bench-50.c.smt | "( and ( or ( = V0 ( + 1 V0 ) ) ( >= V0 ( - V1 V1 ) ) ) ( or ( < V0 ( + 4 V1 ) ) ( >= V0 V1 ) ) )" | 2 | 8.29  | {'ce-T:': 93, 'boogie_result': 21, 'actual_z3': 12, 'ce-I:': 1}
+sygus-bench-51.c.smt | "( < V0 5 )" | 18 | 92.09  | {'ce-T:': 849, 'ce-I:': 483, 'boogie_result': 182, 'ce-F:': 179, 'actual_z3': 14}
+sygus-bench-53.c.smt | "( and ( or ( > V1 ( + 0 V0 ) ) ( < V1 ( + 1 1 ) ) ) ( > V0 ( - 0 1 ) ) )" | 7 | 30.34  | {'ce-T:': 369, 'boogie_result': 80, 'ce-F:': 71, 'actual_z3': 12}
+sygus-bench-54.c.smt | "( > V1 ( + 0 V0 ) )" | 8 | 39.56  | {'ce-T:': 404, 'ce-I:': 122, 'boogie_result': 87, 'ce-F:': 78, 'actual_z3': 14}
+sygus-bench-55.c.smt | "( and ( or ( >= V0 0 ) ( >= V0 ( - V1 V2 ) ) ) ( or ( >= V1 ( - 0 0 ) ) ( = V1 ( - 0 V1 ) ) ) )" | 0 | 1.72  | {'ce-T:': 15, 'boogie_result': 9, 'actual_z3': 9}
+sygus-bench-56.c.smt | "( > V1 ( + 0 V0 ) )" | 8 | 39.62  | {'ce-T:': 403, 'ce-I:': 122, 'boogie_result': 87, 'ce-F:': 78, 'actual_z3': 14}
+sygus-bench-57.c.smt | "( > V1 ( + 0 V0 ) )" | 8 | 39.66  | {'ce-T:': 403, 'ce-I:': 122, 'boogie_result': 87, 'ce-F:': 78, 'actual_z3': 14}
+sygus-bench-58.c.smt | "( and ( or ( = V0 0 ) ( >= V1 ( - V1 V0 ) ) ) ( or ( >= V1 V2 ) ( >= V1 0 ) ) ( >= V1 ( - V1 V1 ) ) )" | 29 | 146.26  | {'ce-T:': 1433, 'ce-F:': 532, 'ce-I:': 413, 'boogie_result': 293, 'actual_z3': 16}
+sygus-bench-59.c.smt | "( and ( or ( < V1 V2 ) ( >= V1 1 ) ) ( or ( = V0 1 ) ( >= V1 1 ) ) ( or ( <= V0 ( - V1 0 ) ) ( > V1 ( + V1 V0 ) ) ) )" | 22 | 117.83  | {'ce-T:': 1216, 'ce-I:': 589, 'boogie_result': 223, 'ce-F:': 214, 'actual_z3': 18}
+sygus-bench-5.c.smt | "( or ( <= V2 V1 ) ( <= V0 0 ) )" | 834 | 5384.26  | {'ce-T:': 58760, 'ce-I:': 34823, 'boogie_result': 8192, 'ce-F:': 8181, 'actual_z3': 16}
+sygus-bench-60.c.smt | "( and ( or ( >= V0 0 ) ( >= V0 ( - V1 V2 ) ) ) ( or ( >= V1 ( - 0 0 ) ) ( = V1 ( - 0 V1 ) ) ) )" | 0 | 1.72  | {'ce-T:': 15, 'boogie_result': 9, 'actual_z3': 9}
+sygus-bench-63.c.smt | "( or ( >= V1 ( - V1 V1 ) ) ( < V0 11 ) )" | 14 | 68.17  | {'ce-T:': 795, 'ce-I:': 195, 'boogie_result': 141, 'ce-F:': 120, 'actual_z3': 24}
+sygus-bench-64.c.smt | "( or ( <= V0 10 ) ( < V1 10 ) )" | 245 | 1517.46  | {'ce-T:': 17653, 'ce-I:': 8356, 'ce-F:': 5367, 'boogie_result': 2412, 'actual_z3': 31}
+sygus-bench-65.c.smt | "( and ( or ( >= V1 ( - 100 100 ) ) ( <= V0 ( - 101 V0 ) ) ) ( or ( > V0 V1 ) ( <= V0 ( - 100 V0 ) ) ) )" | 263 | 1724.80  | {'ce-T:': 17403, 'ce-I:': 12614, 'ce-F:': 3991, 'boogie_result': 2572, 'actual_z3': 23}
+sygus-bench-66.c.smt | "( or ( <= V0 100 ) ( < V1 100 ) )" | 245 | 1550.04  | {'ce-T:': 17653, 'ce-I:': 8356, 'ce-F:': 5367, 'boogie_result': 2412, 'actual_z3': 31}
+sygus-bench-107.c.smt | "( or ( <= V2 ( - 0 0 ) ) ( < V1 ( + 1 V0 ) ) )" | 66 | 412.61  | {'ce-T:': 6320, 'ce-I:': 1058, 'boogie_result': 667, 'ce-F:': 652, 'actual_z3': 17}
+sygus-bench-67.c.smt | "( or ( < V2 ( + 1 1 ) ) ( >= V1 ( - 1 1 ) ) )" | 142 | 660.48  | {'ce-T:': 8440, 'boogie_result': 1412, 'ce-F:': 1407, 'ce-I:': 1365, 'actual_z3': 10}
+sygus-bench-68.c.smt | "( and ( or ( >= V0 ( + V0 0 ) ) ( < V0 V0 ) ) ( or ( <= V2 1 ) ( >= V0 ( + 0 V1 ) ) ) )" | 363 | 1885.96  | {'ce-T:': 19950, 'ce-I:': 10775, 'boogie_result': 3585, 'ce-F:': 3582, 'actual_z3': 17}
+sygus-bench-69.c.smt | "( or ( < V2 ( + 1 1 ) ) ( >= V1 ( - V2 V2 ) ) )" | 119 | 605.62  | {'ce-T:': 7069, 'ce-I:': 2069, 'ce-F:': 1243, 'boogie_result': 1183, 'actual_z3': 11}
+sygus-bench-6.c.smt | "( and ( or ( > V1 ( - V2 V3 ) ) ( = V0 0 ) ) ( or ( >= V1 ( - V2 0 ) ) ( = V0 ( - 1 1 ) ) ) )" | 92 | 517.33  | {'ce-T:': 7703, 'ce-I:': 1211, 'boogie_result': 920, 'ce-F:': 909, 'actual_z3': 14}
+sygus-bench-70.c.smt | "( or ( <= V2 1 ) ( >= V0 ( + 1 V1 ) ) )" | 12 | 51.40  | {'ce-T:': 723, 'boogie_result': 123, 'ce-F:': 118, 'actual_z3': 9}
+sygus-bench-71.c.smt | "( >= V0 ( - 126 126 ) )" | 5 | 25.42  | {'ce-T:': 264, 'ce-F:': 71, 'boogie_result': 58, 'ce-I:': 38, 'actual_z3': 22}
+sygus-bench-74.c.smt | "( and ( > V0 ( + 126 1 ) ) ( or ( > V2 ( - 126 V2 ) ) ( <= V0 ( - V0 0 ) ) ) )" | 13 | 65.12  | {'ce-T:': 673, 'ce-F:': 235, 'ce-I:': 150, 'boogie_result': 140, 'actual_z3': 24}
+sygus-bench-77.c.smt | "( < V3 ( + 1 V1 ) )" | 4 | 17.65  | {'ce-T:': 231, 'boogie_result': 42, 'ce-F:': 33, 'actual_z3': 8}
+sygus-bench-108.c.smt | "( and ( or ( <= V0 ( + V0 0 ) ) ( < V3 ( + V0 0 ) ) ) ( <= V1 ( + V0 0 ) ) )" | 15 | 66.42  | {'ce-T:': 892, 'boogie_result': 153, 'ce-F:': 142, 'actual_z3': 10}

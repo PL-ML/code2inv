@@ -1,0 +1,15 @@
+To run the batch experiments with slurm, run `./run_exp.sh $exp_type -o output_directory`. This needs a machine running slurm.
+
+If slurm is not available, run the experiments with `./run_exp_noslurm.sh $exp_type $timelimit -o output_directory`. However, this runs one instance at a time so the experiments will take significantly longer to complete. $timelimit indicates the time limit for each benchmark evaluation (each experiment has multiple benchmarks) and takes the time in the same format as the bash timeout command.
+
+The following exp_types are available:
+`c` for the 133 linear C benchmarks
+`c_nl` for the 7 non linear C benchmarks
+`chc` for the 120 linear CHC benchmarks
+`chc_nl` for the 8 non linear CHC benchmarks
+`learning` for training the weights for the transferbility experiment
+`fine_tuning` for evaluating invariants using the trained weights from the learning experiment
+`fine_tuning_untrained` for evaluating invariants without pretrained weights
+
+Examples:
+`./run_exp_noslurm.sh c 12h` # to run the experiments on the 133 linear C benchmarks with a 12 hour timelimit for each benchmark

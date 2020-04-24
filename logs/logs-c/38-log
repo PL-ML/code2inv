@@ -1,0 +1,2 @@
+14.c | "( ( x < x || x == x ) && ( x <= y || y > ( x - 4 ) ) )" | 4 | 4.80  | {'ce-T:': 149, 'boogie_result': 41, 'ce-F:': 40, 'ce-I:': 36, 'actual_z3': 7}
+{'ce-T:': 149, 'boogie_result': 41, 'ce-F:': 40, 'ce-I:': 36, 'actual_z3': 7}

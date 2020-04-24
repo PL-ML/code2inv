@@ -1,0 +1,2 @@
+77.c | "( ( y < ( 1 + y ) ) && ( i <= ( i + x ) ) && ( x < ( 0 - 1 ) || x > ( y - 1 ) ) )" | 1 | 1.72  | {'ce-T:': 48, 'ce-I:': 30, 'boogie_result': 20, 'ce-F:': 19, 'actual_z3': 8}
+{'ce-T:': 48, 'ce-I:': 30, 'boogie_result': 20, 'ce-F:': 19, 'actual_z3': 8}

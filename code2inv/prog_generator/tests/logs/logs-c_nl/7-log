@@ -1,0 +1,2 @@
+nl-7.c | "( ( w < y || y == ( w - 0 ) ) && z == ( x * w ) )" | 53 | 43.58  | {'ce-I:': 2467, 'ce-T:': 1576, 'ce-F:': 1019, 'boogie_result': 529, 'actual_z3': 13}
+{'ce-I:': 2467, 'ce-T:': 1576, 'ce-F:': 1019, 'boogie_result': 529, 'actual_z3': 13}

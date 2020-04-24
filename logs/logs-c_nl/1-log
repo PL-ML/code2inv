@@ -1,0 +1,2 @@
+nl-1.c | "( ( y <= 0 && y == ( 1 + 1 ) ) || ( x > y && y > ( 1 * y ) ) || x == ( y * y ) )" | 1 | 1.39  | {'ce-F:': 33, 'ce-I:': 22, 'boogie_result': 15, 'ce-T:': 11, 'actual_z3': 9}
+{'ce-F:': 33, 'ce-I:': 22, 'boogie_result': 15, 'ce-T:': 11, 'actual_z3': 9}

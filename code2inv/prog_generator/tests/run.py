@@ -5,7 +5,7 @@ import sys
 from subprocess import check_output
 from tqdm import tqdm
 
-LOG_ROOT="logs"
+# LOG_ROOT="logs"
 
 def R(fpath):
     with open(fpath, 'r') as fin:
@@ -20,12 +20,14 @@ slurmscript = str(sys.argv[1])
 bs = R(sys.argv[2])
 
 logname = sys.argv[3]
-log_dir = os.path.join(LOG_ROOT, logname)
+# log_dir = os.path.join(LOG_ROOT, logname)
+log_dir = logname
 if os.path.exists(log_dir):
     print("log_dir already exists: ", log_dir)
     exit()
 
 os.makedirs(log_dir)
+print("Logs stored in " + log_dir)
 
 for b in tqdm(bs):
     try:

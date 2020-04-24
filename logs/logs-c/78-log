@@ -1,0 +1,2 @@
+50.c | "( ( c >= ( 0 - c ) ) && ( c >= c ) )" | 0 | 0.92  | {'boogie_result': 7, 'actual_z3': 7, 'ce-T:': 6}
+{'boogie_result': 7, 'actual_z3': 7, 'ce-T:': 6}

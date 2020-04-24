@@ -1,0 +1,40 @@
+tmp/82.out
+                                       found a solution for 93 , sol: ( ( y <= ( x + x ) ) && ( x <= ( x + x ) || y <= ( x + x ) ) && ( y <= ( x + x ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 91 , sol: ( ( y <= ( x + x ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 93 , sol: ( ( y <= ( x + x ) ) && ( y <= ( x + x ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 96 , sol: ( ( y <= ( x + x ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 94 , sol: ( ( y <= ( x + x ) || x <= ( x + x ) ) && ( y <= ( y + x ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 90 , sol: ( ( y <= ( x + y ) || x <= ( i + x ) ) && ( y <= ( x + x ) || x <= ( y + x ) ) && ( y <= ( x + x ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 92 , sol: ( ( x <= ( x + x ) || y <= ( y + x ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]avg reward: -3.0000:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -3.0000:   1%|          | 1/100 [00:02<04:33,  2.76s/it]                                                                    found a solution for 99 , sol: ( ( y <= ( x + x ) ) && ( y <= ( x + y ) ) && ( y <= ( y + x ) ) )
+avg reward: -3.0000:   1%|          | 1/100 [00:03<04:33,  2.76s/it]                                                                    found a solution for 93 , sol: ( ( x <= ( x + x ) || y <= ( y + x ) ) && ( y <= ( x + x ) || x <= ( y - x ) ) && ( y >= ( 0 - junk_0 ) || y <= ( x + x ) ) )
+avg reward: -3.0000:   1%|          | 1/100 [00:03<04:33,  2.76s/it]                                                                    found a solution for 95 , sol: ( ( x <= ( x + y ) || y <= ( x + x ) ) && ( y <= ( x + y ) ) && ( y <= ( x + x ) ) )
+avg reward: -3.0000:   1%|          | 1/100 [00:04<04:33,  2.76s/it]                                                                    found a solution for 99 , sol: ( ( x <= ( x + x ) || y <= ( x + x ) ) )
+avg reward: -3.0000:   1%|          | 1/100 [00:04<04:33,  2.76s/it]                                                                    found a solution for 95 , sol: ( ( y <= ( x + y ) ) )
+avg reward: -3.0000:   1%|          | 1/100 [00:04<04:33,  2.76s/it]                                                                    found a solution for 92 , sol: ( ( y <= ( x + x ) || x <= ( x + y ) ) && ( y <= ( y + x ) || y <= ( x + y ) ) && ( x <= ( x + y ) || y <= ( y + y ) ) )
+avg reward: -3.0000:   1%|          | 1/100 [00:04<04:33,  2.76s/it]avg reward: -1.3250:   1%|          | 1/100 [00:06<04:33,  2.76s/it]avg reward: -1.3250:   2%|▏         | 2/100 [00:06<04:48,  2.94s/it]                                                                    found a solution for 98 , sol: ( ( y <= ( x - y ) || x <= ( x + y ) ) && ( y <= ( y + x ) || y <= ( y + y ) ) && ( y <= ( x + x ) || x == ( x + x ) ) )
+avg reward: -1.3250:   2%|▏         | 2/100 [00:06<04:48,  2.94s/it]                                                                    found a solution for 96 , sol: ( ( x <= ( y + y ) || x <= ( x + x ) ) && ( y <= ( x + x ) || y <= ( y + x ) ) )
+avg reward: -1.3250:   2%|▏         | 2/100 [00:07<04:48,  2.94s/it]                                                                    found a solution for 90 , sol: ( ( x <= ( x + x ) || y <= ( x + x ) ) && ( y <= ( x + i ) || x <= ( y + x ) ) )
+avg reward: -1.3250:   2%|▏         | 2/100 [00:07<04:48,  2.94s/it]                                                                    found a solution for 92 , sol: ( ( y <= ( x + x ) || y <= ( x + i ) ) )
+avg reward: -1.3250:   2%|▏         | 2/100 [00:07<04:48,  2.94s/it]                                                                    found a solution for 90 , sol: ( ( y <= ( x + y ) ) && ( y <= ( x + x ) || y <= ( y + x ) ) && ( i <= ( x + x ) || x <= ( x + x ) ) )
+avg reward: -1.3250:   2%|▏         | 2/100 [00:08<04:48,  2.94s/it]                                                                    found a solution for 92 , sol: ( ( y <= ( y + x ) ) && ( i <= ( y + x ) || x <= ( y + y ) ) && ( y <= ( x + y ) || x <= ( y + y ) ) )
+avg reward: -1.3250:   2%|▏         | 2/100 [00:08<04:48,  2.94s/it]avg reward: -0.4000:   2%|▏         | 2/100 [00:09<04:48,  2.94s/it]avg reward: -0.4000:   3%|▎         | 3/100 [00:09<05:09,  3.19s/it]                                                                    found a solution for 98 , sol: ( ( y <= ( x + x ) || x <= ( x + x ) ) && ( x <= ( y + x ) || x <= ( x + y ) ) && ( y <= ( x + x ) ) )
+avg reward: -0.4000:   3%|▎         | 3/100 [00:10<05:09,  3.19s/it]                                                                    found a solution for 91 , sol: ( ( x <= ( x + x ) ) )
+avg reward: -0.4000:   3%|▎         | 3/100 [00:10<05:09,  3.19s/it]                                                                    found a solution for 91 , sol: ( ( x <= ( y + x ) || y <= ( y + x ) ) && ( y <= ( y + x ) ) )
+avg reward: -0.4000:   3%|▎         | 3/100 [00:10<05:09,  3.19s/it]                                                                    found a solution for 97 , sol: ( ( x <= ( x + y ) || junk_0 <= ( x + x ) ) && ( y <= ( x + x ) || y <= ( x + y ) ) && ( x <= ( x + x ) ) )
+avg reward: -0.4000:   3%|▎         | 3/100 [00:11<05:09,  3.19s/it]                                                                    found a solution for 92 , sol: ( ( y <= ( x + x ) || y <= ( y + x ) ) )
+avg reward: -0.4000:   3%|▎         | 3/100 [00:11<05:09,  3.19s/it]                                                                    found a solution for 91 , sol: ( ( x <= ( x + x ) || y < ( x + y ) ) && ( x <= ( y + junk_0 ) || y <= ( y + x ) ) )
+avg reward: -0.4000:   3%|▎         | 3/100 [00:11<05:09,  3.19s/it]                                                                    found a solution for 94 , sol: ( ( x <= ( x + x ) ) )
+avg reward: -0.4000:   3%|▎         | 3/100 [00:11<05:09,  3.19s/it]                                                                    found a solution for 90 , sol: ( ( y <= ( x + y ) ) && ( y <= ( x + x ) ) && ( y <= ( x + x ) ) )
+--
+4
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}

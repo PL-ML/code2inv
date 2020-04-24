@@ -1,0 +1,2 @@
+59.c | "( ( n < ( n + c ) || c < ( n + c ) ) && ( c <= n || c <= ( n + 0 ) ) )" | 62 | 73.73  | {'ce-I:': 2803, 'ce-T:': 1229, 'ce-F:': 1215, 'boogie_result': 620, 'actual_z3': 20}
+{'ce-I:': 2803, 'ce-T:': 1229, 'ce-F:': 1215, 'boogie_result': 620, 'actual_z3': 20}

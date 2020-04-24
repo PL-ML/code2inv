@@ -34,21 +34,65 @@ Install the dev version of this package:
 
 ## Running as an out-of-the-box solver
 
-```cd code2inv/prog_generator```, then directly run the script ```./run_solver_file.sh <graph_file.json> <vc_file> <specification_file>```. 
+```cd code2inv/prog_generator```, then directly run the script ```./run_solver_file.sh $graph_file $vc_file $specification_file```. To assign the output and related logs to a file, you can add the optional `-o` argument : ```./run_solver_file.sh $graph_file $vc_file $specification_file -o output_file```.
+Examples-
+To run code2inv on one of the 133 Linear C instances: `./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec`
 
-Eg- `./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec`
+Optionally, to store the result and related logs into an output file `inv_result.txt`: `./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt`
 
-Eg- `./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec`
+Some of other benchmarks which give an answer relatively quick (in the first epoch under 100 iterations) include: 102.c, 53.c, 56.c, 65.c, 18.c, 98.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
+
+To run code2inv on one of the 120 Linear CHC instances: `./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec`
+
+Optionally, to store the result and related logs into an output file `inv_result.txt`: `./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec -o inv_result.txt`
+
+Some of other benchmarks which give an answer relatively quick (in the first epoch under 100 iterations) include: 78.c, 115.c, 45.c, 54.c, 71.c, 77.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
 
 The specification file is a file as such:
 
 ```
-name_of_inv_grammar
+name_of_inv_grammar_file
 name_of_solver_script (in the format of a python package)
-var_format (ssa if graph has variables in the ssa format, leave blank if not)
+var_format (ssa if graph has core variables in the ssa format (for example in the C instances), leave blank if not)
 ```
 
 Refer to the spec files in `spec/` directory as an example
+
+To lower the amount of time needed for some benchmarks which take longer, we have provided pretrained weights for these benchmarks in the `weights.tar` file in the repository root directory. To use them, first extract the weights: `tar -xvf weights.tar`. This should create a directory with all necessary weights.
+Then change directory `cd code2inv/prog_generator` and run `./run_solver_file_with_weights.sh $graph_file $vc_file $specification_file $path_to_weights [ -o output_file ]`.
+
+The same optional argument from earlier to denote the output file applies here as well.
+
+The path_to_weights argument uses the path to the .encoder weight file without the extension.
+
+for example,
+```./run_solver_file_with_weights.sh ../../benchmarks/C_instances/c_graph/6.c.json ../../benchmarks/C_instances/c_smt2/6.c.smt specs/c_spec ../../weights/benchmarks/C_instances/c_graph/6.c.json/epoch-latest```
+
+Another example:
+```./run_solver_file_with_weights.sh ../../benchmarks/C_instances/c_graph/69.c.json ../../benchmarks/C_instances/c_smt2/69.c.smt specs/c_spec ../../weights/benchmarks/C_instances/c_graph/69.c.json/epoch-latest -o inv_result```
+
+### Setting up the invariant grammar
+
+The invariant grammar is a combination of grammar productions as such:-<br>
+NT `::=` production_rule_1 `|` production_rule_2 `|` ...
+
+Restrictions:<br>
+* There are fixed terminals to denote variables and constants, namely `var` and `const` respectively. These terminals must be used in the invariant grammar wherever variables and constants are expected.
+* The start symbol for the grammar is always `S` and so every invariant grammar must include the `S` non terminal.
+* Each invariant is considered to have an expression in terms of atomic predicates whose grammar is given by the non-terminal `p`. So every invariant grammar must include the `p` non terminal, and the non terminals `S` and `p` should relate to each other through production rules.
+
+An example of a valid invariant grammar is:
+
+```
+S ::= ( C ) | ( C && C ) | ( C && C && C )
+C ::= ( p ) | ( p  "||" p )
+p ::= var cmp expr
+expr ::= ( var op var ) | ( var op const ) | ( const op var ) | ( const op const ) | var | const
+cmp ::= < | > | == | <= | >=
+op ::= + | -
+```
+
+You can see more grammar examples in the `code2inv/prog_generator/grammar_files` directory.
 
 ## Running with pretraining and fine-tuning
 
@@ -57,16 +101,25 @@ Refer to the spec files in `spec/` directory as an example
 ```cd code2inv/prog_generator```
 Then run:
 ```./pretraining.sh ${dataset} ${prog_idx} ${agg_check} ${grammar_file}```
-where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denoting whether more aggressive checker should be used. 
+where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denoting whether more aggressive checker should be used.
+
+An easier way would be to run `cd tests; ./test_learning.sh ${prog_idx}`
 
 ### Fine-tuning:
 ```cd code2inv/prog_generator```
 Then run:
 ```./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch} ${grammar_file}```
 where the penultimate argument ```init_epoch``` stands for the model dump of corresponding epoch (`latest` for the latest epoch dumped). 
+An easier way would be to run `cd tests; ./test_fine_tuning.sh ${prog_idx}`
 
+## Running Batch Experiments
+Read the instructions in the BATCH_EXPERIMENT_INSTRUCTIONS.txt file or the code2inv/prog_generator/tests directory
 
+## Getting the plots
+Read the instructions in the GRAPH_REPRODUCTION_INSTRUCTIONS.txt file
 
+## Referring to existing logs
+We have included the logs for experiments conducted on our servers under the logs directory in the repository root directory. Each folder stands for an experiment with each file under that including the logs for a particular sample. The csv files are the combined logs for the C and CHC linear experiments (`|` is considered the delimiter).
 
 <!-- # Reference
 

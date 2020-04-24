@@ -1,0 +1,2 @@
+7.c | "( ( x < ( y - 10 ) || x < ( y + 20 ) ) )" | 21 | 25.74  | {'ce-T:': 639, 'ce-I:': 551, 'boogie_result': 215, 'ce-F:': 202, 'actual_z3': 18}
+{'ce-T:': 639, 'ce-I:': 551, 'boogie_result': 215, 'ce-F:': 202, 'actual_z3': 18}

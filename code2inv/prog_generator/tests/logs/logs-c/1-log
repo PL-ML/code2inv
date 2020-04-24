@@ -1,0 +1,2 @@
+101.c | "( ( x <= ( 0 - n ) || x <= n ) )" | 42 | 47.91  | {'ce-T:': 1646, 'ce-F:': 819, 'boogie_result': 417, 'ce-I:': 378, 'actual_z3': 12}
+{'ce-T:': 1646, 'ce-F:': 819, 'boogie_result': 417, 'ce-I:': 378, 'actual_z3': 12}

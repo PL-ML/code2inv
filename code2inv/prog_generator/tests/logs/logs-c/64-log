@@ -1,0 +1,2 @@
+38.c | "( ( c > ( 0 - n ) ) && ( c == ( c - c ) || n > 0 ) )" | 0 | 0.38  | {'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2, 'ce-T:': 1}

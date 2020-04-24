@@ -1,0 +1,29 @@
+tmp/30.out
+                                       found a solution for 91 , sol: ( ( x >= ( junk_0 - junk_0 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 93 , sol: ( ( junk_0 >= ( x - x ) ) && ( junk_0 >= ( junk_0 - x ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]avg reward: -1.7500:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -1.7500:   1%|          | 1/100 [00:02<03:29,  2.11s/it]                                                                    found a solution for 99 , sol: ( ( x >= ( x - x ) ) && ( junk_0 >= ( junk_0 - x ) ) )
+avg reward: -1.7500:   1%|          | 1/100 [00:02<03:29,  2.11s/it]avg reward: -1.5000:   1%|          | 1/100 [00:04<03:29,  2.11s/it]avg reward: -1.5000:   2%|▏         | 2/100 [00:04<03:37,  2.22s/it]                                                                    found a solution for 98 , sol: ( ( x >= ( junk_0 - x ) || junk_0 >= ( x - x ) ) && ( x >= ( junk_0 - junk_0 ) ) )
+avg reward: -1.5000:   2%|▏         | 2/100 [00:04<03:37,  2.22s/it]                                                                    found a solution for 94 , sol: ( ( x >= ( junk_0 - junk_0 ) ) )
+avg reward: -1.5000:   2%|▏         | 2/100 [00:04<03:37,  2.22s/it]                                                                    found a solution for 96 , sol: ( ( x >= ( junk_0 - junk_0 ) ) && ( x >= ( x - x ) || x >= ( 0 - 0 ) ) )
+avg reward: -1.5000:   2%|▏         | 2/100 [00:05<03:37,  2.22s/it]                                                                    found a solution for 92 , sol: ( ( x >= ( x - x ) ) && ( x >= ( x - x ) || x >= ( junk_0 - x ) ) && ( junk_0 >= ( junk_0 - x ) ) )
+avg reward: -1.5000:   2%|▏         | 2/100 [00:05<03:37,  2.22s/it]avg reward: -2.0500:   2%|▏         | 2/100 [00:06<03:37,  2.22s/it]avg reward: -2.0500:   3%|▎         | 3/100 [00:06<03:28,  2.15s/it]                                                                    found a solution for 91 , sol: ( ( x >= ( junk_0 - junk_0 ) ) )
+avg reward: -2.0500:   3%|▎         | 3/100 [00:07<03:28,  2.15s/it]avg reward: -1.8125:   3%|▎         | 3/100 [00:08<03:28,  2.15s/it]avg reward: -1.8125:   4%|▍         | 4/100 [00:08<03:22,  2.11s/it]                                                                    found a solution for 95 , sol: ( ( x >= ( x - x ) || x >= ( junk_0 - junk_0 ) ) && ( x >= ( junk_0 - x ) || x >= ( junk_0 - junk_0 ) ) )
+avg reward: -1.8125:   4%|▍         | 4/100 [00:10<03:22,  2.11s/it]                                                                    found a solution for 96 , sol: ( ( x >= ( junk_0 - x ) || x >= ( junk_0 - junk_0 ) ) && ( x >= ( junk_0 - junk_0 ) ) && ( x >= ( junk_0 - x ) || junk_0 >= ( junk_0 - x ) ) )
+avg reward: -1.8125:   4%|▍         | 4/100 [00:10<03:22,  2.11s/it]avg reward: -1.4500:   4%|▍         | 4/100 [00:11<03:22,  2.11s/it]avg reward: -1.4500:   5%|▌         | 5/100 [00:11<03:45,  2.38s/it]avg reward: -1.2667:   5%|▌         | 5/100 [00:14<03:45,  2.38s/it]avg reward: -1.2667:   6%|▌         | 6/100 [00:14<03:50,  2.45s/it]                                                                    found a solution for 97 , sol: ( ( x >= ( x - x ) ) && ( x >= ( junk_0 - junk_0 ) || junk_0 >= ( junk_0 - junk_0 ) ) )
+avg reward: -1.2667:   6%|▌         | 6/100 [00:14<03:50,  2.45s/it]                                                                    found a solution for 95 , sol: ( ( junk_0 >= ( junk_0 - x ) ) )
+avg reward: -1.2667:   6%|▌         | 6/100 [00:15<03:50,  2.45s/it]avg reward: -1.2071:   6%|▌         | 6/100 [00:16<03:50,  2.45s/it]avg reward: -1.2071:   7%|▋         | 7/100 [00:16<03:50,  2.48s/it]                                                                    found a solution for 96 , sol: ( ( x > ( x - junk_0 ) || x >= ( junk_0 - junk_0 ) ) && ( x >= ( junk_0 - x ) || x >= ( x - x ) ) )
+avg reward: -1.2071:   7%|▋         | 7/100 [00:17<03:50,  2.48s/it]                                                                    found a solution for 94 , sol: ( ( x >= ( x - x ) ) )
+avg reward: -1.2071:   7%|▋         | 7/100 [00:17<03:50,  2.48s/it]avg reward: -1.0250:   7%|▋         | 7/100 [00:19<03:50,  2.48s/it]avg reward: -1.0250:   8%|▊         | 8/100 [00:19<03:43,  2.43s/it]                                                                    found a solution for 98 , sol: ( ( junk_0 >= ( x - x ) || junk_0 >= ( x - junk_0 ) ) && ( x >= ( junk_0 - junk_0 ) ) )
+avg reward: -1.0250:   8%|▊         | 8/100 [00:19<03:43,  2.43s/it]                                                                    found a solution for 90 , sol: ( ( x >= ( x - x ) || junk_0 >= ( junk_0 - x ) ) && ( x >= ( x - junk_0 ) || junk_0 >= ( junk_0 - x ) ) )
+--
+9
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-I:': 3, 'ce-F:': 2}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-T:': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-I:': 3, 'ce-F:': 2}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 3, 'ce-I:': 3}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-F:': 4, 'ce-I:': 3, 'ce-T:': 2}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-F:': 1}

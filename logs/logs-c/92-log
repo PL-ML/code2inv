@@ -1,0 +1,2 @@
+63.c | "( ( x <= 10 || x == ( x - y ) ) )" | 10 | 11.85  | {'ce-T:': 425, 'ce-I:': 179, 'boogie_result': 110, 'ce-F:': 109, 'actual_z3': 8}
+{'ce-T:': 425, 'ce-I:': 179, 'boogie_result': 110, 'ce-F:': 109, 'actual_z3': 8}

@@ -1,0 +1,2 @@
+71.c | "( ( y <= ( z + y ) ) )" | 0 | 1.14  | {'ce-F:': 15, 'ce-T:': 12, 'boogie_result': 10, 'actual_z3': 10}
+{'ce-F:': 15, 'ce-T:': 12, 'boogie_result': 10, 'actual_z3': 10}

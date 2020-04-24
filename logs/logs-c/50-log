@@ -1,0 +1,2 @@
+25.c | "( ( x < ( x + 1 ) || x <= ( x + x ) ) && ( x >= ( x + x ) || x == x ) && ( x <= ( x + x ) ) )" | 3 | 6.16  | {'ce-I:': 63, 'boogie_result': 31, 'actual_z3': 31, 'ce-F:': 30, 'ce-T:': 29}
+{'ce-I:': 63, 'boogie_result': 31, 'actual_z3': 31, 'ce-F:': 30, 'ce-T:': 29}

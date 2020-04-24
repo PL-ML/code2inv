@@ -1,0 +1,2 @@
+nl-5.c | "( z == ( w * x ) )" | 352 | 271.32  | {'ce-T:': 22831, 'ce-F:': 6834, 'boogie_result': 3441, 'actual_z3': 11}
+{'ce-T:': 22831, 'ce-F:': 6834, 'boogie_result': 3441, 'actual_z3': 11}

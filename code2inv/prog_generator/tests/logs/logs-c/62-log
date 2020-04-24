@@ -1,0 +1,2 @@
+36.c | "( ( c == 0 || c < ( c + 40 ) ) && ( c <= 40 || c <= ( c - 1 ) ) && ( c <= ( 0 + 40 ) ) )" | 1 | 2.29  | {'boogie_result': 12, 'actual_z3': 12, 'ce-T:': 11, 'ce-I:': 6, 'ce-F:': 5}
+{'boogie_result': 12, 'actual_z3': 12, 'ce-T:': 11, 'ce-I:': 6, 'ce-F:': 5}

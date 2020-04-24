@@ -1,0 +1,2 @@
+60.c | "( ( n >= 0 ) )" | 1 | 3.22  | {'ce-T:': 25, 'ce-I:': 24, 'boogie_result': 18, 'actual_z3': 18, 'ce-F:': 1}
+{'ce-T:': 25, 'ce-I:': 24, 'boogie_result': 18, 'actual_z3': 18, 'ce-F:': 1}

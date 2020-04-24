@@ -1,0 +1,8 @@
+To reproduce the naturalness study (refer the Naturalness subsection under Evaluation in the paper):
+
+`cd naturalness_study`
+
+For getting the result of code2inv on the add-one-add-two.smt2 benchmark, run `cd add-one-add-two; ./naturalness-add-one-add-two.sh`
+For getting the result of code2inv on the sygus-bench-84.c.smt benchmark, run `cd sygus-bench-84.c.smt; ./naturalness-sygus-bench-84.sh`
+
+To see the logs and results for the remaining CHC benchmarks (located in `code2inv/benchmarks/CHC_instances/sygus-constraints`) by code2inv, LinearArbitrary and Z3, refer to `code2inv-general-all-chc-logs`, `LinearArbitrary-all-chc-logs` and `z3-all-chc-logs` under the `naturalness_study` directory respectively.

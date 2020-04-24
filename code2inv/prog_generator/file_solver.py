@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
         decoder = GeneralDecoder(cmd_args.embedding_size)
         
-        if cmd_args.init_model_dump is not None:
+        if cmd_args.init_model_dump is not None and os.path.isfile(cmd_args.init_model_dump + '.encoder'):
             encoder.load_state_dict(torch.load(cmd_args.init_model_dump + '.encoder'))
             decoder.load_state_dict(torch.load(cmd_args.init_model_dump + '.decoder'))
 

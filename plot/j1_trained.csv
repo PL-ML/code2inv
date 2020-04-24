@@ -1,0 +1,750 @@
+{'ce-T:': 241, 'boogie_result': 56, 'ce-F:': 54, 'ce-I:': 44, 'actual_z3': 14}
+{'ce-T:': 784, 'boogie_result': 201, 'ce-F:': 200, 'ce-I:': 187, 'actual_z3': 15}
+{'ce-T:': 2543, 'ce-I:': 1166, 'boogie_result': 640, 'ce-F:': 635, 'actual_z3': 13}
+{'ce-T:': 3928, 'boogie_result': 666, 'ce-F:': 665, 'actual_z3': 13}
+{'ce-T:': 1969, 'ce-I:': 1306, 'boogie_result': 647, 'ce-F:': 644, 'actual_z3': 18}
+{'ce-T:': 4214, 'ce-I:': 1441, 'boogie_result': 725, 'ce-F:': 720, 'actual_z3': 15}
+{'ce-T:': 7951, 'boogie_result': 1105, 'ce-F:': 1104, 'ce-I:': 855, 'actual_z3': 19}
+{'ce-T:': 8911, 'ce-I:': 5447, 'boogie_result': 1790, 'ce-F:': 1775, 'actual_z3': 22}
+{'ce-T:': 10180, 'ce-I:': 3619, 'ce-F:': 1870, 'boogie_result': 1825, 'actual_z3': 26}
+{'ce-I:': 12514, 'ce-T:': 10511, 'boogie_result': 2632, 'ce-F:': 2625, 'actual_z3': 33}
+{'ce-T:': 255, 'boogie_result': 68, 'ce-F:': 62, 'ce-I:': 55, 'actual_z3': 14}
+{'ce-T:': 299, 'ce-I:': 141, 'boogie_result': 79, 'ce-F:': 68, 'actual_z3': 12}
+{'ce-T:': 787, 'boogie_result': 206, 'ce-F:': 194, 'ce-I:': 184, 'actual_z3': 24}
+{'ce-T:': 768, 'ce-I:': 382, 'boogie_result': 197, 'ce-F:': 185, 'actual_z3': 11}
+{'ce-T:': 1236, 'boogie_result': 214, 'ce-F:': 193, 'actual_z3': 20}
+{'ce-T:': 1245, 'boogie_result': 253, 'ce-F:': 245, 'actual_z3': 10}
+{'ce-T:': 2418, 'ce-I:': 665, 'boogie_result': 491, 'ce-F:': 490, 'actual_z3': 17}
+{'ce-T:': 2095, 'boogie_result': 528, 'ce-F:': 524, 'ce-I:': 521, 'actual_z3': 9}
+{'ce-T:': 1434, 'ce-I:': 1070, 'ce-F:': 1069, 'boogie_result': 542, 'actual_z3': 14}
+{'ce-T:': 2078, 'ce-I:': 997, 'boogie_result': 514, 'ce-F:': 505, 'actual_z3': 13}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-I:': 4, 'ce-T:': 3}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-I:': 4, 'ce-F:': 2, 'ce-T:': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-I:': 4}
+{'ce-T:': 241, 'boogie_result': 56, 'ce-F:': 54, 'ce-I:': 44, 'actual_z3': 14}
+{'ce-T:': 784, 'boogie_result': 201, 'ce-F:': 200, 'ce-I:': 187, 'actual_z3': 15}
+{'ce-T:': 2543, 'ce-I:': 1166, 'boogie_result': 640, 'ce-F:': 635, 'actual_z3': 13}
+{'ce-T:': 3928, 'boogie_result': 666, 'ce-F:': 665, 'actual_z3': 13}
+{'ce-T:': 1969, 'ce-I:': 1306, 'boogie_result': 647, 'ce-F:': 644, 'actual_z3': 18}
+{'ce-T:': 4214, 'ce-I:': 1441, 'boogie_result': 725, 'ce-F:': 720, 'actual_z3': 15}
+{'ce-T:': 7951, 'boogie_result': 1105, 'ce-F:': 1104, 'ce-I:': 855, 'actual_z3': 19}
+{'ce-T:': 8911, 'ce-I:': 5447, 'boogie_result': 1790, 'ce-F:': 1775, 'actual_z3': 22}
+{'ce-T:': 10180, 'ce-I:': 3619, 'ce-F:': 1870, 'boogie_result': 1825, 'actual_z3': 26}
+{'ce-I:': 12514, 'ce-T:': 10511, 'boogie_result': 2632, 'ce-F:': 2625, 'actual_z3': 33}
+{'ce-T:': 255, 'boogie_result': 68, 'ce-F:': 62, 'ce-I:': 55, 'actual_z3': 14}
+{'ce-T:': 299, 'ce-I:': 141, 'boogie_result': 79, 'ce-F:': 68, 'actual_z3': 12}
+{'ce-T:': 787, 'boogie_result': 206, 'ce-F:': 194, 'ce-I:': 184, 'actual_z3': 24}
+{'ce-T:': 768, 'ce-I:': 382, 'boogie_result': 197, 'ce-F:': 185, 'actual_z3': 11}
+{'ce-T:': 1236, 'boogie_result': 214, 'ce-F:': 193, 'actual_z3': 20}
+{'ce-T:': 1245, 'boogie_result': 253, 'ce-F:': 245, 'actual_z3': 10}
+{'ce-T:': 2418, 'ce-I:': 665, 'boogie_result': 491, 'ce-F:': 490, 'actual_z3': 17}
+{'ce-T:': 2095, 'boogie_result': 528, 'ce-F:': 524, 'ce-I:': 521, 'actual_z3': 9}
+{'ce-T:': 1434, 'ce-I:': 1070, 'ce-F:': 1069, 'boogie_result': 542, 'actual_z3': 14}
+{'ce-T:': 2078, 'ce-I:': 997, 'boogie_result': 514, 'ce-F:': 505, 'actual_z3': 13}
+{'ce-I:': 6536, 'ce-T:': 2297, 'boogie_result': 849, 'ce-F:': 845, 'actual_z3': 15}
+{'ce-I:': 16810, 'ce-T:': 4748, 'boogie_result': 1805, 'ce-F:': 1792, 'actual_z3': 21}
+{'ce-I:': 46380, 'ce-T:': 12599, 'boogie_result': 3155, 'ce-F:': 3097, 'actual_z3': 32}
+{'ce-I:': 35333, 'ce-T:': 13497, 'boogie_result': 3581, 'ce-F:': 3577, 'actual_z3': 24}
+{'ce-I:': 22465, 'ce-T:': 11126, 'boogie_result': 3762, 'ce-F:': 3761, 'actual_z3': 18}
+{'ce-I:': 29535, 'ce-T:': 9054, 'boogie_result': 3834, 'ce-F:': 3830, 'actual_z3': 22}
+{'ce-I:': 17035, 'ce-T:': 15544, 'boogie_result': 3814, 'ce-F:': 3805, 'actual_z3': 13}
+{'ce-I:': 45089, 'ce-T:': 8120, 'boogie_result': 4070, 'ce-F:': 4067, 'actual_z3': 34}
+{'ce-I:': 20665, 'ce-T:': 16215, 'boogie_result': 4109, 'ce-F:': 4105, 'actual_z3': 19}
+{'ce-I:': 68565, 'ce-T:': 18057, 'boogie_result': 6209, 'ce-F:': 6204, 'actual_z3': 31}
+{'ce-I:': 3751, 'ce-F:': 884, 'boogie_result': 541, 'ce-T:': 538, 'actual_z3': 13}
+{'ce-F:': 4889, 'ce-I:': 2229, 'boogie_result': 1157, 'ce-T:': 1155, 'actual_z3': 12}
+{'ce-I:': 38498, 'ce-F:': 18923, 'boogie_result': 3101, 'ce-T:': 3098, 'actual_z3': 35}
+{'ce-F:': 23394, 'ce-I:': 7687, 'boogie_result': 3904, 'ce-T:': 3892, 'actual_z3': 15}
+{'ce-F:': 23036, 'ce-I:': 9604, 'boogie_result': 4903, 'ce-T:': 4899, 'actual_z3': 16}
+{'ce-I:': 59453, 'ce-F:': 27744, 'boogie_result': 5442, 'ce-T:': 5439, 'actual_z3': 35}
+{'ce-F:': 50579, 'ce-I:': 14885, 'boogie_result': 7449, 'ce-T:': 7441, 'actual_z3': 18}
+{'ce-I:': 75442, 'ce-F:': 58164, 'boogie_result': 8488, 'ce-T:': 8487, 'actual_z3': 25}
+{'ce-I:': 70480, 'ce-F:': 43179, 'boogie_result': 8650, 'ce-T:': 8646, 'actual_z3': 23}
+{'ce-I:': 233055, 'ce-F:': 54541, 'boogie_result': 10741, 'ce-T:': 10739, 'actual_z3': 48}
+{'ce-I:': 742, 'ce-F:': 332, 'boogie_result': 196, 'ce-T:': 195, 'actual_z3': 18}
+{'ce-I:': 6316, 'ce-F:': 3552, 'boogie_result': 1238, 'ce-T:': 1235, 'actual_z3': 13}
+{'ce-I:': 6191, 'ce-F:': 2789, 'boogie_result': 1401, 'ce-T:': 1400, 'actual_z3': 15}
+{'ce-I:': 24180, 'ce-F:': 2630, 'boogie_result': 1490, 'ce-T:': 1488, 'actual_z3': 25}
+{'ce-F:': 6508, 'ce-I:': 5235, 'boogie_result': 1669, 'ce-T:': 1666, 'actual_z3': 10}
+{'ce-I:': 13356, 'ce-F:': 4554, 'boogie_result': 1640, 'ce-T:': 1628, 'actual_z3': 18}
+{'ce-I:': 13720, 'ce-F:': 3030, 'boogie_result': 1567, 'ce-T:': 1565, 'actual_z3': 21}
+{'ce-I:': 6026, 'ce-F:': 3334, 'boogie_result': 1673, 'ce-T:': 1670, 'actual_z3': 12}
+{'ce-I:': 15600, 'ce-F:': 9311, 'boogie_result': 3132, 'ce-T:': 3131, 'actual_z3': 17}
+{'ce-I:': 28707, 'ce-F:': 8100, 'boogie_result': 3214, 'ce-T:': 3213, 'actual_z3': 20}
+{'ce-I:': 3751, 'ce-F:': 884, 'boogie_result': 541, 'ce-T:': 538, 'actual_z3': 13}
+{'ce-F:': 4889, 'ce-I:': 2229, 'boogie_result': 1157, 'ce-T:': 1155, 'actual_z3': 12}
+{'ce-I:': 38498, 'ce-F:': 18923, 'boogie_result': 3101, 'ce-T:': 3098, 'actual_z3': 35}
+{'ce-F:': 23394, 'ce-I:': 7687, 'boogie_result': 3904, 'ce-T:': 3892, 'actual_z3': 15}
+{'ce-F:': 23036, 'ce-I:': 9604, 'boogie_result': 4903, 'ce-T:': 4899, 'actual_z3': 16}
+{'ce-I:': 59453, 'ce-F:': 27744, 'boogie_result': 5442, 'ce-T:': 5439, 'actual_z3': 35}
+{'ce-F:': 50579, 'ce-I:': 14885, 'boogie_result': 7449, 'ce-T:': 7441, 'actual_z3': 18}
+{'ce-I:': 75442, 'ce-F:': 58164, 'boogie_result': 8488, 'ce-T:': 8487, 'actual_z3': 25}
+{'ce-I:': 70480, 'ce-F:': 43179, 'boogie_result': 8650, 'ce-T:': 8646, 'actual_z3': 23}
+{'ce-I:': 233055, 'ce-F:': 54541, 'boogie_result': 10741, 'ce-T:': 10739, 'actual_z3': 48}
+{'ce-I:': 742, 'ce-F:': 332, 'boogie_result': 196, 'ce-T:': 195, 'actual_z3': 18}
+{'ce-I:': 6316, 'ce-F:': 3552, 'boogie_result': 1238, 'ce-T:': 1235, 'actual_z3': 13}
+{'ce-I:': 6191, 'ce-F:': 2789, 'boogie_result': 1401, 'ce-T:': 1400, 'actual_z3': 15}
+{'ce-I:': 24180, 'ce-F:': 2630, 'boogie_result': 1490, 'ce-T:': 1488, 'actual_z3': 25}
+{'ce-F:': 6508, 'ce-I:': 5235, 'boogie_result': 1669, 'ce-T:': 1666, 'actual_z3': 10}
+{'ce-I:': 13356, 'ce-F:': 4554, 'boogie_result': 1640, 'ce-T:': 1628, 'actual_z3': 18}
+{'ce-I:': 13720, 'ce-F:': 3030, 'boogie_result': 1567, 'ce-T:': 1565, 'actual_z3': 21}
+{'ce-I:': 6026, 'ce-F:': 3334, 'boogie_result': 1673, 'ce-T:': 1670, 'actual_z3': 12}
+{'ce-I:': 15600, 'ce-F:': 9311, 'boogie_result': 3132, 'ce-T:': 3131, 'actual_z3': 17}
+{'ce-I:': 28707, 'ce-F:': 8100, 'boogie_result': 3214, 'ce-T:': 3213, 'actual_z3': 20}
+{'ce-T:': 57, 'ce-I:': 29, 'boogie_result': 23, 'ce-F:': 18, 'actual_z3': 12}
+{'ce-T:': 46, 'ce-I:': 26, 'boogie_result': 22, 'ce-F:': 21, 'actual_z3': 13}
+{'ce-T:': 398, 'boogie_result': 84, 'ce-F:': 82, 'ce-I:': 11, 'actual_z3': 10}
+{'ce-T:': 376, 'ce-I:': 163, 'boogie_result': 102, 'ce-F:': 95, 'actual_z3': 26}
+{'ce-T:': 400, 'ce-I:': 146, 'boogie_result': 94, 'ce-F:': 93, 'actual_z3': 15}
+{'ce-T:': 450, 'ce-I:': 112, 'boogie_result': 110, 'ce-F:': 109, 'actual_z3': 39}
+{'ce-T:': 854, 'boogie_result': 158, 'ce-F:': 156, 'ce-I:': 64, 'actual_z3': 14}
+{'ce-T:': 1560, 'boogie_result': 287, 'ce-F:': 282, 'ce-I:': 186, 'actual_z3': 26}
+{'ce-T:': 2504, 'ce-I:': 2256, 'boogie_result': 423, 'ce-F:': 413, 'actual_z3': 26}
+{'ce-T:': 3426, 'ce-I:': 2721, 'boogie_result': 580, 'ce-F:': 570, 'actual_z3': 24}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 3}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'ce-I:': 11, 'boogie_result': 6, 'actual_z3': 6, 'ce-T:': 4}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4, 'ce-F:': 3, 'ce-I:': 2}
+{'ce-T:': 13, 'boogie_result': 6, 'actual_z3': 6, 'ce-I:': 2}
+{'ce-T:': 22, 'boogie_result': 9, 'actual_z3': 9, 'ce-I:': 8}
+{'ce-T:': 38, 'ce-I:': 31, 'boogie_result': 19, 'ce-F:': 18, 'actual_z3': 13}
+{'ce-T:': 39, 'boogie_result': 19, 'actual_z3': 18, 'ce-F:': 18, 'ce-I:': 14}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 3}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'ce-I:': 11, 'boogie_result': 6, 'actual_z3': 6, 'ce-T:': 4}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4, 'ce-F:': 3, 'ce-I:': 2}
+{'ce-T:': 13, 'boogie_result': 6, 'actual_z3': 6, 'ce-I:': 2}
+{'ce-T:': 22, 'boogie_result': 9, 'actual_z3': 9, 'ce-I:': 8}
+{'ce-T:': 38, 'ce-I:': 31, 'boogie_result': 19, 'ce-F:': 18, 'actual_z3': 13}
+{'ce-T:': 39, 'boogie_result': 19, 'actual_z3': 18, 'ce-F:': 18, 'ce-I:': 14}
+{'ce-I:': 804, 'ce-T:': 740, 'boogie_result': 254, 'ce-F:': 252, 'actual_z3': 23}
+{'ce-T:': 3222, 'boogie_result': 648, 'ce-F:': 637, 'ce-I:': 566, 'actual_z3': 13}
+{'ce-T:': 3620, 'ce-I:': 2411, 'boogie_result': 1210, 'ce-F:': 1208, 'actual_z3': 21}
+{'ce-T:': 6249, 'boogie_result': 1269, 'ce-F:': 1265, 'ce-I:': 1257, 'actual_z3': 30}
+{'ce-T:': 8777, 'ce-I:': 3051, 'boogie_result': 1299, 'ce-F:': 1289, 'actual_z3': 44}
+{'ce-T:': 5019, 'ce-I:': 3696, 'boogie_result': 1262, 'ce-F:': 1257, 'actual_z3': 14}
+{'ce-T:': 9436, 'ce-I:': 1680, 'boogie_result': 1385, 'ce-F:': 1344, 'actual_z3': 44}
+{'ce-T:': 10577, 'ce-I:': 2126, 'boogie_result': 1341, 'ce-F:': 1337, 'actual_z3': 26}
+{'ce-T:': 11029, 'ce-I:': 3860, 'boogie_result': 1553, 'ce-F:': 1552, 'actual_z3': 30}
+{'ce-T:': 12046, 'boogie_result': 1579, 'ce-F:': 1571, 'ce-I:': 819, 'actual_z3': 37}
+{'ce-T:': 2027, 'boogie_result': 340, 'ce-I:': 316, 'ce-F:': 255, 'actual_z3': 11}
+{'ce-T:': 2541, 'ce-I:': 607, 'boogie_result': 427, 'ce-F:': 390, 'actual_z3': 10}
+{'ce-T:': 2535, 'ce-I:': 426, 'boogie_result': 390, 'ce-F:': 49, 'actual_z3': 14}
+{'ce-T:': 2351, 'ce-I:': 656, 'boogie_result': 456, 'ce-F:': 423, 'actual_z3': 14}
+{'ce-T:': 10407, 'ce-I:': 1780, 'boogie_result': 1557, 'ce-F:': 1388, 'actual_z3': 11}
+{'ce-T:': 14209, 'ce-I:': 6584, 'ce-F:': 4058, 'boogie_result': 2147, 'actual_z3': 21}
+{'ce-T:': 13518, 'ce-F:': 5933, 'boogie_result': 2281, 'ce-I:': 2275, 'actual_z3': 15}
+{'ce-T:': 18372, 'ce-F:': 4444, 'ce-I:': 2833, 'boogie_result': 2528, 'actual_z3': 14}
+{'ce-T:': 37856, 'ce-I:': 24273, 'ce-F:': 12451, 'boogie_result': 5491, 'actual_z3': 31}
+{'ce-T:': 45250, 'ce-I:': 26828, 'ce-F:': 15728, 'boogie_result': 5595, 'actual_z3': 23}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-I:': 1305, 'ce-T:': 769, 'boogie_result': 282, 'ce-F:': 276, 'actual_z3': 14}
+{'ce-I:': 1967, 'ce-T:': 1113, 'boogie_result': 434, 'ce-F:': 423, 'actual_z3': 17}
+{'ce-I:': 2673, 'ce-T:': 1008, 'boogie_result': 562, 'ce-F:': 560, 'actual_z3': 13}
+{'ce-I:': 3526, 'ce-T:': 2326, 'boogie_result': 670, 'ce-F:': 652, 'actual_z3': 24}
+{'ce-I:': 5785, 'ce-T:': 1653, 'boogie_result': 839, 'ce-F:': 836, 'actual_z3': 15}
+{'ce-I:': 5162, 'ce-T:': 2621, 'boogie_result': 734, 'ce-F:': 720, 'actual_z3': 18}
+{'ce-I:': 4275, 'ce-T:': 2873, 'boogie_result': 796, 'ce-F:': 790, 'actual_z3': 23}
+{'ce-I:': 4318, 'ce-T:': 1462, 'boogie_result': 778, 'ce-F:': 760, 'actual_z3': 20}
+{'ce-I:': 6321, 'ce-T:': 2749, 'boogie_result': 1378, 'ce-F:': 1376, 'actual_z3': 11}
+{'ce-I:': 10428, 'ce-T:': 5666, 'boogie_result': 1553, 'ce-F:': 1542, 'actual_z3': 28}
+{'ce-I:': 6536, 'ce-T:': 2297, 'boogie_result': 849, 'ce-F:': 845, 'actual_z3': 15}
+{'ce-I:': 16810, 'ce-T:': 4748, 'boogie_result': 1805, 'ce-F:': 1792, 'actual_z3': 21}
+{'ce-I:': 46380, 'ce-T:': 12599, 'boogie_result': 3155, 'ce-F:': 3097, 'actual_z3': 32}
+{'ce-I:': 35333, 'ce-T:': 13497, 'boogie_result': 3581, 'ce-F:': 3577, 'actual_z3': 24}
+{'ce-I:': 22465, 'ce-T:': 11126, 'boogie_result': 3762, 'ce-F:': 3761, 'actual_z3': 18}
+{'ce-I:': 29535, 'ce-T:': 9054, 'boogie_result': 3834, 'ce-F:': 3830, 'actual_z3': 22}
+{'ce-I:': 17035, 'ce-T:': 15544, 'boogie_result': 3814, 'ce-F:': 3805, 'actual_z3': 13}
+{'ce-I:': 45089, 'ce-T:': 8120, 'boogie_result': 4070, 'ce-F:': 4067, 'actual_z3': 34}
+{'ce-I:': 20665, 'ce-T:': 16215, 'boogie_result': 4109, 'ce-F:': 4105, 'actual_z3': 19}
+{'ce-I:': 68565, 'ce-T:': 18057, 'boogie_result': 6209, 'ce-F:': 6204, 'actual_z3': 31}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-T:': 6703, 'boogie_result': 1347, 'ce-F:': 1325, 'ce-I:': 1237, 'actual_z3': 29}
+{'ce-T:': 8327, 'ce-I:': 3876, 'boogie_result': 1395, 'ce-F:': 1372, 'actual_z3': 23}
+{'ce-T:': 6091, 'ce-F:': 3044, 'boogie_result': 1530, 'ce-I:': 1459, 'actual_z3': 15}
+{'ce-I:': 7513, 'ce-T:': 6831, 'boogie_result': 1728, 'ce-F:': 1712, 'actual_z3': 84}
+{'ce-T:': 8522, 'ce-F:': 4260, 'ce-I:': 3417, 'boogie_result': 2147, 'actual_z3': 34}
+{'ce-T:': 8795, 'ce-I:': 8128, 'ce-F:': 2912, 'boogie_result': 2101, 'actual_z3': 20}
+{'ce-T:': 8501, 'ce-F:': 6402, 'ce-I:': 3499, 'boogie_result': 2148, 'actual_z3': 28}
+{'ce-I:': 10891, 'ce-T:': 8808, 'ce-F:': 4532, 'boogie_result': 2278, 'actual_z3': 29}
+{'ce-T:': 14298, 'ce-I:': 9265, 'ce-F:': 4411, 'boogie_result': 2927, 'actual_z3': 38}
+{'ce-T:': 17787, 'ce-I:': 7303, 'ce-F:': 4554, 'boogie_result': 2978, 'actual_z3': 45}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-F:': 3, 'ce-I:': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-I:': 3}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-F:': 3, 'ce-I:': 2}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-I:': 3}
+{'boogie_result': 7, 'actual_z3': 7, 'ce-T:': 6, 'ce-F:': 5, 'ce-I:': 2}
+{'boogie_result': 9, 'actual_z3': 9, 'ce-F:': 8, 'ce-I:': 5, 'ce-T:': 1}
+{'ce-T:': 6703, 'boogie_result': 1347, 'ce-F:': 1325, 'ce-I:': 1237, 'actual_z3': 29}
+{'ce-T:': 8327, 'ce-I:': 3876, 'boogie_result': 1395, 'ce-F:': 1372, 'actual_z3': 23}
+{'ce-T:': 6091, 'ce-F:': 3044, 'boogie_result': 1530, 'ce-I:': 1459, 'actual_z3': 15}
+{'ce-I:': 7513, 'ce-T:': 6831, 'boogie_result': 1728, 'ce-F:': 1712, 'actual_z3': 84}
+{'ce-T:': 8522, 'ce-F:': 4260, 'ce-I:': 3417, 'boogie_result': 2147, 'actual_z3': 34}
+{'ce-T:': 8795, 'ce-I:': 8128, 'ce-F:': 2912, 'boogie_result': 2101, 'actual_z3': 20}
+{'ce-T:': 8501, 'ce-F:': 6402, 'ce-I:': 3499, 'boogie_result': 2148, 'actual_z3': 28}
+{'ce-I:': 10891, 'ce-T:': 8808, 'ce-F:': 4532, 'boogie_result': 2278, 'actual_z3': 29}
+{'ce-T:': 14298, 'ce-I:': 9265, 'ce-F:': 4411, 'boogie_result': 2927, 'actual_z3': 38}
+{'ce-T:': 17787, 'ce-I:': 7303, 'ce-F:': 4554, 'boogie_result': 2978, 'actual_z3': 45}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-F:': 3, 'ce-T:': 2}
+{'boogie_result': 6, 'actual_z3': 6, 'ce-F:': 5, 'ce-T:': 4, 'ce-I:': 3}
+{'ce-I:': 7, 'boogie_result': 5, 'actual_z3': 5, 'ce-F:': 3}
+{'boogie_result': 7, 'actual_z3': 7, 'ce-F:': 6, 'ce-T:': 5}
+{'boogie_result': 7, 'actual_z3': 7, 'ce-I:': 7, 'ce-F:': 4}
+{'ce-I:': 26, 'boogie_result': 9, 'actual_z3': 9, 'ce-T:': 5}
+{'ce-I:': 1417, 'boogie_result': 277, 'ce-T:': 276, 'ce-F:': 271, 'actual_z3': 17}
+{'ce-I:': 1781, 'boogie_result': 278, 'ce-F:': 277, 'ce-T:': 272, 'actual_z3': 40}
+{'ce-I:': 4550, 'boogie_result': 522, 'ce-F:': 521, 'ce-T:': 519, 'actual_z3': 68}
+{'ce-I:': 25977, 'boogie_result': 1555, 'ce-F:': 1554, 'ce-T:': 1552, 'actual_z3': 126}
+{'ce-I:': 24035, 'boogie_result': 1543, 'ce-T:': 1542, 'ce-F:': 1537, 'actual_z3': 50}
+{'ce-I:': 34307, 'boogie_result': 1914, 'ce-T:': 1912, 'ce-F:': 1908, 'actual_z3': 41}
+{'ce-I:': 55616, 'boogie_result': 3298, 'ce-T:': 3297, 'ce-F:': 3287, 'actual_z3': 81}
+{'ce-I:': 60545, 'boogie_result': 3485, 'ce-T:': 3482, 'ce-F:': 3472, 'actual_z3': 49}
+{'ce-I:': 39172, 'boogie_result': 3843, 'ce-F:': 3840, 'ce-T:': 3839, 'actual_z3': 32}
+{'ce-I:': 62688, 'boogie_result': 4106, 'ce-T:': 4104, 'ce-F:': 4102, 'actual_z3': 73}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-T:': 20503, 'ce-I:': 17353, 'boogie_result': 2615, 'ce-F:': 2586, 'actual_z3': 19}
+{'ce-T:': 28695, 'ce-F:': 5304, 'ce-I:': 4043, 'boogie_result': 2927, 'actual_z3': 26}
+{'ce-T:': 51046, 'ce-I:': 28983, 'ce-F:': 7244, 'boogie_result': 5366, 'actual_z3': 27}
+{'ce-T:': 48392, 'ce-F:': 21954, 'ce-I:': 12187, 'boogie_result': 5689, 'actual_z3': 26}
+{'ce-T:': 94994, 'ce-I:': 39127, 'ce-F:': 6547, 'boogie_result': 6066, 'actual_z3': 58}
+{'ce-T:': 74168, 'ce-I:': 35696, 'ce-F:': 10842, 'boogie_result': 6719, 'actual_z3': 31}
+{'ce-T:': 98460, 'ce-I:': 75980, 'ce-F:': 17968, 'boogie_result': 6820, 'actual_z3': 90}
+{'ce-T:': 67432, 'ce-I:': 36954, 'ce-F:': 10772, 'boogie_result': 6932, 'actual_z3': 31}
+{'ce-T:': 98508, 'ce-I:': 42001, 'ce-F:': 23011, 'boogie_result': 8179, 'actual_z3': 38}
+{'ce-T:': 97414, 'ce-I:': 76448, 'ce-F:': 17971, 'boogie_result': 9077, 'actual_z3': 36}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-T:': 17, 'boogie_result': 12, 'actual_z3': 11, 'ce-I:': 11, 'ce-F:': 3}
+{'ce-I:': 22, 'ce-T:': 15, 'boogie_result': 11, 'actual_z3': 9, 'ce-F:': 3}
+{'ce-I:': 22, 'ce-T:': 15, 'boogie_result': 12, 'ce-F:': 9, 'actual_z3': 8}
+{'ce-I:': 60, 'ce-T:': 35, 'boogie_result': 22, 'ce-F:': 15, 'actual_z3': 11}
+{'ce-I:': 74, 'ce-F:': 44, 'boogie_result': 25, 'ce-T:': 24, 'actual_z3': 12}
+{'ce-T:': 87, 'ce-F:': 65, 'boogie_result': 35, 'ce-I:': 27, 'actual_z3': 12}
+{'ce-I:': 154, 'ce-F:': 78, 'boogie_result': 47, 'ce-T:': 44, 'actual_z3': 21}
+{'ce-I:': 427, 'ce-T:': 173, 'ce-F:': 92, 'boogie_result': 63, 'actual_z3': 21}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'ce-I:': 5, 'boogie_result': 4, 'actual_z3': 4, 'ce-F:': 1}
+{'ce-T:': 10, 'boogie_result': 8, 'actual_z3': 8, 'ce-I:': 7, 'ce-F:': 7}
+{'ce-F:': 29, 'ce-I:': 23, 'ce-T:': 19, 'boogie_result': 18, 'actual_z3': 15}
+{'boogie_result': 12, 'actual_z3': 12, 'ce-F:': 11, 'ce-T:': 10, 'ce-I:': 7}
+{'ce-T:': 28, 'ce-I:': 27, 'boogie_result': 21, 'actual_z3': 21, 'ce-F:': 14}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2, 'ce-T:': 1}
+{'ce-I:': 7, 'boogie_result': 5, 'actual_z3': 5, 'ce-F:': 3}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 3, 'ce-I:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-I:': 5, 'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 1}
+{'ce-T:': 9, 'ce-I:': 9, 'boogie_result': 7, 'actual_z3': 7}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-I:': 1}
+{'ce-T:': 9, 'boogie_result': 6, 'actual_z3': 6, 'ce-I:': 5}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-F:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'ce-T:': 14, 'ce-I:': 13, 'boogie_result': 9, 'actual_z3': 9, 'ce-F:': 4}
+{'ce-T:': 14, 'ce-I:': 14, 'boogie_result': 10, 'actual_z3': 9, 'ce-F:': 2}
+{'ce-I:': 113, 'ce-T:': 52, 'boogie_result': 33, 'ce-F:': 32, 'actual_z3': 19}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'ce-I:': 6716, 'ce-T:': 4136, 'ce-F:': 2211, 'boogie_result': 1119, 'actual_z3': 18}
+{'ce-I:': 19994, 'ce-T:': 2933, 'boogie_result': 1611, 'ce-F:': 1577, 'actual_z3': 40}
+{'ce-I:': 13666, 'ce-F:': 4921, 'ce-T:': 3738, 'boogie_result': 1652, 'actual_z3': 25}
+{'ce-I:': 25908, 'ce-T:': 12999, 'ce-F:': 8692, 'boogie_result': 2902, 'actual_z3': 38}
+{'ce-I:': 45631, 'ce-F:': 10259, 'ce-T:': 7326, 'boogie_result': 3672, 'actual_z3': 41}
+{'ce-I:': 53301, 'ce-T:': 8747, 'ce-F:': 7339, 'boogie_result': 3956, 'actual_z3': 36}
+{'ce-I:': 35697, 'ce-T:': 11963, 'ce-F:': 8221, 'boogie_result': 4127, 'actual_z3': 36}
+{'ce-I:': 58853, 'ce-T:': 16736, 'ce-F:': 11193, 'boogie_result': 5607, 'actual_z3': 45}
+{'ce-I:': 76804, 'ce-T:': 29113, 'boogie_result': 7433, 'ce-F:': 7424, 'actual_z3': 40}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 3}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-I:': 3, 'ce-T:': 2}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-F:': 4, 'ce-T:': 2}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-I:': 9, 'boogie_result': 6, 'actual_z3': 6, 'ce-T:': 5}
+{'ce-T:': 5098, 'ce-I:': 3364, 'boogie_result': 448, 'ce-F:': 353, 'actual_z3': 39}
+{'ce-I:': 111959, 'ce-T:': 64828, 'boogie_result': 4279, 'ce-F:': 4232, 'actual_z3': 63}
+{'ce-I:': 284133, 'ce-T:': 113337, 'ce-F:': 34825, 'boogie_result': 11658, 'actual_z3': 58}
+{'ce-I:': 288534, 'ce-T:': 205056, 'boogie_result': 12895, 'ce-F:': 12887, 'actual_z3': 61}
+{'ce-I:': 382879, 'ce-T:': 134052, 'ce-F:': 16373, 'boogie_result': 12799, 'actual_z3': 81}
+{'ce-I:': 208728, 'ce-T:': 152272, 'ce-F:': 26616, 'boogie_result': 13310, 'actual_z3': 39}
+{'ce-I:': 276808, 'ce-T:': 139032, 'boogie_result': 13331, 'ce-F:': 13276, 'actual_z3': 53}
+{'ce-I:': 1003458, 'ce-T:': 280417, 'ce-F:': 34378, 'boogie_result': 13839, 'actual_z3': 210}
+{'ce-I:': 626684, 'ce-T:': 249529, 'ce-F:': 29820, 'boogie_result': 14298, 'actual_z3': 139}
+{'ce-I:': 616246, 'ce-T:': 238411, 'boogie_result': 14253, 'ce-F:': 14222, 'actual_z3': 152}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 3, 'ce-F:': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-I:': 4, 'ce-F:': 3}
+{'ce-I:': 9, 'boogie_result': 7, 'actual_z3': 7, 'ce-F:': 5, 'ce-T:': 1}
+{'boogie_result': 7, 'actual_z3': 7, 'ce-F:': 6, 'ce-T:': 5}
+{'ce-F:': 17, 'boogie_result': 11, 'actual_z3': 11, 'ce-T:': 10}
+{'ce-I:': 24, 'boogie_result': 12, 'actual_z3': 12, 'ce-T:': 11, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 7, 'actual_z3': 7, 'ce-F:': 6, 'ce-I:': 5}
+{'ce-I:': 52, 'boogie_result': 20, 'ce-T:': 18, 'ce-F:': 15, 'actual_z3': 11}
+{'ce-I:': 98, 'boogie_result': 29, 'ce-F:': 28, 'ce-T:': 26, 'actual_z3': 11}
+{'ce-I:': 210, 'boogie_result': 48, 'ce-F:': 47, 'actual_z3': 29, 'ce-T:': 21}
+{'ce-I:': 213, 'boogie_result': 47, 'ce-T:': 44, 'ce-F:': 35, 'actual_z3': 16}
+{'ce-I:': 3912, 'boogie_result': 463, 'ce-T:': 460, 'ce-F:': 457, 'actual_z3': 29}
+{'ce-I:': 3452, 'boogie_result': 645, 'ce-F:': 643, 'ce-T:': 642, 'actual_z3': 20}
+{'ce-I:': 5645, 'boogie_result': 715, 'ce-F:': 713, 'ce-T:': 712, 'actual_z3': 14}
+{'ce-I:': 8194, 'ce-F:': 2413, 'boogie_result': 847, 'ce-T:': 846, 'actual_z3': 44}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 3}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-T:': 17, 'boogie_result': 12, 'actual_z3': 11, 'ce-I:': 11, 'ce-F:': 3}
+{'ce-I:': 22, 'ce-T:': 15, 'boogie_result': 11, 'actual_z3': 9, 'ce-F:': 3}
+{'ce-I:': 22, 'ce-T:': 15, 'boogie_result': 12, 'ce-F:': 9, 'actual_z3': 8}
+{'ce-I:': 60, 'ce-T:': 35, 'boogie_result': 22, 'ce-F:': 15, 'actual_z3': 11}
+{'ce-I:': 74, 'ce-F:': 44, 'boogie_result': 25, 'ce-T:': 24, 'actual_z3': 12}
+{'ce-T:': 87, 'ce-F:': 65, 'boogie_result': 35, 'ce-I:': 27, 'actual_z3': 12}
+{'ce-I:': 154, 'ce-F:': 78, 'boogie_result': 47, 'ce-T:': 44, 'actual_z3': 21}
+{'ce-I:': 427, 'ce-T:': 173, 'ce-F:': 92, 'boogie_result': 63, 'actual_z3': 21}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'ce-I:': 5, 'boogie_result': 4, 'actual_z3': 4, 'ce-F:': 1}
+{'ce-T:': 10, 'boogie_result': 8, 'actual_z3': 8, 'ce-I:': 7, 'ce-F:': 7}
+{'ce-F:': 29, 'ce-I:': 23, 'ce-T:': 19, 'boogie_result': 18, 'actual_z3': 15}
+{'boogie_result': 12, 'actual_z3': 12, 'ce-F:': 11, 'ce-T:': 10, 'ce-I:': 7}
+{'ce-T:': 28, 'ce-I:': 27, 'boogie_result': 21, 'actual_z3': 21, 'ce-F:': 14}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-I:': 2, 'ce-T:': 1}
+{'ce-I:': 7, 'boogie_result': 5, 'actual_z3': 5, 'ce-F:': 3}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4, 'ce-F:': 2, 'ce-I:': 1}
+{'boogie_result': 6, 'actual_z3': 6, 'ce-T:': 5, 'ce-I:': 1}
+{'ce-I:': 7, 'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-I:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-I:': 1}
+{'ce-T:': 9, 'boogie_result': 6, 'actual_z3': 6, 'ce-I:': 5}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-F:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'ce-T:': 14, 'ce-I:': 13, 'boogie_result': 9, 'actual_z3': 9, 'ce-F:': 4}
+{'ce-T:': 14, 'ce-I:': 14, 'boogie_result': 10, 'actual_z3': 9, 'ce-F:': 2}
+{'ce-I:': 113, 'ce-T:': 52, 'boogie_result': 33, 'ce-F:': 32, 'actual_z3': 19}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'ce-I:': 6716, 'ce-T:': 4136, 'ce-F:': 2211, 'boogie_result': 1119, 'actual_z3': 18}
+{'ce-I:': 19994, 'ce-T:': 2933, 'boogie_result': 1611, 'ce-F:': 1577, 'actual_z3': 40}
+{'ce-I:': 13666, 'ce-F:': 4921, 'ce-T:': 3738, 'boogie_result': 1652, 'actual_z3': 25}
+{'ce-I:': 25908, 'ce-T:': 12999, 'ce-F:': 8692, 'boogie_result': 2902, 'actual_z3': 38}
+{'ce-I:': 45631, 'ce-F:': 10259, 'ce-T:': 7326, 'boogie_result': 3672, 'actual_z3': 41}
+{'ce-I:': 53301, 'ce-T:': 8747, 'ce-F:': 7339, 'boogie_result': 3956, 'actual_z3': 36}
+{'ce-I:': 35697, 'ce-T:': 11963, 'ce-F:': 8221, 'boogie_result': 4127, 'actual_z3': 36}
+{'ce-I:': 58853, 'ce-T:': 16736, 'ce-F:': 11193, 'boogie_result': 5607, 'actual_z3': 45}
+{'ce-I:': 76804, 'ce-T:': 29113, 'boogie_result': 7433, 'ce-F:': 7424, 'actual_z3': 40}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-T:': 2297, 'ce-I:': 2050, 'boogie_result': 356, 'ce-F:': 355, 'actual_z3': 36}
+{'ce-I:': 4729, 'ce-T:': 3080, 'boogie_result': 583, 'ce-F:': 582, 'actual_z3': 53}
+{'ce-I:': 26928, 'ce-T:': 19675, 'ce-F:': 3903, 'boogie_result': 2204, 'actual_z3': 109}
+{'ce-I:': 46222, 'ce-T:': 23561, 'boogie_result': 2965, 'ce-F:': 2962, 'actual_z3': 55}
+{'ce-I:': 58973, 'ce-T:': 28367, 'boogie_result': 3382, 'ce-F:': 3375, 'actual_z3': 47}
+{'ce-I:': 36865, 'ce-T:': 23096, 'boogie_result': 4174, 'ce-F:': 4167, 'actual_z3': 57}
+{'ce-I:': 81564, 'ce-T:': 41036, 'boogie_result': 5292, 'ce-F:': 5291, 'actual_z3': 103}
+{'ce-I:': 109754, 'ce-T:': 53936, 'ce-F:': 13522, 'boogie_result': 8255, 'actual_z3': 47}
+{'ce-I:': 168485, 'ce-T:': 80897, 'ce-F:': 19257, 'boogie_result': 9879, 'actual_z3': 78}
+{'ce-I:': 263493, 'ce-T:': 166804, 'boogie_result': 16030, 'ce-F:': 16011, 'actual_z3': 76}
+{'ce-T:': 432, 'ce-I:': 317, 'boogie_result': 71, 'ce-F:': 41, 'actual_z3': 24}
+{'ce-I:': 2500, 'ce-T:': 1546, 'boogie_result': 308, 'ce-F:': 292, 'actual_z3': 38}
+{'ce-T:': 2293, 'ce-I:': 2209, 'boogie_result': 334, 'ce-F:': 330, 'actual_z3': 36}
+{'ce-I:': 18866, 'ce-T:': 10550, 'ce-F:': 2330, 'boogie_result': 1243, 'actual_z3': 92}
+{'ce-I:': 14508, 'ce-T:': 13451, 'ce-F:': 3314, 'boogie_result': 1663, 'actual_z3': 63}
+{'ce-I:': 29716, 'ce-T:': 13625, 'boogie_result': 1816, 'ce-F:': 1810, 'actual_z3': 140}
+{'ce-I:': 28391, 'ce-T:': 28222, 'ce-F:': 5046, 'boogie_result': 2529, 'actual_z3': 86}
+{'ce-I:': 58142, 'ce-T:': 16444, 'boogie_result': 2821, 'ce-F:': 2817, 'actual_z3': 151}
+{'ce-I:': 73585, 'ce-T:': 38921, 'ce-F:': 5955, 'boogie_result': 3060, 'actual_z3': 190}
+{'ce-T:': 130434, 'ce-I:': 106428, 'ce-F:': 32806, 'boogie_result': 8138, 'actual_z3': 230}
+{'ce-T:': 5551, 'ce-I:': 1553, 'ce-F:': 1548, 'boogie_result': 752, 'actual_z3': 62}
+{'ce-T:': 18104, 'ce-I:': 11305, 'ce-F:': 5602, 'boogie_result': 2187, 'actual_z3': 161}
+{'ce-I:': 33481, 'ce-T:': 21121, 'ce-F:': 5127, 'boogie_result': 2518, 'actual_z3': 133}
+{'ce-I:': 44719, 'ce-T:': 34716, 'ce-F:': 10322, 'boogie_result': 3795, 'actual_z3': 134}
+{'ce-I:': 139948, 'ce-T:': 53361, 'ce-F:': 9720, 'boogie_result': 5887, 'actual_z3': 168}
+{'ce-I:': 101448, 'ce-T:': 57759, 'ce-F:': 15554, 'boogie_result': 5932, 'actual_z3': 120}
+{'ce-I:': 135700, 'ce-T:': 50435, 'ce-F:': 12324, 'boogie_result': 6332, 'actual_z3': 186}
+{'ce-I:': 189398, 'ce-T:': 92537, 'ce-F:': 16332, 'boogie_result': 8352, 'actual_z3': 238}
+{'ce-I:': 152558, 'ce-T:': 73178, 'ce-F:': 16675, 'boogie_result': 8387, 'actual_z3': 136}
+{'ce-I:': 86120, 'ce-T:': 65718, 'boogie_result': 8337, 'ce-F:': 8327, 'actual_z3': 143}
+{'ce-I:': 519, 'ce-T:': 388, 'boogie_result': 102, 'ce-F:': 90, 'actual_z3': 16}
+{'ce-T:': 765, 'ce-I:': 417, 'ce-F:': 205, 'boogie_result': 140, 'actual_z3': 20}
+{'ce-T:': 786, 'ce-I:': 609, 'ce-F:': 460, 'boogie_result': 182, 'actual_z3': 27}
+{'ce-I:': 4816, 'ce-T:': 2924, 'boogie_result': 616, 'ce-F:': 606, 'actual_z3': 26}
+{'ce-I:': 14897, 'ce-T:': 9483, 'ce-F:': 2303, 'boogie_result': 1424, 'actual_z3': 34}
+{'ce-I:': 15594, 'ce-T:': 7710, 'ce-F:': 2973, 'boogie_result': 1538, 'actual_z3': 37}
+{'ce-I:': 12667, 'ce-T:': 12565, 'ce-F:': 2884, 'boogie_result': 1586, 'actual_z3': 37}
+{'ce-I:': 29567, 'ce-T:': 15022, 'boogie_result': 2685, 'ce-F:': 2671, 'actual_z3': 39}
+{'ce-I:': 45802, 'ce-T:': 22197, 'ce-F:': 8430, 'boogie_result': 3021, 'actual_z3': 55}
+{'ce-I:': 44869, 'ce-T:': 28884, 'ce-F:': 14153, 'boogie_result': 4822, 'actual_z3': 34}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4, 'ce-F:': 4}
+{'boogie_result': 12, 'actual_z3': 12, 'ce-T:': 11}
+{'boogie_result': 6, 'actual_z3': 6, 'ce-T:': 5}
+{'boogie_result': 14, 'actual_z3': 14, 'ce-T:': 13, 'ce-I:': 12}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 5, 'actual_z3': 5, 'ce-T:': 4, 'ce-F:': 4}
+{'boogie_result': 12, 'actual_z3': 12, 'ce-T:': 11}
+{'boogie_result': 6, 'actual_z3': 6, 'ce-T:': 5}
+{'boogie_result': 14, 'actual_z3': 14, 'ce-T:': 13, 'ce-I:': 12}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-T:': 47, 'ce-F:': 41, 'boogie_result': 22, 'actual_z3': 13, 'ce-I:': 11}
+{'ce-T:': 269, 'ce-F:': 228, 'boogie_result': 100, 'ce-I:': 86, 'actual_z3': 19}
+{'ce-F:': 427, 'ce-T:': 240, 'boogie_result': 95, 'actual_z3': 15}
+{'ce-I:': 346, 'ce-T:': 261, 'ce-F:': 144, 'boogie_result': 99, 'actual_z3': 22}
+{'ce-T:': 603, 'ce-I:': 354, 'ce-F:': 265, 'boogie_result': 184, 'actual_z3': 17}
+{'ce-F:': 811, 'ce-T:': 538, 'boogie_result': 220, 'ce-I:': 217, 'actual_z3': 14}
+{'ce-T:': 7141, 'ce-F:': 4387, 'boogie_result': 1642, 'ce-I:': 1484, 'actual_z3': 20}
+{'ce-I:': 5804, 'ce-T:': 4834, 'ce-F:': 2688, 'boogie_result': 1559, 'actual_z3': 18}
+{'ce-F:': 5058, 'ce-I:': 4772, 'ce-T:': 3507, 'boogie_result': 1702, 'actual_z3': 19}
+{'ce-T:': 8453, 'ce-F:': 8109, 'ce-I:': 6289, 'boogie_result': 2179, 'actual_z3': 24}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-F:': 3, 'ce-T:': 2}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 3, 'ce-F:': 3}
+{'ce-I:': 14, 'boogie_result': 7, 'actual_z3': 7, 'ce-F:': 4}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-T:': 57, 'ce-I:': 29, 'boogie_result': 23, 'ce-F:': 18, 'actual_z3': 12}
+{'ce-T:': 46, 'ce-I:': 26, 'boogie_result': 22, 'ce-F:': 21, 'actual_z3': 13}
+{'ce-T:': 398, 'boogie_result': 84, 'ce-F:': 82, 'ce-I:': 11, 'actual_z3': 10}
+{'ce-T:': 376, 'ce-I:': 163, 'boogie_result': 102, 'ce-F:': 95, 'actual_z3': 26}
+{'ce-T:': 400, 'ce-I:': 146, 'boogie_result': 94, 'ce-F:': 93, 'actual_z3': 15}
+{'ce-T:': 450, 'ce-I:': 112, 'boogie_result': 110, 'ce-F:': 109, 'actual_z3': 39}
+{'ce-T:': 854, 'boogie_result': 158, 'ce-F:': 156, 'ce-I:': 64, 'actual_z3': 14}
+{'ce-T:': 1560, 'boogie_result': 287, 'ce-F:': 282, 'ce-I:': 186, 'actual_z3': 26}
+{'ce-T:': 2504, 'ce-I:': 2256, 'boogie_result': 423, 'ce-F:': 413, 'actual_z3': 26}
+{'ce-T:': 3426, 'ce-I:': 2721, 'boogie_result': 580, 'ce-F:': 570, 'actual_z3': 24}
+{'ce-T:': 47, 'ce-F:': 41, 'boogie_result': 22, 'actual_z3': 13, 'ce-I:': 11}
+{'ce-T:': 269, 'ce-F:': 228, 'boogie_result': 100, 'ce-I:': 86, 'actual_z3': 19}
+{'ce-F:': 427, 'ce-T:': 240, 'boogie_result': 95, 'actual_z3': 15}
+{'ce-I:': 346, 'ce-T:': 261, 'ce-F:': 144, 'boogie_result': 99, 'actual_z3': 22}
+{'ce-T:': 603, 'ce-I:': 354, 'ce-F:': 265, 'boogie_result': 184, 'actual_z3': 17}
+{'ce-F:': 811, 'ce-T:': 538, 'boogie_result': 220, 'ce-I:': 217, 'actual_z3': 14}
+{'ce-T:': 7141, 'ce-F:': 4387, 'boogie_result': 1642, 'ce-I:': 1484, 'actual_z3': 20}
+{'ce-I:': 5804, 'ce-T:': 4834, 'ce-F:': 2688, 'boogie_result': 1559, 'actual_z3': 18}
+{'ce-F:': 5058, 'ce-I:': 4772, 'ce-T:': 3507, 'boogie_result': 1702, 'actual_z3': 19}
+{'ce-T:': 8453, 'ce-F:': 8109, 'ce-I:': 6289, 'boogie_result': 2179, 'actual_z3': 24}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-F:': 3, 'ce-T:': 2}
+{'boogie_result': 4, 'actual_z3': 4, 'ce-T:': 3, 'ce-F:': 3}
+{'ce-I:': 14, 'boogie_result': 7, 'actual_z3': 7, 'ce-F:': 4}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2}
+{'boogie_result': 1, 'actual_z3': 1}
+{'ce-I:': 1784, 'ce-T:': 1089, 'boogie_result': 217, 'ce-F:': 112, 'actual_z3': 28}
+{'ce-I:': 3899, 'ce-T:': 3191, 'boogie_result': 461, 'ce-F:': 389, 'actual_z3': 24}
+{'ce-I:': 5625, 'ce-T:': 4186, 'boogie_result': 841, 'ce-F:': 739, 'actual_z3': 26}
+{'ce-T:': 10996, 'ce-I:': 7196, 'ce-F:': 2505, 'boogie_result': 1839, 'actual_z3': 26}
+{'ce-I:': 22921, 'ce-T:': 13454, 'ce-F:': 2429, 'boogie_result': 2200, 'actual_z3': 32}
+{'ce-I:': 51602, 'ce-T:': 27576, 'ce-F:': 14120, 'boogie_result': 5216, 'actual_z3': 37}
+{'ce-I:': 76337, 'ce-T:': 42626, 'ce-F:': 6309, 'boogie_result': 5521, 'actual_z3': 48}
+{'ce-I:': 106676, 'ce-T:': 56452, 'ce-F:': 13949, 'boogie_result': 7108, 'actual_z3': 43}
+{'ce-I:': 160670, 'ce-T:': 64932, 'ce-F:': 12754, 'boogie_result': 7861, 'actual_z3': 67}
+{'ce-I:': 119239, 'ce-T:': 47894, 'ce-F:': 14573, 'boogie_result': 8162, 'actual_z3': 50}
+{'ce-T:': 7809, 'ce-I:': 5112, 'ce-F:': 2063, 'boogie_result': 1067, 'actual_z3': 21}
+{'ce-I:': 11390, 'ce-T:': 10181, 'ce-F:': 4618, 'boogie_result': 1840, 'actual_z3': 19}
+{'ce-T:': 13856, 'ce-I:': 11746, 'ce-F:': 5200, 'boogie_result': 2102, 'actual_z3': 50}
+{'ce-I:': 18987, 'ce-T:': 17302, 'boogie_result': 2266, 'ce-F:': 2234, 'actual_z3': 58}
+{'ce-T:': 16855, 'ce-I:': 14212, 'ce-F:': 4040, 'boogie_result': 2232, 'actual_z3': 32}
+{'ce-T:': 14823, 'ce-I:': 14227, 'ce-F:': 2298, 'boogie_result': 2203, 'actual_z3': 21}
+{'ce-T:': 14749, 'ce-I:': 13755, 'ce-F:': 4502, 'boogie_result': 2277, 'actual_z3': 40}
+{'ce-T:': 15922, 'ce-I:': 12642, 'ce-F:': 5687, 'boogie_result': 2362, 'actual_z3': 38}
+{'ce-T:': 20002, 'ce-I:': 11085, 'boogie_result': 2571, 'ce-F:': 2560, 'actual_z3': 20}
+{'ce-I:': 20158, 'ce-T:': 18714, 'ce-F:': 4914, 'boogie_result': 2696, 'actual_z3': 32}
+{'ce-T:': 861, 'ce-I:': 480, 'boogie_result': 186, 'ce-F:': 122, 'actual_z3': 20}
+{'ce-T:': 1388, 'ce-F:': 524, 'boogie_result': 287, 'ce-I:': 286, 'actual_z3': 13}
+{'ce-I:': 2226, 'ce-T:': 2224, 'ce-F:': 757, 'boogie_result': 584, 'actual_z3': 28}
+{'ce-T:': 5058, 'ce-I:': 2629, 'boogie_result': 698, 'ce-F:': 669, 'actual_z3': 17}
+{'ce-T:': 4560, 'ce-I:': 3027, 'boogie_result': 680, 'ce-F:': 613, 'actual_z3': 25}
+{'ce-T:': 4654, 'ce-I:': 4199, 'boogie_result': 876, 'ce-F:': 812, 'actual_z3': 25}
+{'ce-T:': 7617, 'ce-I:': 3406, 'ce-F:': 1987, 'boogie_result': 1098, 'actual_z3': 26}
+{'ce-T:': 6153, 'ce-I:': 5551, 'ce-F:': 2753, 'boogie_result': 1171, 'actual_z3': 35}
+{'ce-I:': 21776, 'ce-T:': 21405, 'ce-F:': 3526, 'boogie_result': 2820, 'actual_z3': 29}
+{'ce-T:': 44598, 'ce-I:': 35277, 'ce-F:': 6711, 'boogie_result': 3960, 'actual_z3': 44}
+{'ce-T:': 7809, 'ce-I:': 5112, 'ce-F:': 2063, 'boogie_result': 1067, 'actual_z3': 21}
+{'ce-I:': 11390, 'ce-T:': 10181, 'ce-F:': 4618, 'boogie_result': 1840, 'actual_z3': 19}
+{'ce-T:': 13856, 'ce-I:': 11746, 'ce-F:': 5200, 'boogie_result': 2102, 'actual_z3': 50}
+{'ce-I:': 18987, 'ce-T:': 17302, 'boogie_result': 2266, 'ce-F:': 2234, 'actual_z3': 58}
+{'ce-T:': 16855, 'ce-I:': 14212, 'ce-F:': 4040, 'boogie_result': 2232, 'actual_z3': 32}
+{'ce-T:': 14823, 'ce-I:': 14227, 'ce-F:': 2298, 'boogie_result': 2203, 'actual_z3': 21}
+{'ce-T:': 14749, 'ce-I:': 13755, 'ce-F:': 4502, 'boogie_result': 2277, 'actual_z3': 40}
+{'ce-T:': 15922, 'ce-I:': 12642, 'ce-F:': 5687, 'boogie_result': 2362, 'actual_z3': 38}
+{'ce-T:': 20002, 'ce-I:': 11085, 'boogie_result': 2571, 'ce-F:': 2560, 'actual_z3': 20}
+{'ce-I:': 20158, 'ce-T:': 18714, 'ce-F:': 4914, 'boogie_result': 2696, 'actual_z3': 32}
+{'ce-I:': 804, 'ce-T:': 740, 'boogie_result': 254, 'ce-F:': 252, 'actual_z3': 23}
+{'ce-T:': 3222, 'boogie_result': 648, 'ce-F:': 637, 'ce-I:': 566, 'actual_z3': 13}
+{'ce-T:': 3620, 'ce-I:': 2411, 'boogie_result': 1210, 'ce-F:': 1208, 'actual_z3': 21}
+{'ce-T:': 6249, 'boogie_result': 1269, 'ce-F:': 1265, 'ce-I:': 1257, 'actual_z3': 30}
+{'ce-T:': 8777, 'ce-I:': 3051, 'boogie_result': 1299, 'ce-F:': 1289, 'actual_z3': 44}
+{'ce-T:': 5019, 'ce-I:': 3696, 'boogie_result': 1262, 'ce-F:': 1257, 'actual_z3': 14}
+{'ce-T:': 9436, 'ce-I:': 1680, 'boogie_result': 1385, 'ce-F:': 1344, 'actual_z3': 44}
+{'ce-T:': 10577, 'ce-I:': 2126, 'boogie_result': 1341, 'ce-F:': 1337, 'actual_z3': 26}
+{'ce-T:': 11029, 'ce-I:': 3860, 'boogie_result': 1553, 'ce-F:': 1552, 'actual_z3': 30}
+{'ce-T:': 12046, 'boogie_result': 1579, 'ce-F:': 1571, 'ce-I:': 819, 'actual_z3': 37}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'ce-F:': 6, 'boogie_result': 5, 'actual_z3': 5, 'ce-I:': 4}
+{'ce-F:': 24, 'ce-I:': 14, 'boogie_result': 13, 'actual_z3': 13}
+{'ce-I:': 67, 'boogie_result': 22, 'ce-T:': 19, 'actual_z3': 15, 'ce-F:': 9}
+{'ce-I:': 74, 'ce-F:': 44, 'boogie_result': 29, 'ce-T:': 27, 'actual_z3': 11}
+{'ce-I:': 88, 'boogie_result': 32, 'ce-T:': 31, 'ce-F:': 25, 'actual_z3': 21}
+{'ce-I:': 219, 'boogie_result': 61, 'ce-T:': 60, 'ce-F:': 56, 'actual_z3': 14}
+{'ce-F:': 182, 'boogie_result': 58, 'ce-I:': 57, 'ce-T:': 45, 'actual_z3': 26}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2, 'ce-I:': 1}
+{'ce-F:': 6, 'boogie_result': 5, 'actual_z3': 5, 'ce-I:': 4}
+{'ce-F:': 24, 'ce-I:': 14, 'boogie_result': 13, 'actual_z3': 13}
+{'ce-I:': 67, 'boogie_result': 22, 'ce-T:': 19, 'actual_z3': 15, 'ce-F:': 9}
+{'ce-I:': 74, 'ce-F:': 44, 'boogie_result': 29, 'ce-T:': 27, 'actual_z3': 11}
+{'ce-I:': 88, 'boogie_result': 32, 'ce-T:': 31, 'ce-F:': 25, 'actual_z3': 21}
+{'ce-I:': 219, 'boogie_result': 61, 'ce-T:': 60, 'ce-F:': 56, 'actual_z3': 14}
+{'ce-F:': 182, 'boogie_result': 58, 'ce-I:': 57, 'ce-T:': 45, 'actual_z3': 26}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 2}
+{'boogie_result': 6, 'actual_z3': 6, 'ce-T:': 5}
+{'boogie_result': 6, 'actual_z3': 6, 'ce-F:': 5, 'ce-T:': 4}
+{'boogie_result': 7, 'actual_z3': 7, 'ce-T:': 6}
+{'boogie_result': 19, 'actual_z3': 19, 'ce-T:': 18, 'ce-I:': 16, 'ce-F:': 14}
+{'boogie_result': 13, 'actual_z3': 13, 'ce-T:': 12}
+{'boogie_result': 25, 'actual_z3': 25, 'ce-T:': 24, 'ce-F:': 9}
+{'ce-T:': 45, 'boogie_result': 31, 'actual_z3': 31, 'ce-F:': 11}
+{'ce-T:': 2093, 'ce-I:': 395, 'boogie_result': 349, 'ce-F:': 339, 'actual_z3': 12}
+{'ce-I:': 5937, 'ce-T:': 3328, 'ce-F:': 1628, 'boogie_result': 887, 'actual_z3': 23}
+{'ce-I:': 6548, 'ce-T:': 3794, 'boogie_result': 1117, 'ce-F:': 1108, 'actual_z3': 17}
+{'ce-I:': 7181, 'ce-T:': 6834, 'ce-F:': 1854, 'boogie_result': 1206, 'actual_z3': 19}
+{'ce-I:': 12251, 'ce-T:': 6794, 'boogie_result': 1366, 'ce-F:': 1347, 'actual_z3': 28}
+{'ce-I:': 13473, 'ce-T:': 8660, 'boogie_result': 1988, 'ce-F:': 1986, 'actual_z3': 25}
+{'ce-I:': 55567, 'ce-T:': 17085, 'ce-F:': 4740, 'boogie_result': 2559, 'actual_z3': 48}
+{'ce-I:': 41054, 'ce-T:': 18105, 'ce-F:': 4333, 'boogie_result': 2696, 'actual_z3': 34}
+{'ce-I:': 41470, 'ce-T:': 20834, 'ce-F:': 4778, 'boogie_result': 3023, 'actual_z3': 35}
+{'ce-I:': 39419, 'ce-T:': 22116, 'ce-F:': 3751, 'boogie_result': 3408, 'actual_z3': 37}
+{'ce-I:': 1305, 'ce-T:': 769, 'boogie_result': 282, 'ce-F:': 276, 'actual_z3': 14}
+{'ce-I:': 1967, 'ce-T:': 1113, 'boogie_result': 434, 'ce-F:': 423, 'actual_z3': 17}
+{'ce-I:': 2673, 'ce-T:': 1008, 'boogie_result': 562, 'ce-F:': 560, 'actual_z3': 13}
+{'ce-I:': 3526, 'ce-T:': 2326, 'boogie_result': 670, 'ce-F:': 652, 'actual_z3': 24}
+{'ce-I:': 5785, 'ce-T:': 1653, 'boogie_result': 839, 'ce-F:': 836, 'actual_z3': 15}
+{'ce-I:': 5162, 'ce-T:': 2621, 'boogie_result': 734, 'ce-F:': 720, 'actual_z3': 18}
+{'ce-I:': 4275, 'ce-T:': 2873, 'boogie_result': 796, 'ce-F:': 790, 'actual_z3': 23}
+{'ce-I:': 4318, 'ce-T:': 1462, 'boogie_result': 778, 'ce-F:': 760, 'actual_z3': 20}
+{'ce-I:': 6321, 'ce-T:': 2749, 'boogie_result': 1378, 'ce-F:': 1376, 'actual_z3': 11}
+{'ce-I:': 10428, 'ce-T:': 5666, 'boogie_result': 1553, 'ce-F:': 1542, 'actual_z3': 28}

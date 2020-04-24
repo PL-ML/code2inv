@@ -1,0 +1,2 @@
+117.c | "( ( sn == x ) )" | 6 | 7.67  | {'ce-I:': 228, 'ce-F:': 192, 'boogie_result': 68, 'ce-T:': 64, 'actual_z3': 11}
+{'ce-I:': 228, 'ce-F:': 192, 'boogie_result': 68, 'ce-T:': 64, 'actual_z3': 11}

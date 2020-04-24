@@ -1,0 +1,2 @@
+30.c | "( ( x < ( 1 + x ) ) && ( x <= ( x + x ) ) )" | 0 | 1.12  | {'boogie_result': 9, 'actual_z3': 9, 'ce-T:': 8, 'ce-I:': 8}
+{'boogie_result': 9, 'actual_z3': 9, 'ce-T:': 8, 'ce-I:': 8}

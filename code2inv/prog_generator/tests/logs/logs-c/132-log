@@ -1,0 +1,2 @@
+9.c | "( ( x < ( 4 + y ) ) )" | 87 | 94.65  | {'ce-T:': 3408, 'ce-I:': 2057, 'boogie_result': 872, 'ce-F:': 859, 'actual_z3': 19}
+{'ce-T:': 3408, 'ce-I:': 2057, 'boogie_result': 872, 'ce-F:': 859, 'actual_z3': 19}

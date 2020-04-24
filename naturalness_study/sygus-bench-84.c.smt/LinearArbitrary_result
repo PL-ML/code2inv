@@ -1,0 +1,81 @@
+Verifying benchmark: sygus-constraints/sygus-bench-84.c.smt
+/seahorn/seahorn/build/run/bin/clang -c -emit-llvm -D__SEAHORN__ -fgnu89-inline -m32 -I./build/run/include -o /tmp/sea-E9o4tJ/dummpy.bc dummpy.c
+/seahorn/seahorn/build/run/bin/seapp -o /tmp/sea-E9o4tJ/dummpy.pp.bc --strip-extern=false --kill-vaarg=true -log none /tmp/sea-E9o4tJ/dummpy.bc
+/seahorn/seahorn/build/run/bin/seapp -o /tmp/sea-E9o4tJ/dummpy.pp.ms.bc --horn-mixed-sem --ms-reduce-main /tmp/sea-E9o4tJ/dummpy.pp.bc
+/seahorn/seahorn/build/run/bin/seaopt -f -funit-at-a-time -o /tmp/sea-E9o4tJ/dummpy.pp.ms.o.bc -O3 --enable-indvar=false --enable-loop-idiom=false --enable-nondet-init=false --unroll-threshold=150 --disable-loop-vectorization=true --disable-slp-vectorization=true --vectorize-slp-aggressive=false /tmp/sea-E9o4tJ/dummpy.pp.ms.bc
+/seahorn/seahorn/build/run/bin/seahorn -horn-inter-proc -horn-sem-lvl=mem --horn-step=large -zverbose 1 -log none /tmp/sea-E9o4tJ/dummpy.pp.ms.o.bc --horn-parser=sygus-constraints/sygus-bench-84.c.smt --horn-answer --horn-stats --horn-ice --horn-ice-svm-c-paramter=10 --horn-ice-c5-exec-path=C50/c5.0.dt_entropy --horn-ice-svm-exec-path=libsvm/svm-invgen --horn-ice-svm-coeff-bound=5 --horn-rule-sample-length=1 --horn-ice-svm-call-freq-pos=0 --horn-ice-svm-call-freq-neg=30
+************** CHCs Solved in 1.140221e+00 (secs) **************
+
+************** Program is correct **************
+REL: main@verifier.error.split -- invariant size: 1, 
+false
+REL: (verifier.error V_0 V_1 V_2) -- invariant size: 1, 2, 
+((((true||(((true&&(!V_0))&&(!V_1))&&(!V_2)))||(((true&&(!V_0))&&V_1)&&V_2))||(((true&&V_0)&&(!V_1))&&V_2))||(((true&&V_0)&&V_1)&&V_2))
+REL: (main@entry V_0) -- invariant size: 1, 
+true
+REL: (main@_bb V_0 V_1) -- invariant size: 2, 6, 8, 10, 5, 3, 
+[||
+  true&&(V_0<=-50)
+  [&&
+    true
+    !(V_0<=-50)
+    V_1<=5
+    ((1*V_0)+(-1*V_1))<=-45
+    V_1<=4
+    ((1*V_0)+(-1*V_1))<=-51
+  ]
+  [&&
+    true
+    !(V_0<=-50)
+    V_1<=5
+    ((1*V_0)+(-1*V_1))<=-45
+    V_1<=4
+    !(((1*V_0)+(-1*V_1))<=-51)
+    !(V_1<=2)
+    ((1*V_0)+(-1*V_1))<=-50
+  ]
+  [&&
+    true
+    !(V_0<=-50)
+    V_1<=5
+    ((1*V_0)+(-1*V_1))<=-45
+    V_1<=4
+    !(((1*V_0)+(-1*V_1))<=-51)
+    !(V_1<=2)
+    !(((1*V_0)+(-1*V_1))<=-50)
+    !(V_1<=3)
+    ((1*V_0)+(1*V_1))<=-40
+  ]
+  [&&
+    true
+    !(V_0<=-50)
+    V_1<=5
+    ((1*V_0)+(-1*V_1))<=-45
+    !(V_1<=4)
+  ]
+  [&&
+    true
+    !(V_0<=-50)
+    !(V_1<=5)
+  ]
+]
+************** Program Correctness End **************
+
+************** Learning Statistics **************:
+Total CHC size: 8
+Total Relation size: 4
+Total Var size: 23
+Neg sample size: 23
+Pos sample size: 22
+Total sample size: 45
+Iteration number: 80
+************** Learning Statistics End **************
+
+
+
+************** BRUNCH STATS ***************** 
+BRUNCH_STAT HornifyModule 0.00
+BRUNCH_STAT ICE inv 0.84
+BRUNCH_STAT LargeHornifyFunction 0.00
+BRUNCH_STAT seahorn_total 0.85
+************** BRUNCH STATS END ***************** 

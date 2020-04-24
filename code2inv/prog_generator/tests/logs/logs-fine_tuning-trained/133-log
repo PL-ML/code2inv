@@ -1,0 +1,30 @@
+tmp/133.out
+                                       found a solution for 91 , sol: ( ( n >= x || n >= ( n + 5 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 93 , sol: ( ( n >= x || n >= ( n + 5 ) ) && ( n >= x ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 96 , sol: ( ( n >= x ) && ( n <= ( n + 36 ) || n >= n ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 92 , sol: ( ( n >= x ) )
+  0%|          | 0/100 [00:01<?, ?it/s]avg reward: -2.8500:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -2.8500:   1%|          | 1/100 [00:02<03:31,  2.14s/it]                                                                    found a solution for 99 , sol: ( ( n >= x ) )
+avg reward: -2.8500:   1%|          | 1/100 [00:02<03:31,  2.14s/it]                                                                    found a solution for 93 , sol: ( ( n >= x ) && ( n >= ( n + 5 ) || n >= n ) )
+avg reward: -2.8500:   1%|          | 1/100 [00:02<03:31,  2.14s/it]                                                                    found a solution for 95 , sol: ( ( n >= x || n >= ( n + 472 ) ) && ( n >= x || junk_0 >= n ) && ( n >= x || n >= n ) )
+avg reward: -2.8500:   1%|          | 1/100 [00:03<03:31,  2.14s/it]                                                                    found a solution for 95 , sol: ( ( n >= x || n < n ) )
+avg reward: -2.8500:   1%|          | 1/100 [00:03<03:31,  2.14s/it]                                                                    found a solution for 94 , sol: ( ( n >= x || n >= ( n + 4 ) ) )
+avg reward: -2.8500:   1%|          | 1/100 [00:03<03:31,  2.14s/it]avg reward: -1.9000:   1%|          | 1/100 [00:04<03:31,  2.14s/it]avg reward: -1.9000:   2%|▏         | 2/100 [00:04<03:34,  2.19s/it]                                                                    found a solution for 90 , sol: ( ( n >= x ) && ( n >= n || x <= ( n + 0 ) ) && ( n >= x || n >= n ) )
+avg reward: -1.9000:   2%|▏         | 2/100 [00:05<03:34,  2.19s/it]                                                                    found a solution for 92 , sol: ( ( n >= x || n >= ( n + 2 ) ) && ( n >= x ) )
+avg reward: -1.9000:   2%|▏         | 2/100 [00:05<03:34,  2.19s/it]                                                                    found a solution for 90 , sol: ( ( n >= x || n >= ( n + 6 ) ) && ( n >= x || n >= n ) && ( n >= x ) )
+avg reward: -1.9000:   2%|▏         | 2/100 [00:05<03:34,  2.19s/it]                                                                    found a solution for 92 , sol: ( ( n >= x ) && ( n >= n ) )
+avg reward: -1.9000:   2%|▏         | 2/100 [00:06<03:34,  2.19s/it]                                                                    found a solution for 98 , sol: ( ( n >= x || n >= n ) && ( n >= x || n >= ( 1 + x ) ) && ( n >= n || x <= ( n + 0 ) ) )
+avg reward: -1.9000:   2%|▏         | 2/100 [00:06<03:34,  2.19s/it]avg reward: -1.2833:   2%|▏         | 2/100 [00:07<03:34,  2.19s/it]avg reward: -1.2833:   3%|▎         | 3/100 [00:07<03:55,  2.43s/it]                                                                    found a solution for 98 , sol: ( ( n >= x ) && ( n >= ( n + -37 ) || n >= x ) )
+avg reward: -1.2833:   3%|▎         | 3/100 [00:08<03:55,  2.43s/it]                                                                    found a solution for 91 , sol: ( ( n >= x ) && ( n >= ( n + 5 ) || n >= n ) && ( n >= x ) )
+avg reward: -1.2833:   3%|▎         | 3/100 [00:08<03:55,  2.43s/it]                                                                    found a solution for 97 , sol: ( ( n >= x || n >= n ) && ( n >= x || n >= n ) && ( x <= ( n + 0 ) || n >= x ) )
+--
+4
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}

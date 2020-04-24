@@ -1,0 +1,2 @@
+105.c | "( ( x <= 0 || x < ( 1 + n ) ) )" | 5 | 7.40  | {'ce-T:': 217, 'boogie_result': 59, 'ce-I:': 46, 'ce-F:': 42, 'actual_z3': 18}
+{'ce-T:': 217, 'boogie_result': 59, 'ce-I:': 46, 'ce-F:': 42, 'actual_z3': 18}

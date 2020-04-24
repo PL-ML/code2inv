@@ -1,0 +1,2 @@
+sygus-bench-67.c.smt | "( or ( < V2 ( + 1 1 ) ) ( >= V1 ( - 1 1 ) ) )" | 142 | 660.48  | {'ce-T:': 8440, 'boogie_result': 1412, 'ce-F:': 1407, 'ce-I:': 1365, 'actual_z3': 10}
+{'ce-T:': 8440, 'boogie_result': 1412, 'ce-F:': 1407, 'ce-I:': 1365, 'actual_z3': 10}

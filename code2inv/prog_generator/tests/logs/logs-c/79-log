@@ -1,0 +1,2 @@
+51.c | "( ( c == 0 || c < ( c + 4 ) ) && ( c <= 4 || c <= ( c - 1 ) ) && ( c <= ( 0 + 4 ) ) )" | 1 | 2.32  | {'boogie_result': 12, 'actual_z3': 12, 'ce-T:': 11, 'ce-I:': 6, 'ce-F:': 5}
+{'boogie_result': 12, 'actual_z3': 12, 'ce-T:': 11, 'ce-I:': 6, 'ce-F:': 5}

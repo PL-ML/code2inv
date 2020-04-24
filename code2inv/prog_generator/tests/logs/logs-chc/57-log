@@ -1,0 +1,2 @@
+sygus-bench-30.c.smt | "( and ( or ( > V0 ( - V0 100 ) ) ( > V0 ( + 1 V0 ) ) ) ( or ( > V0 V0 ) ( >= V0 ( + 0 0 ) ) ) ( or ( <= V0 ( + 100 V0 ) ) ( > V0 ( + 1 100 ) ) ) )" | 0 | 1.76  | {'boogie_result': 10, 'actual_z3': 10, 'ce-T:': 9}
+{'boogie_result': 10, 'actual_z3': 10, 'ce-T:': 9}

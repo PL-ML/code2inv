@@ -1,0 +1,2 @@
+sygus-bench-17.c.smt | "( and ( or ( < V1 V3 ) ( < V1 2 ) ) ( or ( <= V3 V3 ) ( >= V1 ( + V2 V2 ) ) ) )" | 531 | 3492.99  | {'ce-T:': 37315, 'ce-I:': 22618, 'ce-F:': 9885, 'boogie_result': 5261, 'actual_z3': 22}
+{'ce-T:': 37315, 'ce-I:': 22618, 'ce-F:': 9885, 'boogie_result': 5261, 'actual_z3': 22}

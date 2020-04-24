@@ -1,0 +1,2 @@
+13.c | "( ( x <= ( 2 + y ) ) )" | 7 | 8.56  | {'ce-T:': 309, 'ce-I:': 89, 'boogie_result': 73, 'ce-F:': 72, 'actual_z3': 9}
+{'ce-T:': 309, 'ce-I:': 89, 'boogie_result': 73, 'ce-F:': 72, 'actual_z3': 9}

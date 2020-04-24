@@ -1,0 +1,2 @@
+33.c | "( ( n >= n ) && ( x >= 0 || n < ( 0 - n ) ) )" | 35 | 42.04  | {'ce-T:': 1708, 'ce-F:': 470, 'boogie_result': 349, 'ce-I:': 325, 'actual_z3': 19}
+{'ce-T:': 1708, 'ce-F:': 470, 'boogie_result': 349, 'ce-I:': 325, 'actual_z3': 19}

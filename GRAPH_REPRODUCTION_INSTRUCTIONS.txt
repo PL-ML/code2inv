@@ -1,0 +1,14 @@
+Read the following instructions to reproduce the plots in figures 4a and 4b under the Evaluation section.
+
+NOTE: In both plots, Code2Inv-S refers to the previous version of Code2Inv with the fixed invariant grammar while Code2Inv-G refers to the current Code2Inv version.
+
+To reproduce the graph in figure 4a,
+run `./get_z3calls_plot.sh $path_to_linear_C_logs`
+eg- `./get_z3calls_plot.sh logs/logs-c` to reproduce the graph in figure 4a with the results we have provided.
+This script can only be used with logs for the 133 linear C benchmarks.
+
+To reproduce the graph in figure 4b,
+run `./get_learning_plot.sh $untrained_logs $pretrained_logs`
+eg- `./get_learning_plot.sh logs/logs-fine_tuning-untrained logs/logs-fine_tuning-trained` to reproduce the graph in figure 4b with the results we have provided.
+This script can only be used with logs for the transferability experiment.
+

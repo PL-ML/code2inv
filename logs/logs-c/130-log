@@ -1,0 +1,2 @@
+98.c | "( ( y >= y ) && ( y > 0 || j <= i ) && ( y >= ( 2 + 0 ) ) )" | 7 | 7.56  | {'ce-T:': 370, 'ce-I:': 131, 'boogie_result': 80, 'ce-F:': 74, 'actual_z3': 12}
+{'ce-T:': 370, 'ce-I:': 131, 'boogie_result': 80, 'ce-F:': 74, 'actual_z3': 12}

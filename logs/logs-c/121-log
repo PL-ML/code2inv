@@ -1,0 +1,2 @@
+8.c | "( ( x <= ( 10 + y ) ) )" | 12 | 14.89  | {'ce-T:': 489, 'boogie_result': 125, 'ce-I:': 121, 'ce-F:': 112, 'actual_z3': 14}
+{'ce-T:': 489, 'boogie_result': 125, 'ce-I:': 121, 'ce-F:': 112, 'actual_z3': 14}

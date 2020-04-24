@@ -1,0 +1,47 @@
+tmp/49.out
+                                       found a solution for 93 , sol: ( ( n >= 1 ) && ( n >= ( 1 - n ) ) && ( n >= 0 || n >= 1 ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 91 , sol: ( ( n >= 0 || junk_0 >= 1 ) && ( n >= ( 0 - n ) ) && ( n >= 1 ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 92 , sol: ( ( n >= 0 ) && ( n >= ( 1 - n ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 93 , sol: ( ( n >= 0 ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 96 , sol: ( ( n >= 0 || n >= ( 0 - n ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 98 , sol: ( ( n >= 0 || n >= ( 1 - n ) ) && ( c >= 0 ) && ( n >= ( 1 - n ) || n >= ( 0 - n ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 94 , sol: ( ( n >= 1 || n >= ( 1 - n ) ) && ( n >= 0 ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 90 , sol: ( ( n >= 0 || n > ( n - 1 ) ) && ( n >= ( 0 - n ) || n >= 0 ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 92 , sol: ( ( n >= 0 ) && ( n >= ( 1 - n ) || n >= 0 ) )
+  0%|          | 0/100 [00:01<?, ?it/s]avg reward: -2.4000:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -2.4000:   1%|          | 1/100 [00:02<03:54,  2.37s/it]                                                                    found a solution for 99 , sol: ( ( n >= 1 ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:02<03:54,  2.37s/it]                                                                    found a solution for 95 , sol: ( ( n >= 1 || n >= ( 1 - n ) ) && ( n >= 1 || n >= ( 1 - n ) ) && ( n >= ( 0 - n ) ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:02<03:54,  2.37s/it]                                                                    found a solution for 95 , sol: ( ( n >= 1 ) && ( n >= ( 0 - n ) || n >= 0 ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:03<03:54,  2.37s/it]                                                                    found a solution for 99 , sol: ( ( n >= 1 || n > 0 ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:03<03:54,  2.37s/it]                                                                    found a solution for 95 , sol: ( ( n >= 0 ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:03<03:54,  2.37s/it]                                                                    found a solution for 94 , sol: ( ( n >= 0 || n >= ( 0 - n ) ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:03<03:54,  2.37s/it]                                                                    found a solution for 94 , sol: ( ( n >= 1 || n >= ( 1 - n ) ) && ( n >= 0 || n >= 1 ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:03<03:54,  2.37s/it]                                                                    found a solution for 92 , sol: ( ( n >= 1 ) )
+avg reward: -2.4000:   1%|          | 1/100 [00:03<03:54,  2.37s/it]avg reward: -0.6250:   1%|          | 1/100 [00:04<03:54,  2.37s/it]avg reward: -0.6250:   2%|▏         | 2/100 [00:04<03:50,  2.35s/it]                                                                    found a solution for 98 , sol: ( ( c >= 1 || n >= ( 0 - n ) ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:05<03:50,  2.35s/it]                                                                    found a solution for 94 , sol: ( ( n >= 1 || junk_0 >= 0 ) && ( n >= ( 1 - n ) || n >= 1 ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:05<03:50,  2.35s/it]                                                                    found a solution for 96 , sol: ( ( n >= 1 ) && ( n >= ( 1 + n ) || n >= 0 ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:05<03:50,  2.35s/it]                                                                    found a solution for 90 , sol: ( ( n >= 0 || n >= ( 1 - n ) ) && ( n >= 0 ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:05<03:50,  2.35s/it]                                                                    found a solution for 92 , sol: ( ( n >= 0 ) && ( n >= ( 1 - n ) || n >= 0 ) && ( n >= -1 || n >= 1 ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:05<03:50,  2.35s/it]                                                                    found a solution for 92 , sol: ( ( c >= 0 ) && ( n >= ( 0 - n ) ) && ( n >= 0 ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:05<03:50,  2.35s/it]                                                                    found a solution for 90 , sol: ( ( n >= 1 ) && ( c >= 1 || n >= ( 1 - n ) ) && ( n >= 0 || n >= ( 1 - n ) ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:06<03:50,  2.35s/it]                                                                    found a solution for 92 , sol: ( ( n >= 1 || n >= ( 1 - n ) ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:06<03:50,  2.35s/it]                                                                    found a solution for 98 , sol: ( ( n >= 1 || n >= ( 1 - n ) ) && ( n >= 0 || n >= 1 ) )
+avg reward: -0.6250:   2%|▏         | 2/100 [00:06<03:50,  2.35s/it]avg reward: 0.8500:   2%|▏         | 2/100 [00:07<03:50,  2.35s/it] avg reward: 0.8500:   3%|▎         | 3/100 [00:07<03:58,  2.46s/it]                                                                   found a solution for 96 , sol: ( ( n >= 1 ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:07<03:58,  2.46s/it]                                                                   found a solution for 98 , sol: ( ( n >= 1 ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:07<03:58,  2.46s/it]                                                                   found a solution for 91 , sol: ( ( n >= 0 ) && ( junk_0 >= 0 || n >= ( 1 - n ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:08<03:58,  2.46s/it]                                                                   found a solution for 97 , sol: ( ( n >= 0 || n >= ( 1 - n ) ) && ( n >= 0 ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:08<03:58,  2.46s/it]                                                                   found a solution for 92 , sol: ( ( n >= 1 || n <= 1 ) && ( n >= 0 || n >= ( 1 + n ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:08<03:58,  2.46s/it]                                                                   found a solution for 91 , sol: ( ( n >= 0 ) && ( n >= ( 0 - n ) ) && ( n >= 1 ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:08<03:58,  2.46s/it]                                                                   found a solution for 97 , sol: ( ( n >= 0 ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:08<03:58,  2.46s/it]                                                                   found a solution for 90 , sol: ( ( n >= 0 || n >= ( 1 - n ) ) && ( n >= 860 || n >= 1 ) && ( n >= ( 0 - n ) || n >= 1 ) )
+--
+4
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}

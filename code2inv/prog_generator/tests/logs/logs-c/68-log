@@ -1,0 +1,2 @@
+41.c | "( ( n >= ( 0 + 1 ) || c > ( c + c ) ) && ( n > c ) )" | 6 | 8.83  | {'ce-I:': 164, 'ce-T:': 121, 'ce-F:': 107, 'boogie_result': 66, 'actual_z3': 19}
+{'ce-I:': 164, 'ce-T:': 121, 'ce-F:': 107, 'boogie_result': 66, 'actual_z3': 19}

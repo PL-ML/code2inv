@@ -1,0 +1,2 @@
+46.c | "( ( n > ( 1 + 1 ) || n > ( 0 - n ) ) && ( c <= ( n - 0 ) ) )" | 6 | 8.98  | {'ce-I:': 165, 'ce-T:': 119, 'ce-F:': 95, 'boogie_result': 65, 'actual_z3': 19}
+{'ce-I:': 165, 'ce-T:': 119, 'ce-F:': 95, 'boogie_result': 65, 'actual_z3': 19}

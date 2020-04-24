@@ -1,0 +1,47 @@
+tmp/76.out
+                                       found a solution for 91 , sol: ( ( y <= ( y - 0 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 93 , sol: ( ( y >= ( 0 - 0 ) ) && ( y > ( 0 - 609 ) || y > ( 0 + 0 ) ) && ( y > ( 0 - 4608 ) || y >= ( 0 - 609 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 96 , sol: ( ( y >= ( 4 - 4 ) ) && ( y > ( 0 - 4608 ) || y > ( 4 - 4608 ) ) && ( y > ( 4 + 4 ) || y > ( 1 - 0 ) ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 96 , sol: ( ( y >= ( 0 - 0 ) ) && ( y > ( 0 - 132 ) || y > ( 4 - 36 ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 98 , sol: ( ( y >= ( 0 - 0 ) || y > ( 0 - 36 ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 90 , sol: ( ( y >= ( 0 - 1 ) || y == ( 1 - 127 ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 92 , sol: ( ( y >= ( 0 - 0 ) || y > ( 0 - 735 ) ) )
+  0%|          | 0/100 [00:01<?, ?it/s]avg reward: -3.3500:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -3.3500:   1%|          | 1/100 [00:02<04:44,  2.88s/it]                                                                    found a solution for 99 , sol: ( ( y >= ( 0 - 127 ) || y > ( 0 - 127 ) ) && ( y > ( 0 - 4608 ) || y > y ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:03<04:44,  2.88s/it]                                                                    found a solution for 95 , sol: ( ( y >= ( 0 - 0 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:03<04:44,  2.88s/it]                                                                    found a solution for 93 , sol: ( ( y >= ( 0 - 0 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:03<04:44,  2.88s/it]                                                                    found a solution for 99 , sol: ( ( y >= ( 0 - 0 ) || y < ( 0 - 127 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:03<04:44,  2.88s/it]                                                                    found a solution for 95 , sol: ( ( z >= ( 0 - 0 ) || y > ( 0 - 127 ) ) && ( y > ( 0 - 127 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:03<04:44,  2.88s/it]                                                                    found a solution for 99 , sol: ( ( y >= ( 0 - 0 ) || y > ( 0 - 4608 ) ) && ( y > ( 1 - 0 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:04<04:44,  2.88s/it]                                                                    found a solution for 95 , sol: ( ( y >= ( 0 - 0 ) || y > ( 0 - 36 ) ) && ( y > ( 0 - 127 ) ) && ( y > 0 || y > ( 0 - 4608 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:04<04:44,  2.88s/it]                                                                    found a solution for 94 , sol: ( ( y >= ( 0 - 0 ) || y > ( y - y ) ) && ( y > ( 0 - 36 ) || y > ( 0 - 4608 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:04<04:44,  2.88s/it]                                                                    found a solution for 94 , sol: ( ( y >= ( 0 - 0 ) || y > ( 0 - 127 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:04<04:44,  2.88s/it]                                                                    found a solution for 92 , sol: ( ( y >= ( 3 - 0 ) || y > ( 0 - 0 ) ) )
+avg reward: -3.3500:   1%|          | 1/100 [00:04<04:44,  2.88s/it]avg reward: -0.8500:   1%|          | 1/100 [00:05<04:44,  2.88s/it]avg reward: -0.8500:   2%|▏         | 2/100 [00:05<04:45,  2.91s/it]                                                                    found a solution for 98 , sol: ( ( y >= ( 0 - 8 ) || y > y ) && ( y > ( 0 - 1 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:06<04:45,  2.91s/it]                                                                    found a solution for 94 , sol: ( ( c >= ( 0 - 0 ) || y > ( 0 - 127 ) ) && ( y > ( 0 - 655 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:06<04:45,  2.91s/it]                                                                    found a solution for 96 , sol: ( ( y >= ( 0 - 0 ) || y > ( 0 - 4608 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:06<04:45,  2.91s/it]                                                                    found a solution for 90 , sol: ( ( y >= ( 0 - 1 ) || y > ( 1 - 279 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:06<04:45,  2.91s/it]                                                                    found a solution for 92 , sol: ( ( y >= ( 0 - 0 ) ) && ( y > ( 0 - 36 ) || y > ( 3 - 735 ) ) && ( y > ( 3 - 36 ) || y > ( 0 - 4608 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:07<04:45,  2.91s/it]                                                                    found a solution for 92 , sol: ( ( y >= ( 3 - 3 ) ) && ( y > ( 0 - 665 ) ) && ( y > ( 3 - 735 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:07<04:45,  2.91s/it]                                                                    found a solution for 94 , sol: ( ( y >= ( 0 - 0 ) ) && ( y > ( 0 - 127 ) ) && ( y > ( 0 - 1 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:07<04:45,  2.91s/it]                                                                    found a solution for 90 , sol: ( ( y >= ( 0 - 0 ) ) && ( y > ( 0 - 967 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:07<04:45,  2.91s/it]                                                                    found a solution for 92 , sol: ( ( y >= ( 0 - 3 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:07<04:45,  2.91s/it]                                                                    found a solution for 98 , sol: ( ( y >= ( 0 - 0 ) ) )
+avg reward: -0.8500:   2%|▏         | 2/100 [00:07<04:45,  2.91s/it]avg reward: 0.8500:   2%|▏         | 2/100 [00:08<04:45,  2.91s/it] avg reward: 0.8500:   3%|▎         | 3/100 [00:08<04:38,  2.87s/it]                                                                   found a solution for 96 , sol: ( ( y >= ( 4 - 0 ) || z > ( 4 - 132 ) ) && ( z > ( 4 - 127 ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:09<04:38,  2.87s/it]                                                                   found a solution for 91 , sol: ( ( y >= ( 3 - 0 ) || z > ( z - 3 ) ) && ( junk_0 <= ( 0 - 36 ) || z > ( 3 - 36 ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:09<04:38,  2.87s/it]                                                                   found a solution for 97 , sol: ( ( y >= ( 7 - 0 ) || junk_0 > ( 0 - 0 ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:09<04:38,  2.87s/it]                                                                   found a solution for 92 , sol: ( ( y >= ( 3 - 3 ) ) && ( z > ( 3 - 735 ) || z > ( 3 - 1 ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:09<04:38,  2.87s/it]                                                                   found a solution for 91 , sol: ( ( y >= ( 0 - 3 ) || z > ( 0 - junk_0 ) ) && ( y > ( 3 - 0 ) || c > ( 3 - -379 ) ) && ( c > ( 3 - 867 ) || z > ( 0 - 3 ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:10<04:38,  2.87s/it]                                                                   found a solution for 94 , sol: ( ( y >= ( 0 - 0 ) ) && ( junk_0 > ( 0 - 1 ) ) )
+avg reward: 0.8500:   3%|▎         | 3/100 [00:10<04:38,  2.87s/it]                                                                   found a solution for 97 , sol: ( ( y >= ( 0 - 7 ) ) && ( junk_0 > ( 0 - 127 ) || z > ( 0 - 4608 ) ) && ( junk_0 > ( 0 - 4608 ) || y < ( 7 - 36 ) ) )
+--
+4
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}

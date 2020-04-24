@@ -1,0 +1,33 @@
+Verifying benchmark: add2.smt2
+/seahorn/seahorn/build/run/bin/clang -c -emit-llvm -D__SEAHORN__ -fgnu89-inline -m32 -I./build/run/include -o /tmp/sea-FPz3HV/dummpy.bc dummpy.c
+/seahorn/seahorn/build/run/bin/seapp -o /tmp/sea-FPz3HV/dummpy.pp.bc --strip-extern=false --kill-vaarg=true -log none /tmp/sea-FPz3HV/dummpy.bc
+/seahorn/seahorn/build/run/bin/seapp -o /tmp/sea-FPz3HV/dummpy.pp.ms.bc --horn-mixed-sem --ms-reduce-main /tmp/sea-FPz3HV/dummpy.pp.bc
+/seahorn/seahorn/build/run/bin/seaopt -f -funit-at-a-time -o /tmp/sea-FPz3HV/dummpy.pp.ms.o.bc -O3 --enable-indvar=false --enable-loop-idiom=false --enable-nondet-init=false --unroll-threshold=150 --disable-loop-vectorization=true --disable-slp-vectorization=true --vectorize-slp-aggressive=false /tmp/sea-FPz3HV/dummpy.pp.ms.bc
+/seahorn/seahorn/build/run/bin/seahorn -horn-inter-proc -horn-sem-lvl=mem --horn-step=large -zverbose 1 -log none /tmp/sea-FPz3HV/dummpy.pp.ms.o.bc --horn-parser=add2.smt2 --horn-answer --horn-stats --horn-ice --horn-ice-svm-c-paramter=10 --horn-ice-c5-exec-path=C50/c5.0.dt_entropy --horn-ice-svm-exec-path=libsvm/svm-invgen --horn-ice-svm-coeff-bound=5 --horn-rule-sample-length=1 --horn-ice-svm-call-freq-pos=0 --horn-ice-svm-call-freq-neg=30
+************** CHCs Solved in 1.999298e+00 (secs) **************
+
+************** Program is correct **************
+REL: simple!!query -- invariant size: 1, 
+false
+REL: (itp V_0 V_1) -- invariant size: 2, 
+(true&&(!(((-2*V_0)+(1*V_1))<=-2)))
+************** Program Correctness End **************
+
+************** Learning Statistics **************:
+Total CHC size: 3
+Total Relation size: 2
+Total Var size: 4
+Neg sample size: 1
+Pos sample size: 6
+Total sample size: 7
+Iteration number: 121
+************** Learning Statistics End **************
+
+
+
+************** BRUNCH STATS ***************** 
+BRUNCH_STAT HornifyModule 0.00
+BRUNCH_STAT ICE inv 0.88
+BRUNCH_STAT LargeHornifyFunction 0.00
+BRUNCH_STAT seahorn_total 0.88
+************** BRUNCH STATS END ***************** 

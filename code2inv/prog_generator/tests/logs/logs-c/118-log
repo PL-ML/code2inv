@@ -1,0 +1,2 @@
+87.c | "( ( lock <= ( lock - 1 ) || lock == ( 1 + 0 ) ) && ( lock <= ( lock + 0 ) ) && ( x == ( y + 0 ) ) )" | 182 | 183.82  | {'ce-T:': 5397, 'ce-I:': 5124, 'ce-F:': 2824, 'boogie_result': 1803, 'actual_z3': 9}
+{'ce-T:': 5397, 'ce-I:': 5124, 'ce-F:': 2824, 'boogie_result': 1803, 'actual_z3': 9}

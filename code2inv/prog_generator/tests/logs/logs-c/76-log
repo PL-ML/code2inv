@@ -1,0 +1,2 @@
+49.c | "( ( n >= ( 0 + 1 ) ) )" | 1 | 1.72  | {'ce-I:': 14, 'boogie_result': 11, 'actual_z3': 11, 'ce-T:': 10, 'ce-F:': 8}
+{'ce-I:': 14, 'boogie_result': 11, 'actual_z3': 11, 'ce-T:': 10, 'ce-F:': 8}

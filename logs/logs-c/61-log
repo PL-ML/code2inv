@@ -1,0 +1,2 @@
+35.c | "( ( c <= c ) && ( c < ( c + 0 ) || c >= ( 0 - c ) ) )" | 2 | 4.36  | {'boogie_result': 22, 'actual_z3': 22, 'ce-F:': 21, 'ce-T:': 20, 'ce-I:': 3}
+{'boogie_result': 22, 'actual_z3': 22, 'ce-F:': 21, 'ce-T:': 20, 'ce-I:': 3}

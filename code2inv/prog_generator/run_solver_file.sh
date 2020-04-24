@@ -1,14 +1,20 @@
 #!/bin/bash
 
-if(( $# != 3))
+if(( !($# == 5 || $# == 3) ))
 then
-    echo "Usage- run_solver.sh <input_graph> <input_vcs> <grammar_file>"
+    echo "Usage- run_solver.sh <input_graph> <input_vcs> <grammar_file> [ -o <output file> ]"
+    exit
+elif [ $# -eq 5 ] && [ "$4" != "-o" ]
+then
+    echo "Usage- run_solver.sh <input_graph> <input_vcs> <grammar_file> [ -o <output file> ]"
     exit
 fi
 
 data_folder=../../benchmarks
 file_list=names.txt
 
+op_file="$5"
+echo OP_FILE $op_file
 inv_reward_type=ordered
 input_graph="$1"
 input_vcs="$2"
@@ -45,8 +51,8 @@ python -u file_solver.py \
     -embedding_size $embedding \
     -rl_batchsize $rl_batchsize \
     -inv_reward_type $inv_reward_type \
+    -op_file "$op_file"\
     -inv_grammar $(sed "1q;d" $grammar_file)\
     -inv_checker $(sed "2q;d" $grammar_file)\
     -var_format "$(sed '3q;d' $grammar_file)"\
-    -save_dir "$save_dir/$input_graph/"\
     2>&1 | tee $log_file

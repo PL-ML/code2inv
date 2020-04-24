@@ -1,0 +1,39 @@
+tmp/129.out
+                                       found a solution for 93 , sol: ( ( x >= 1 ) )
+                                       found a solution for 92 , sol: ( ( junk_0 >= 1 ) && ( y > ( y - x ) ) && ( junk_0 >= 1 || x >= 1 ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 93 , sol: ( ( x >= 1 || y > ( y - x ) ) && ( y > ( y - x ) ) && ( junk_0 >= 1 || x >= 1 ) )
+  0%|          | 0/100 [00:00<?, ?it/s]                                       found a solution for 98 , sol: ( ( x >= 1 ) && ( y > ( y - x ) ) && ( junk_0 >= 1 || x >= 1 ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 90 , sol: ( ( x >= 1 ) && ( y > ( y - x ) ) && ( junk_0 >= 1 ) )
+  0%|          | 0/100 [00:01<?, ?it/s]                                       found a solution for 92 , sol: ( ( x >= 1 ) && ( y > ( y - y ) || x >= 1 ) && ( junk_0 >= 1 ) )
+  0%|          | 0/100 [00:01<?, ?it/s]avg reward: -0.9500:   0%|          | 0/100 [00:02<?, ?it/s]avg reward: -0.9500:   1%|          | 1/100 [00:02<04:11,  2.54s/it]                                                                    found a solution for 95 , sol: ( ( x >= 1 ) )
+avg reward: -0.9500:   1%|          | 1/100 [00:03<04:11,  2.54s/it]                                                                    found a solution for 93 , sol: ( ( x >= 1 ) && ( y > ( y - x ) ) && ( junk_0 >= x || y > ( y - x ) ) )
+avg reward: -0.9500:   1%|          | 1/100 [00:03<04:11,  2.54s/it]                                                                    found a solution for 99 , sol: ( ( x >= 1 || y > ( y - x ) ) )
+avg reward: -0.9500:   1%|          | 1/100 [00:03<04:11,  2.54s/it]                                                                    found a solution for 95 , sol: ( ( x >= 1 ) )
+avg reward: -0.9500:   1%|          | 1/100 [00:03<04:11,  2.54s/it]                                                                    found a solution for 99 , sol: ( ( x >= 1 || y > ( y - x ) ) )
+avg reward: -0.9500:   1%|          | 1/100 [00:03<04:11,  2.54s/it]                                                                    found a solution for 94 , sol: ( ( x >= 1 ) && ( y > ( y - x ) || junk_0 >= 1 ) )
+avg reward: -0.9500:   1%|          | 1/100 [00:03<04:11,  2.54s/it]                                                                    found a solution for 92 , sol: ( ( x >= 1 || y > ( y - x ) ) )
+avg reward: -0.9500:   1%|          | 1/100 [00:04<04:11,  2.54s/it]avg reward: -0.5000:   1%|          | 1/100 [00:04<04:11,  2.54s/it]avg reward: -0.5000:   2%|▏         | 2/100 [00:04<03:57,  2.42s/it]                                                                    found a solution for 94 , sol: ( ( x >= 1 ) && ( y > ( y - x ) || junk_0 >= 1 ) && ( junk_0 >= 1 || x >= 1 ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:05<03:57,  2.42s/it]                                                                    found a solution for 96 , sol: ( ( x >= 1 ) && ( y > ( y - x ) || junk_0 >= 1 ) && ( junk_0 >= 1 || x >= 1 ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:05<03:57,  2.42s/it]                                                                    found a solution for 90 , sol: ( ( x >= 1 || y > ( y - x ) ) && ( y > ( y - x ) ) && ( x >= 1 || x >= 9 ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:05<03:57,  2.42s/it]                                                                    found a solution for 92 , sol: ( ( x >= 1 || y > ( y - x ) ) && ( x <= ( y - x ) || x >= 1 ) && ( x < 1 || y > ( y - x ) ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:05<03:57,  2.42s/it]                                                                    found a solution for 92 , sol: ( ( x >= 1 ) && ( y > ( y - x ) || junk_0 >= 1 ) && ( junk_0 >= 1 ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:06<03:57,  2.42s/it]                                                                    found a solution for 94 , sol: ( ( x >= 1 ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:06<03:57,  2.42s/it]                                                                    found a solution for 92 , sol: ( ( x >= 1 || y > ( y - x ) ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:06<03:57,  2.42s/it]                                                                    found a solution for 98 , sol: ( ( x >= 1 ) && ( y > ( y - x ) ) && ( junk_0 >= 1 ) )
+avg reward: -0.5000:   2%|▏         | 2/100 [00:06<03:57,  2.42s/it]avg reward: 0.6167:   2%|▏         | 2/100 [00:07<03:57,  2.42s/it] avg reward: 0.6167:   3%|▎         | 3/100 [00:07<04:07,  2.55s/it]                                                                   found a solution for 96 , sol: ( ( y >= 1 || x >= 1 ) )
+avg reward: 0.6167:   3%|▎         | 3/100 [00:07<04:07,  2.55s/it]                                                                   found a solution for 91 , sol: ( ( x >= 1 ) )
+avg reward: 0.6167:   3%|▎         | 3/100 [00:08<04:07,  2.55s/it]                                                                   found a solution for 97 , sol: ( ( y >= 1 || x >= 1 ) )
+avg reward: 0.6167:   3%|▎         | 3/100 [00:08<04:07,  2.55s/it]                                                                   found a solution for 92 , sol: ( ( junk_0 >= 1 ) && ( x >= 1 ) && ( x >= 1 ) )
+avg reward: 0.6167:   3%|▎         | 3/100 [00:08<04:07,  2.55s/it]                                                                   found a solution for 94 , sol: ( ( junk_0 >= 1 ) && ( y >= 1 || x >= 1 ) && ( y >= 1 || x >= ( 1 - 1 ) ) )
+--
+4
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 1, 'actual_z3': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 2, 'actual_z3': 2, 'ce-F:': 1}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-T:': 3}
+{'boogie_result': 3, 'actual_z3': 3, 'ce-F:': 2, 'ce-T:': 1}
+{'boogie_result': 1, 'actual_z3': 1}

@@ -1,0 +1,2 @@
+nl-5-chc.smt2 | "( and ( = ( * V2 V0 ) V1 ) ( = V2 V2 ) )" | 254 | 886.50  | {'ce-T:': 18487, 'boogie_result': 2382, 'ce-F:': 2374, 'actual_z3': 12}
+{'ce-T:': 18487, 'boogie_result': 2382, 'ce-F:': 2374, 'actual_z3': 12}

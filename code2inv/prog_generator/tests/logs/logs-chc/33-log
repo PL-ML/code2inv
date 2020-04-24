@@ -1,0 +1,2 @@
+sygus-bench-12.c.smt | "( >= V0 ( - V1 11 ) )" | 32 | 143.03  | {'ce-T:': 1541, 'ce-I:': 374, 'boogie_result': 322, 'ce-F:': 318, 'actual_z3': 12}
+{'ce-T:': 1541, 'ce-I:': 374, 'boogie_result': 322, 'ce-F:': 318, 'actual_z3': 12}

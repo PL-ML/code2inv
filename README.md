@@ -58,9 +58,8 @@ $ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../ben
 ```
 
 Optionally, to store the result and related logs into an output file `inv_result.txt`:
-```
-$ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt
-```
+
+```$ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt```
 
 Some of other benchmarks which give an answer relatively quick include: 102.c, 53.c, 56.c, 65.c, 18.c, 98.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
 

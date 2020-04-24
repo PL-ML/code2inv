@@ -30,48 +30,41 @@ The `chc-fe` frontend is used to extract program graphs from the input CHC progr
 
 Install the dev version of this package:
 
-```
-$ pip install -e .
-```
+```pip install -e .```
 
 ## Running as an out-of-the-box solver
 
 First change directory as follows:
-```
-$ cd code2inv/prog_generator
-```
+
+```cd code2inv/prog_generator```
 
 Directly run the solver script:
-```
-$ ./run_solver_file.sh $graph_file $vc_file $specification_file
-```
+
+```./run_solver_file.sh $graph_file $vc_file $specification_file```
 
 To assign the output and related logs to a file, you can add the optional `-o` argument: 
-```
-$ ./run_solver_file.sh $graph_file $vc_file $specification_file -o output_file
-```
+
+```./run_solver_file.sh $graph_file $vc_file $specification_file -o output_file```
+
 ### Examples
 
 To run code2inv on one of the 133 Linear C instances:
-```
-$ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec
-```
+
+```./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec```
 
 Optionally, to store the result and related logs into an output file `inv_result.txt`:
 
-```$ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt```
+```./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt```
 
 Some of other benchmarks which give an answer relatively quick include: 102.c, 53.c, 56.c, 65.c, 18.c, 98.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
 
 To run code2inv on one of the 120 Linear CHC instances:
-```
-$ ./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec
-```
+
+```./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec```
 
 Optionally, to store the result and related logs into an output file `inv_result.txt`: 
-```
-$ ./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec -o inv_result.txt
-```
+
+```./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec -o inv_result.txt```
 
 Some of other benchmarks which give an answer relatively quick include: 78.c, 115.c, 45.c, 54.c, 71.c, 77.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
 
@@ -136,33 +129,29 @@ Refer to the spec files in `spec/` directory as an example
 
 ### Pretraining: 
 
-```
-$ cd code2inv/prog_generator
-```
-Then run:
-```
-$ ./pretraining.sh ${dataset} ${prog_idx} ${agg_check} ${grammar_file}
-```
+Run:
+
+```cd code2inv/prog_generator```
+
+```./pretraining.sh ${dataset} ${prog_idx} ${agg_check} ${grammar_file}```
+
 where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denoting whether more aggressive checker should be used.
 
 An easier way would be to run 
-```
-$ cd tests; ./test_learning.sh ${prog_idx}
-```
+```cd tests; ./test_learning.sh ${prog_idx}```
 
 ### Fine-tuning:
-```
-$ cd code2inv/prog_generator
-```
-Then run:
-```
-$ ./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch} ${grammar_file}
-```
+
+Run:
+
+```cd code2inv/prog_generator```
+
+```./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch} ${grammar_file}```
+
 where the penultimate argument ```init_epoch``` stands for the model dump of corresponding epoch (`latest` for the latest epoch dumped). 
 An easier way would be to run 
-```
-$ cd tests; ./test_fine_tuning.sh ${prog_idx}
-```
+
+```cd tests; ./test_fine_tuning.sh ${prog_idx}```
 
 ## Running Batch Experiments
 Read the instructions in the BATCH_EXPERIMENT_INSTRUCTIONS.txt file or the code2inv/prog_generator/tests directory

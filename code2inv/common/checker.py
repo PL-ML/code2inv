@@ -39,6 +39,24 @@ class StatsCounter(object):
         
         tqdm.write('z3_report time: %.2f pid: %s stats: %s' % (dur, str(pid), str(c)))
         
+    def report_str(self, pid):
+        if not pid in self.stats_dict:
+            self.stats_dict[pid] = Counter()
+        c = self.stats_dict[pid]
+        report = ""
+        # report += 'z3_report pid: %s stats: %s' % (str(pid), str(c))
+        dur = toc()
+        
+        report += 'z3_report time: %.2f pid: %s stats: %s' % (dur, str(pid), str(c))
+
+        return report
+
+    def report_str_once(self, pid):
+        if pid in self.reported:
+            return
+        self.reported.add(pid)
+        
+        return self.report_str(pid)
 
     def report_once(self, pid):
         if pid in self.reported:
@@ -497,7 +515,9 @@ def boogie_result(g, expr_root):
     if res > 0:
         tqdm.write("found a solution for " + str(g.sample_index) + " , sol: " + str(expr_root))
         # saving the expr_root object in a pickle
-        stat_counter.report_once(g.sample_index)
+        # stat_counter.report_once(g.sample_index)
+        r = stat_counter.report_str_once(g.sample_index)
+        tqdm.write(r)
         if cmd_args.exit_on_find:
             if cmd_args.save_smt is not None:
                 filename = cmd_args.save_smt
@@ -505,6 +525,11 @@ def boogie_result(g, expr_root):
                 with open(filename, 'w') as inv_fil:
                     inv_fil.write(expr_root.to_smt2())
                 tqdm.write("Written smt2")
+            if cmd_args.op_file is not None and cmd_args.op_file != "":
+                filename = cmd_args.op_file
+                tqdm.write("Writing logs to " + filename)
+                with open(filename, 'w') as inv_file:
+                    inv_file.write(str(expr_root) + "\n" + r + "\n")
             
             exit()
 

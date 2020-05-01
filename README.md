@@ -1,4 +1,6 @@
 
+# Code2Inv
+
 # Environment Setup
 
 ## Basic Setup
@@ -18,11 +20,11 @@ code2inv uses the Z3 theorem prover to verify the correctness of generated loop 
 Remember to set environment variables LD_LIBRARY_PATH and PYTHONPATH to contain paths for Z3 shared libraries and Z3Py, respectively.  These paths will be indicated upon successful installation of Z3.
 
 ## Frontend Setup (Optional)
-There are two frontends, one each for the C and CHC instances. The C frontend is called clang-fe and can be found in the `clang-fe/` directory. The CHC frontend is called chc-fe and is located in the `chc-fe/` directory.
+There are two frontends, one each for the C and CHC instances. The C frontend is called clang-fe and can be found in the `clang-fe/` directory. The CHC frontend is called chc-fe and is located in the `chc-fe/` directory. These frontends have limited support and are tested with the benchmarks included. Primarily, they can be used with programs containing single loops.
 
-The `clang-fe` frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. The program graphs and VCs for our benchmarks are already included in the `benchmarks/C_instances` directory and the same for the Non Linear benchmarks are included in the `benchmarks/nl-bench/` directory.  To build the frontend, follow the instructions in README in `clang-fe`. 
+The `clang-fe` frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. This will be a necessary step if you wish to run Code2Inv on a C file which isn't in the benchmarks. The program graphs and VCs for our benchmarks are already included in the `benchmarks/C_instances` directory and the same for the Non Linear benchmarks are included in the `benchmarks/nl-bench/` directory.  To build the frontend, follow the instructions in README in `clang-fe`. 
 
-The `chc-fe` frontend is used to extract program graphs from the input CHC programs (the CHC constraints themselves serve as the verification conditions (VCs)). The graphs and the VCs are already included in the `benchmarks/CHC_instances` directory. To run the CHC frontend, follow the instructions in README in `chc-fe`.
+The `chc-fe` frontend is used to extract program graphs from the input CHC programs (the CHC constraints themselves serve as the verification conditions (VCs)). This will be necessary to run Code2Inv for constraints not included in the benchmarks. The graphs and the VCs are already included in the `benchmarks/CHC_instances` directory. To run the CHC frontend, follow the instructions in README in `chc-fe`.
 
 # Experiments
 
@@ -34,39 +36,96 @@ Install the dev version of this package:
 
 ## Running as an out-of-the-box solver
 
-```cd code2inv/prog_generator```, then directly run the script ```./run_solver_file.sh <graph_file.json> <vc_file> <specification_file>```. 
+First change directory as follows:
 
-Eg- `./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec`
+```cd code2inv/prog_generator```
 
-Eg- `./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec`
+Directly run the solver script:
 
-The specification file is a file as such:
+```./run_solver_file.sh $graph_file $vc_file $specification_file```
 
+To assign the output and related logs to a file, you can add the optional `-o` argument: 
+
+```./run_solver_file.sh $graph_file $vc_file $specification_file -o output_file```
+
+### Examples
+
+To run code2inv on one of the 133 Linear C instances:
+
+```./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec```
+
+Optionally, to store the result and related logs into an output file `inv_result.txt`:
+
+```./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt```
+
+Some of other benchmarks which give an answer relatively quick include: 102.c, 53.c, 56.c, 65.c, 18.c, 98.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
+
+To run code2inv on one of the 120 Linear CHC instances:
+
+```./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec```
+
+Optionally, to store the result and related logs into an output file `inv_result.txt`: 
+
+```./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec -o inv_result.txt```
+
+Some of other benchmarks which give an answer relatively quick include: 78.c, 115.c, 45.c, 54.c, 71.c, 77.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
+
+To use a different grammar file for the invariants, refer to the grammar section in the [customization guide](customizing.md#the-grammar-file).
+
+For general customization, check out the [customization guide](customizing.md).
+
+To run Code2Inv on your own C programs or CHC instances, you will have to use the frontends provided to generate the program graphs and the verification conditions.
+
+<!--### Using Pretrained weights
+
+To lower the amount of time needed for some benchmarks which take longer, we have provided pretrained weights for these benchmarks in the `weights.tar` file in the repository root directory. To use them, first extract the weights: `tar -xvf weights.tar`. This should create a directory with all necessary weights.
+Then change directory `cd code2inv/prog_generator` and run
 ```
-name_of_inv_grammar
-name_of_solver_script (in the format of a python package)
-var_format (ssa if graph has variables in the ssa format, leave blank if not)
+$./run_solver_file_with_weights.sh $graph_file $vc_file $specification_file $path_to_weights [ -o output_file ]
 ```
 
-Refer to the spec files in `spec/` directory as an example
+The same optional argument from earlier to denote the output file applies here as well.
+
+The path_to_weights argument uses the path to the .encoder weight file without the extension.
+
+for example,
+```
+$ ./run_solver_file_with_weights.sh ../../benchmarks/C_instances/c_graph/6.c.json ../../benchmarks/C_instances/c_smt2/6.c.smt specs/c_spec ../../weights/benchmarks/C_instances/c_graph/6.c.json/epoch-latest
+```
+
+Another example:
+```
+$ ./run_solver_file_with_weights.sh ../../benchmarks/C_instances/c_graph/69.c.json ../../benchmarks/C_instances/c_smt2/69.c.smt specs/c_spec ../../weights/benchmarks/C_instances/c_graph/69.c.json/epoch-latest -o inv_result
+```
+-->
 
 ## Running with pretraining and fine-tuning
 
 ### Pretraining: 
 
+Run:
+
 ```cd code2inv/prog_generator```
-Then run:
+
 ```./pretraining.sh ${dataset} ${prog_idx} ${agg_check} ${grammar_file}```
-where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denoting whether more aggressive checker should be used. 
+
+where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denoting whether more aggressive checker should be used.
+
+An easier way would be to run 
+```cd tests; ./test_learning.sh ${prog_idx}```
 
 ### Fine-tuning:
+
+Run:
+
 ```cd code2inv/prog_generator```
-Then run:
+
 ```./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch} ${grammar_file}```
+
 where the penultimate argument ```init_epoch``` stands for the model dump of corresponding epoch (`latest` for the latest epoch dumped). 
+An easier way would be to run 
 
-
-
+```cd tests; ./test_fine_tuning.sh ${prog_idx}```
 
 <!-- # Reference
 

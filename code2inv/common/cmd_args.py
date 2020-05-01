@@ -39,6 +39,8 @@ cmd_opt.add_argument('-encoder_model', default='GNN', help='encoder model', choi
 cmd_opt.add_argument('-decoder_model', default='AssertAwareRNN', help='decoder model')
 cmd_opt.add_argument('-learning_rate', default=0.001, type=float, help='random seed')
 
+cmd_opt.add_argument('-op_file', default=None, type=str, help='Output File')
+
 # for testing purposes- saves smt version of generated invariant
 cmd_opt.add_argument('-save_smt', default=None, type=str, help='save smt version when invariant generated')
 

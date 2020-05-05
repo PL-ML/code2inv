@@ -5,19 +5,24 @@
 
 NOTE: An easy way to get Code2Inv up and running is to build it using the Dockerfile we have provided.
 
-To build the docker container, run:
+You can either pull the docker image from our dockerhub repo:
 ```
-$ docker build -t code2inv docker/
+docker pull code2inv/code2inv
 ```
 
-This should create an image called `code2inv`. To see all the docker images, run
+Or you can build the docker container:
+```
+$ docker build -t code2inv/code2inv docker/
+```
+
+This should create an image called `code2inv/code2inv`. To see all the docker images, run
 ```
 $ docker images
 ```
 
 Create the docker container:
 ```
-$ docker run -it --name code2inv code2inv
+$ docker run -it --name code2inv code2inv/code2inv
 ```
 
 This should open a docker container with all code2inv setup completed.

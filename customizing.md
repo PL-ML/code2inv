@@ -26,7 +26,7 @@ y = y + 1;
 ```
 
 The corresponding nodes in the JSON object would be written as-
-```json
+```
 {
     "nodes": {
         ...
@@ -73,7 +73,7 @@ The control flows are defined as an array of pairs, each pair being an array of 
 To denote a control flow from `node_1` to `node_2`, the pair will be written as `["node_1", "node_2"]`.
 
 Once we add the control flows to the previously discussed example, we will get the final JSON object as-
-```json
+```
 {
     "nodes": {
         ...

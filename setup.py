@@ -37,6 +37,9 @@ setup(
     install_requires=[
         'torch',
         'pysmt',
+        'numpy',
+        'future',
+        'tqdm',
     ],
     cmdclass={
         'develop': custom_develop,

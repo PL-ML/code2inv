@@ -135,6 +135,46 @@ $ ./run_solver_file_with_weights.sh ../../benchmarks/C_instances/c_graph/69.c.js
 ```
 -->
 
+### Process for running Code2Inv with C files
+
+Code2Inv only supports C files with one loop and no external function calls (refer to `benchmarks/C_instances/c/` for examples of supported C programs).
+
+We refer to the file as `file.c`.
+
+First, we need our input files which are the program graph json file and verification conditions SMT2 file. Follow the README in `clang-fe/` and build the front-end. Then perform the following while in the `clang-fe/` directory:
+```
+$ ./bin/clang-fe -ssa file.c > file.c.json 2>/dev/null
+$ ./bin/clang-fe -smt file.c > file.c.smt2 2>/dev/null
+```
+
+Our graph file is now `file.c.json` and verification condition file is `file.c.smt2`. Now from the repository directory, do the following:
+```
+$ cd code2inv/prog_generator
+$ ./run_solver_file.sh file.c.json file.c.smt2 specs/c_spec -o file_inv.txt
+```
+
+After the solution is found (if it is found), you will see the solution and its logs printed on the screen (the line begins with `Found a solution for 0...`). There will also be a file called file_inv.txt created with this information.
+
+### Process for running Code2Inv with CHC clauses
+
+Code2Inv has only been tested on the CHC constraints corresponding to single loop C files obtained from Seahorn (refer to `benchmarks/CHC_instances/sygus-constraints` for examples of supported CHC constraints).
+
+We refer to our file as `file.chc`.
+
+First, we need our input files which are the program graph json file and the verification conditions file. The CHC file itself will serve as our verification condition file, so we only need to extract a program graph from it:
+```
+$ cd chc-fe
+$ python graph-gen.py file.chc > file.json
+```
+
+Our graph file is now `file.json` and verification condition file is `file.chc`. From the repository directory, do the following:
+```
+$ cd code2inv/prog_generator
+$ ./run_solver_file.sh file.c.json file.c.smt2 specs/c_spec -o file_inv.txt
+```
+
+After the solution is found (if it is found), you will see the solution and its logs printed on the screen (the line begins with `Found a solution for 0...`). There will also be a file called file_inv.txt created with this information.
+
 ## Running with pretraining and fine-tuning
 
 ### Pretraining: 

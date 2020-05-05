@@ -3,6 +3,25 @@
 
 # Environment Setup
 
+NOTE: An easy way to get Code2Inv up and running is to build it using the Dockerfile we have provided.
+
+To build the docker container, run:
+```
+$ docker build -t code2inv docker/
+```
+
+This should create an image called `code2inv`. To see all the docker images, run
+```
+$ docker images
+```
+
+Create the docker container:
+```
+$ docker run -it --name code2inv code2inv
+```
+
+This should open a docker container with all code2inv setup completed.
+
 ## Basic Setup
 The following are needed for running the basic setup
 - python-3.7 
@@ -17,7 +36,7 @@ code2inv uses the Z3 theorem prover to verify the correctness of generated loop 
 1. Clone the source code of Z3 from https://github.com/Z3Prover/z3
 2. Run ```git checkout tags/z3-4.8.7; python scripts/mk_make.py --prefix=<installation_prefix> --python --pypkgdir=<python_site_package_directory>; cd build; make; make install```
 
-Remember to set environment variables LD_LIBRARY_PATH and PYTHONPATH to contain paths for Z3 shared libraries and Z3Py, respectively.  These paths will be indicated upon successful installation of Z3.
+Remember to set environment variables `LD_LIBRARY_PATH` and `PYTHONPATH` to contain paths for Z3 shared libraries and Z3Py, respectively.  These paths will be indicated upon successful installation of Z3.
 
 ## Frontend Setup (Optional)
 There are two frontends, one each for the C and CHC instances. The C frontend is called clang-fe and can be found in the `clang-fe/` directory. The CHC frontend is called chc-fe and is located in the `chc-fe/` directory. These frontends have limited support and are tested with the benchmarks included. Primarily, they can be used with programs containing single loops.
@@ -32,41 +51,53 @@ The `chc-fe` frontend is used to extract program graphs from the input CHC progr
 
 Install the dev version of this package:
 
-```pip install -e .```
+```
+$ pip install -e .
+```
 
 ## Running as an out-of-the-box solver
 
 First change directory as follows:
-
-```cd code2inv/prog_generator```
+```
+$ cd code2inv/prog_generator
+```
 
 Directly run the solver script:
-
-```./run_solver_file.sh $graph_file $vc_file $specification_file```
+```
+$ ./run_solver_file.sh $graph_file $vc_file $specification_file
+```
 
 To assign the output and related logs to a file, you can add the optional `-o` argument: 
-
-```./run_solver_file.sh $graph_file $vc_file $specification_file -o output_file```
+```
+$ ./run_solver_file.sh $graph_file $vc_file $specification_file \
+-o output_file
+```
 
 ### Examples
 
 To run code2inv on one of the 133 Linear C instances:
-
-```./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec```
+```
+$ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec
+```
 
 Optionally, to store the result and related logs into an output file `inv_result.txt`:
-
-```./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt```
+```
+$ ./run_solver_file.sh ../../benchmarks/C_instances/c_graph/101.c.json ../../benchmarks/C_instances/c_smt2/101.c.smt specs/c_spec -o inv_result.txt
+```
 
 Some of other benchmarks which give an answer relatively quick include: 102.c, 53.c, 56.c, 65.c, 18.c, 98.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
 
 To run code2inv on one of the 120 Linear CHC instances:
 
-```./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec```
+```
+$ ./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec
+```
 
 Optionally, to store the result and related logs into an output file `inv_result.txt`: 
 
-```./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec -o inv_result.txt```
+```
+$ ./run_solver_file.sh ../../benchmarks/CHC_instances/sygus-constraints-graphs/sygus-bench-101.c.smt.json ../../benchmarks/CHC_instances/sygus-constraints/sygus-bench-101.c.smt specs/chc_spec -o inv_result.txt
+```
 
 Some of other benchmarks which give an answer relatively quick include: 78.c, 115.c, 45.c, 54.c, 71.c, 77.c. Just substitute 101.c in the previous command with one of these benchmarks to get the solution for the same.
 
@@ -105,27 +136,36 @@ $ ./run_solver_file_with_weights.sh ../../benchmarks/C_instances/c_graph/69.c.js
 
 Run:
 
-```cd code2inv/prog_generator```
+```
+$ cd code2inv/prog_generator
+```
 
-```./pretraining.sh ${dataset} ${prog_idx} ${agg_check} ${grammar_file}```
+```
+$ ./pretraining.sh ${dataset} ${prog_idx} ${agg_check} ${grammar_file}
+```
 
 where ```dataset``` is the data name, ```prog_idx``` stands for the set of random perturbed programs, and ```agg_check``` can be 0 or 1, denoting whether more aggressive checker should be used.
 
 An easier way would be to run 
-```cd tests; ./test_learning.sh ${prog_idx}```
+```
+$ cd tests; ./test_learning.sh ${prog_idx}
+```
 
 ### Fine-tuning:
 
 Run:
 
-```cd code2inv/prog_generator```
-
-```./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch} ${grammar_file}```
+```
+$ cd code2inv/prog_generator
+$ ./fine_tuning.sh ${dataset} ${prog_idx} ${agg_check} ${init_epoch} ${grammar_file}
+```
 
 where the penultimate argument ```init_epoch``` stands for the model dump of corresponding epoch (`latest` for the latest epoch dumped). 
 An easier way would be to run 
 
-```cd tests; ./test_fine_tuning.sh ${prog_idx}```
+```
+$ cd tests; ./test_fine_tuning.sh ${prog_idx}
+```
 
 <!-- # Reference
 

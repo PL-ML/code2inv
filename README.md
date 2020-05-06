@@ -3,16 +3,13 @@
 
 # Environment Setup
 
-NOTE: An easy way to get Code2Inv up and running is to build it using the Dockerfile we have provided.
+## Using the Docker Container
+
+An easy way to get Code2Inv up and running is to build it using the Dockerfile we have provided.
 
 You can either pull the docker image from our dockerhub repo:
 ```
 docker pull code2inv/code2inv
-```
-
-Or you can build the docker container:
-```
-$ docker build -t code2inv/code2inv docker/
 ```
 
 This should create an image called `code2inv/code2inv`. To see all the docker images, run
@@ -26,6 +23,12 @@ $ docker run -it --name code2inv code2inv/code2inv
 ```
 
 This should open a docker container with all code2inv setup completed.
+
+If you want to build the docker container yourself, run:
+```
+$ docker build -t code2inv/code2inv docker/
+```
+which should create a docker image named code2inv/code2inv.
 
 ## Basic Setup
 The following are needed for running the basic setup
@@ -46,9 +49,9 @@ Remember to set environment variables `LD_LIBRARY_PATH` and `PYTHONPATH` to cont
 ## Frontend Setup (Optional)
 There are two frontends, one each for the C and CHC instances. The C frontend is called clang-fe and can be found in the `clang-fe/` directory. The CHC frontend is called chc-fe and is located in the `chc-fe/` directory. These frontends have limited support and are tested with the benchmarks included. Primarily, they can be used with programs containing single loops.
 
-The `clang-fe` frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. This will be a necessary step if you wish to run Code2Inv on a C file which isn't in the benchmarks. The program graphs and VCs for our benchmarks are already included in the `benchmarks/C_instances` directory and the same for the Non Linear benchmarks are included in the `benchmarks/nl-bench/` directory.  To build the frontend, follow the instructions in README in `clang-fe`. 
+The `clang-fe` frontend is used to extract program graphs and verification conditions (VCs) from the input C programs. This will be a necessary step if you wish to run Code2Inv on a C file which isn't in the benchmarks. The program graphs and VCs for our benchmarks are already included in the `benchmarks/C_instances` directory and the same for the Non Linear benchmarks are included in the `benchmarks/nl-bench/` directory.  To build the frontend, follow the instructions in [README](clang-fe/README.md) in `clang-fe`. 
 
-The `chc-fe` frontend is used to extract program graphs from the input CHC programs (the CHC constraints themselves serve as the verification conditions (VCs)). This will be necessary to run Code2Inv for constraints not included in the benchmarks. The graphs and the VCs are already included in the `benchmarks/CHC_instances` directory. To run the CHC frontend, follow the instructions in README in `chc-fe`.
+The `chc-fe` frontend is used to extract program graphs from the input CHC programs (the CHC constraints themselves serve as the verification conditions (VCs)). This will be necessary to run Code2Inv for constraints not included in the benchmarks. The graphs and the VCs are already included in the `benchmarks/CHC_instances` directory. To run the CHC frontend, follow the instructions in [README](chc-fe/README) in `chc-fe`.
 
 # Experiments
 

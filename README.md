@@ -57,7 +57,7 @@ The `chc-fe` frontend is used to extract program graphs from the input CHC progr
 
 ## Package Installation
 
-Install the dev version of this package:
+First, install the dev version of this package. To do this, run the following in the repository root directory:
 
 ```
 $ pip install -e .

@@ -12,6 +12,11 @@ You can either pull the docker image from our dockerhub repo:
 docker pull code2inv/code2inv
 ```
 
+Or alternatively build the docker docker container yourself, run the following from the repository root directory:
+```
+$ docker build -t code2inv/code2inv docker/
+```
+
 This should create an image called `code2inv/code2inv`. To see all the docker images, run
 ```
 $ docker images
@@ -23,12 +28,6 @@ $ docker run -it --name code2inv code2inv/code2inv
 ```
 
 This should open a docker container with all code2inv setup completed.
-
-If you want to build the docker container yourself, run:
-```
-$ docker build -t code2inv/code2inv docker/
-```
-which should create a docker image named code2inv/code2inv.
 
 ## Basic Setup
 The following are needed for running the basic setup

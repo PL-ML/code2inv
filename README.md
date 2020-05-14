@@ -12,7 +12,7 @@ You can either pull the docker image from our dockerhub repo:
 docker pull code2inv/code2inv
 ```
 
-Or alternatively build the docker docker container yourself, run the following from the repository root directory:
+Or alternatively build the docker container yourself, run the following from the repository root directory:
 ```
 $ docker build -t code2inv/code2inv docker/
 ```

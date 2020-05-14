@@ -155,6 +155,11 @@ You can see more grammar examples in the [`code2inv/prog_generator/grammar_files
 The name of the checker module (which we shall discuss in the next section) should be in the format of a python package relative to the `code2inv/prog_generator` directory.
 For example, if the checker module is `code2inv/prog_generator/checkers/c_inv_checker.py`, the name should be given as `checkers.c_inv_checker`.
 
+### The Variable Format
+
+The variable format must be specified as `ssa` only if the SSA format of variables is used in the input graph, else leave it blank. For example, refer to our
+[C benchmarks](benchmarks/C_instances) and our [C specification file](code2inv/prog_generator/specs/c_spec).
+
 ## The Checker Module
 
 The checker module is the way Code2Inv verifies if the predicted invariant is correct, and if it is not, then the checker module must return the set of counter examples for that invariant.
